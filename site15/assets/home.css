@@ -1,0 +1,258 @@
+/***************************************************/
+/* HERO SECTION */
+/***************************************************/
+#hero-background{
+	position: fixed;
+	z-index:0;
+	max-width:1680px;
+	left:0%;
+	right:0%;
+	margin:0% auto;
+}
+.hero-wrapper{
+	position: absolute;
+	left:0%;
+	top:10%;
+	right:0%;
+}
+.hero-filler{
+	max-width: 1680px;
+}
+h1, h2{
+	color: #ffffff;
+	text-shadow: 5px 5px 15px #555555;
+	transition: background-color .75s ease-in-out;
+	padding: 0%;
+}
+h1{
+	margin: 0%;
+	padding: 0%;
+	font-size:3.75rem;
+	line-height: 1em;
+}
+h2{
+	margin:0% 0% 10% 0%;
+	font-size:1.5rem;
+	line-height: 1em;
+}
+.highlight{
+    background-color: #5cb6f6;
+    transition: background-color .75s ease-in-out;
+}
+.highlight-text{
+    color: #5cb6f6;
+    transition: color .75s ease-in-out;
+}
+.nav-bucket{
+    width:24%;
+    margin-right:2%;
+    background-color: #fafafa;
+    position: relative;
+    float: left;
+	cursor: pointer;
+	overflow: hidden;
+}
+#snippet-bucket{
+	cursor: default;
+}
+.bucket-title h3{
+	font-size: 1.25rem;
+	letter-spacing: .025rem;
+	line-height: 1.5rem;
+	margin:0%;
+	padding: 0%;
+}
+.bucket-description p{
+	margin: 0px;
+	color: #555555;
+	line-height:1.25rem;
+	padding: 5% 0 10%;
+}
+.bucket-image{
+	position: absolute;
+	top:8.5%;
+	right:5.7%;
+	border-radius: 50%;
+	background-color: #fff;
+	padding: 4.5% 3%;
+}
+.bucket-image img{
+	max-width: 59px;
+}
+.coming-soon{
+	position:absolute;
+	right: -44px;
+	padding:5% 10%;
+	color: #ffffff;
+	background-color: #ff0000;
+	font-size:1.25rem;
+	line-height:1rem;
+	bottom: 7%;
+    width: 50%;
+	text-align: center;
+	transform: rotate(-45deg);
+}
+
+/***************************************************/
+/* ALT LAYOUT */
+/***************************************************/
+.alt-hero{
+    position: absolute;
+    top:0px;
+    left:0px;
+    opacity: 0;
+    transition: opacity .75s ease-in-out;
+}
+.alt-layout .alt-hero{
+    opacity: 1;
+}
+.alt-layout .highlight{
+	background-color: #da2f10;
+}
+.alt-layout .highlight-text{
+	color: #da2f10;
+}
+.alt-layout h1, .alt-layout h2{
+	color: #000000;
+	text-shadow: none;
+}
+
+/***************************************************/
+/* SUB SECTIONS */
+/***************************************************/
+section, footer{
+	position:relative;
+	z-index:1;
+}
+#my-story-section{
+	background-color:#454545;
+}
+#hover-circle{
+	position: relative;
+	border-radius: 50%;
+	overflow: hidden;
+	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+	border:10px solid #d0d0d0;
+	cursor: pointer;
+}
+.section-image{
+	width:33%;
+	margin-right:5%;
+}
+.webkit-radius-fix{
+	position: absolute;
+	top:0%;
+	left:0%;
+	opacity: 0;
+	transition: opacity .75s ease-in-out;
+	border-radius: 50%;
+}
+.circle-hovered .webkit-radius-fix{
+	opacity: 1;
+}
+.my-story-image-description{
+	width: 100%;
+	position: absolute;
+	left:0%;
+	bottom:0%;
+	transform: translateY(100%);
+	transition: transform .25s ease-in-out;
+}
+.circle-hovered .my-story-image-description{
+	transform: translateY(0px);
+}
+.section-image p{
+	margin: 0%;
+	padding: 4% 0 5%;
+	font-size:1.15rem;
+	line-height: 1.5rem;
+	text-align: center;
+}
+.section-text{
+	width: 60%;
+}
+.section-text p{
+	line-height:1.25rem;
+	margin: 0% 0% 5% 0%;
+}
+#what-i-know-section{
+	background-color: #ffffff;
+}
+
+/***************************************************/
+/* TABLET LANDSCAPE ADJUSTMENTS */
+/***************************************************/
+@media only screen and (max-width:1024px){
+	h2{
+		margin-bottom:7%;
+	}
+	.nav-bucket{
+		width:27%;
+	}
+	.bucket-description p{
+		padding-bottom: 7%;
+	}
+	.section-text {
+		width: 59.8%;
+	}
+}
+
+/***************************************************/
+/* TABLET PORTRAIT ADJUSTMENTS */
+/***************************************************/
+@media only screen and (max-width:991px){
+	.hero-wrapper{
+		position: static;
+		top:auto;
+		left:auto;
+	}
+	h1, h2{
+		color: #000000;
+		text-shadow: none;
+		transition: none;
+		text-align: center
+	}
+	.mobile-hero-img{
+		max-width: 767px;
+		display: block;
+		margin: 0 auto 5%;
+	}
+	.nav-bucket{
+		float:none;
+		margin:0 auto 5%;
+		width:100%;
+		max-width:400px;
+	}
+	#my-story-section .float-left,
+	#my-story-section .float-right,
+	#what-i-know-section .float-left,
+	#what-i-know-section .float-right{
+		float:none;
+	}
+	.section-image,
+	.section-text{
+		width:90%;
+		margin: 0 auto;
+	}
+	.section-image{
+		max-width: 350px;
+		margin:5% auto;
+	}
+	#what-i-know-section .section-image{
+		max-width:342px;
+	}
+}
+
+/***************************************************/
+/* PHONE PORTRAIT ADJUSTMENTS */
+/***************************************************/
+@media only screen and (max-width:400px){
+	h1{
+		font-size:3rem;
+		margin-bottom: 5%;
+	}
+	h2{
+		font-size: 1.25rem;
+		line-height: 1.25em;
+	}
+}

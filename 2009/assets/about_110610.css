@@ -1,0 +1,6 @@
+/* ABOUT
+*********************************************************/
+#about_statement{background:url(../images/about_header.jpg) no-repeat;width:946px;height:425px;padding:75px 14px 14px;display:block;margin-left:14px;}
+p{color:#fff;font-size:.8em;font-family:Verdana, Arial, Helvetica, sans-serif;margin:0px 0px 21px;line-height:1.5em;}
+#about_statement a{color:#cecd76;text-decoration:none;}
+#about_statement a:hover{color:#ffffff;text-decoration:underine;}

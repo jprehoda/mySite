@@ -1,0 +1,55 @@
+/* CSS RESET
+**************************************************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+
+/* GLOBAL
+**************************************************/
+body{background:#e2e2da;}
+h1{font-family: Georgia, "Times New Roman", Times, serif;color:#6b6b68;margin-bottom:21px;font-size:20px;}
+h1 a{text-decoration:none;color:#6b6b68;-webkit-transition:color 0.35s ease-in;-moz-transition:color 0.35s ease-in;-0-transition:color 0.35s ease-in;transition:color 0.35s ease-in;}
+h1 a:hover{color:#a24d29;}
+h2{font-family: Georgia, "Times New Roman", Times, serif;color:#73736f;margin-bottom:14px;font-size:18px;border-bottom:2px dotted #9e9e98;}
+h3{font-family: Georgia, "Times New Roman", Times, serif; font-size:22px; border-bottom:1px dotted #8A8A8A; margin-bottom:14px;}
+h4{font-family: Georgia, "Times New Roman", Times, serif; border-bottom:3px double #4b4b4a;color:#4b4b4a;font-size:22px; padding-bottom:3px; margin-bottom:28px;}
+.clear{overflow:auto;}
+.hasFloat{overflow:hidden;}
+.center{width:998px; margin:0px auto;}
+.isBold{font-weight:bold;}
+a.paragraph{color:#8a8a8a;text-decoration:none;font-weight:bold;-webkit-transition:color 0.35s ease-in;-moz-transition:color 0.35s ease-in;-0-transition:color 0.35s ease-in;transition:color 0.35s ease-in; background:none; padding:0px;}
+a.paragraph:hover{color:#a24d29;}
+
+/* WRAPPERS
+**************************************************/
+#topIndexWrapper{background:transparent url(../images/topindex_wrapper.jpg) repeat-x 50% top ;z-index: 1;margin-bottom: -132px;}
+#headerWrapper{background:transparent url(../images/navbar_bg.png) repeat-x top;}
+#contentWrapper{background:#e2e2da url(../images/content_wrapper.jpg) repeat-x top;}
+#topInteriorWrapper{background:transparent url(../images/interior_head.jpg) repeat-x 50% top ;}
+#interiorcontentWrapper{background:#e2e2da url(../images/interior_content.jpg) repeat-x top; margin-bottom:21px;}
+
+/* NAVIGATION
+**************************************************/
+#header{font-family:Helvetica, Arial, sans-serif;width:1010px;}
+#header a{color:#a6c2c8;text-decoration:none;text-shadow: #2a3639 2px 2px 2px;-webkit-transition:color 0.35s ease-in;-moz-transition:color 0.35s ease-in;-0-transition:color 0.35s ease-in;transition:color 0.35s ease-in;}
+#header a:hover{color:#dcedf1;}
+#guitarPick{float:left}
+#logo{float:left; font-size:24px;margin:14px 0px;}
+#navigation{float:right;margin:24px 6px 0px 0px;font-size:14px;text-transform:uppercase;}
+#navigation a{margin-left:28px; font-weight:bold;}
+#footer{border-top:2px solid #adac9e; padding-top:14px;margin:0px auto 21px;font-size:12px;font-family:Helvetica, Arial, sans-serif;color:#adac9e;}
+#footer a{color:#adac9e;text-decoration:none;-webkit-transition:color 0.35s ease-in;-moz-transition:color 0.35s ease-in;-0-transition:color 0.35s ease-in;transition:color 0.35s ease-in;}
+#footer a:hover{color:#a24d29;}
+.legal{float:left;}
+ul.social{float:right;text-align:right;list-style-type: none;}
+.social li {display:inline; margin-left:14px;background: url(../images/list_square.gif) no-repeat 0px 3px;padding-left: 14px;}
+
+/* INTERIOR PAGE STYLE
+**************************************************/
+#sectionHead{font-size:30px;color:#73736f;border-bottom:1px solid #73736f;font-family: Georgia, "Times New Roman", Times, serif;padding-top:13px;}
+#content{margin-top:42px;}
+
+/* SIDEBAR
+***********************************************/
+#sidebar{background:#D0D0C9;padding:21px;border:1px solid #73736F;color:#73736F; float:right; width:400px; margin-left:21px;}
+#sidebar p{font-family:Helvetica, Arial, sans-serif; font-size:16px; line-height:24px; margin-bottom:21px;}
+.dropcap::first-letter {float:left;font-size:100px;line-height:72px;margin-right:3px;color:#b4b4ae;font-weight:bold;}
+.sidebarBucket{background:#E2E2DA;padding:14px;border:1px solid #8A8A8A;color:#8A8A8A;font-family:Helvetica, Arial, sans-serif;margin-bottom:21px;}

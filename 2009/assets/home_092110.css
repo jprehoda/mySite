@@ -1,0 +1,19 @@
+/* POSTER
+*********************************************************/
+#poster{position:relative;margin-bottom:14px;width:958px;height:379px;cursor:pointer;}
+#poster img {position:absolute;left:14px;top:0;}
+/* 3COLUMN
+*********************************************************/
+#bucket_container{padding:0px 14px 14px;height:167px;}
+.bucket{padding:0px;display:block;width:308px;height:165px;float:left;border:solid 1px #36362a;position:relative;}
+.bucket_text{padding:14px;position:absolute;top:14px;display:block;font-family:Verdana, Arial, Helvetica, sans-serif;color:#cecd76;font-size:1em;letter-spacing:-1px;line-height:1.3em;cursor:pointer;}
+.author{color:#afaf7c;font-size:.8em;font-family:Georgia, "Times New Roman", Times, serif;letter-spacing:normal;}
+#portfolio{margin:0px;}
+#portfolio a{background:url(../images/portfolio_bucket_bg.jpg) no-repeat;display:block;width:308px;height:165px;}
+#portfolio .bucket_text{background:url(../images/portfolio_bucket_txt_bg.png) repeat;}
+#resume{margin-left:14px;}
+#resume a{background:url(../images/resume_bucket_bg.jpg) no-repeat;display:block;width:308px;height:165px;border:ipx solid #36362a;}
+#resume .bucket_text{background:url(../images/resume_bucket_txt_bg.png) repeat;right:0px;bottom:14px;top:auto;}
+#about{margin-left:14px;}
+#about a{background:url(../images/about_bucket_bg.jpg) no-repeat;display:block;width:308px;height:165px;border:ipx solid #36362a;}
+#about .bucket_text{background:url(../images/about_bucket_txt_bg.png) repeat;}

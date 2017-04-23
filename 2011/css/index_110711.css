@@ -1,0 +1,18 @@
+/* INDEX STYLES
+**************************************************/
+#leadin{margin:31px auto 30px;text-align:center;}
+#leadin img{margin-bottom:10px;}
+#leadin p{color:#51666b;text-transform:uppercase;font-size:18px;font-family:Helvetica, Arial, sans-serif; font-weight:bold;}
+#siteCaps{background:transparent url(../images/sitecaps.png) no-repeat; height:399px;position: relative;}
+#siteCaps img{margin:38px 0px 0px 255px;}
+
+/* BOTTOM NAVIGATION
+**************************************************/
+.indexContent{padding-top: 195px;}
+#bottomNav{margin-bottom:51px;}
+.bucket{margin-left:28px; float:left; border-top:4px solid #bcbbad;-webkit-transition:border-top-color 0.35s ease-in;-moz-transition:border-top-color 0.35s ease-in;-0-transition:border-top-color 0.35s ease-in;transition:border-top-color 0.35s ease-in; padding-top:21px; width:314px;}
+.bucket:hover{border-top-color:#a24d29;}
+.bucketLeft{margin-left:0px;}
+.bucket p{color:#a1a19f;font-size:14px;line-height:20px;font-family:Helvetica, Arial, sans-serif;}
+a.more{color:#6b6b68;text-decoration:none;-webkit-transition:color 0.35s ease-in;-moz-transition:color 0.35s ease-in;-0-transition:color 0.35s ease-in;transition:color 0.35s ease-in; margin-top:21px; display:block; font-size:14px;font-family:Helvetica, Arial, sans-serif;}
+a.more:hover{color:#a24d29;}

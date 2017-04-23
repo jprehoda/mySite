@@ -1,0 +1,24 @@
+/* RESUME
+*********************************************************/
+#content_wrapper{padding:0px 14px 14px;}
+#resume_wrapper{background:#ffffff;padding:7px 14px;}
+#resume_bg{background:url(../images/resume_bg.png) repeat-y; padding:7px 28px;}
+/* CONTACT INFO
+*********************************************************/
+#profile{width:228px;height:306px;float:left;display:block;margin-right:15px;}
+/* HISTORY
+*********************************************************/
+#experience{float:left;margin-left:14px;width:590px;display:block;}
+a.print{background:url(../images/print.jpg) no-repeat;width:60px;height:30px;float:right;display:block;cursor:pointer;}
+a.print:hover{background-position:0px -30px;}
+.spacer{width:14px;background-color:#FFFFFF;height:30px;float:right;}
+a.word{background:url(../images/word_icon.jpg) no-repeat;width:30px;height:30px;float:right;display:block;cursor:pointer;}
+a.word:hover{background-position:0px -30px;}
+a.pdf{background:url(../images/pdf.jpg) no-repeat;width:30px;height:30px;float:right;display:block;cursor:pointer;}
+a.pdf:hover{background-position:0px -30px;}
+h3.title{border-bottom:1px solid #575844;color:#575844;font-size:1.4em;margin:0px 0px 14px; font-family:Verdana, Arial, Helvetica, sans-serif;}
+p.paragraph{padding-left:7px;font-size:.9em;line-height:1.2em;margin:0px 0px 42px;clear:both;color:#000000; font-family:Verdana, Arial, Helvetica, sans-serif;}
+p.job_header{padding:0px 7px 1px;font-size:.9em;font-weight:bold;color:#000000;margin:0px; font-family:Verdana, Arial, Helvetica, sans-serif;}
+ul.details{margin:7px 0px 28px 14px;padding:0px 14px;}
+ul.details li{font-size:.9em;line-height:1.2em;margin:0px 0px 7px;color:#000000;margin=-bottom:7px;list-style:square outside none; font-family:Verdana, Arial, Helvetica, sans-serif;}
+.floated_list{width:154px;float:left;}

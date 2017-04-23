@@ -1,0 +1,42 @@
+/* PORTFOLIO STYLES
+**************************************************/
+.workExample{padding:21px;margin-bottom:7px;}
+.even{background:transparent;}
+.odd{background:#d0d0c9;}
+.topExample{padding-top:0px;}
+
+/* DESCRIPTION
+**************************************************/
+.description{float:left; width:312px;margin-right:21px;}
+.description p{color:#8a8a8a;font-size:13px;font-family:Helvetica, Arial, sans-serif;line-height:18px;margin-bottom:14px;}
+a.lightbox{font-weight:bold;font-family:Helvetica, Arial, sans-serif;padding-left:21px;background:transparent url(../images/magnifier.png) no-repeat;font-size:13px;color:#a24d29;text-decoration:none;-webkit-transition:color 0.35s ease-in;-moz-transition:color 0.35s ease-in;-0-transition:color 0.35s ease-in;transition:color 0.35s ease-in;}
+a.lightbox:hover{color:#8a8a8a;}
+a.noLightbox{font-weight:bold;font-family:Helvetica, Arial, sans-serif;padding-left:21px;background:transparent url(../images/magnifier.png) no-repeat;font-size:13px;color:#a24d29;text-decoration:none;-webkit-transition:color 0.35s ease-in;-moz-transition:color 0.35s ease-in;-0-transition:color 0.35s ease-in;transition:color 0.35s ease-in;}
+a.noLightbox:hover{color:#8a8a8a;}
+a.lightbox.paragraph{color:#8a8a8a;text-decoration:none;font-weight:bold;-webkit-transition:color 0.35s ease-in;-moz-transition:color 0.35s ease-in;-0-transition:color 0.35s ease-in;transition:color 0.35s ease-in; background:none; padding:0px;}
+a.lightbox.paragraph:hover{color:#a24d29;}
+
+/* CAROUSEL
+**************************************************/
+.carousel{width:607px;padding:7px;border:1px solid #a9a8a3;float:right;}
+.pictureBar{background:url(../images/picture_bar.png) repeat-x;position:absolute;z-index:10;bottom:0px;width:607px;}
+.controls{float:right; margin:3px 14px 3px 0px;}
+.controls a{cursor:pointer;width:29px;height:29px;display:block;float:left;background:url(../images/carousel_ctrls.png) no-repeat;}
+a.prev{margin-right:7px;}
+a.prev:hover{background-position:0px -29px;}
+a.next{background-position:-29px 0px;}
+a.next:hover{background-position:-29px -29px;}
+.carouselImage{display:none;}
+
+/* APPLICATION ICONS
+**************************************************/
+.programIcons{float:left; margin:8px 0px 3px 14px;}
+.programIcons a{cursor:pointer;height:23px;display:block;float:left;margin-right:28px;}
+.programIcons a:hover{background-position:0 -23px;}
+a.photoshop{background:url(../images/icons/photoshop.png) no-repeat; width:24px;}
+a.illustrator{background:url(../images/icons/illustrator.png) no-repeat; width:22px;}
+a.dreamweaver{background:url(../images/icons/dreamweaver.png) no-repeat; width:34px;}
+a.jquery{background:url(../images/icons/jquery.png) no-repeat; width:35px;}
+a.wordpress{background:url(../images/icons/wordpress.png) no-repeat; width:23px;}
+a.refine{background:url(../images/icons/refine.png) no-repeat; width:24px;}
+a.word{background:url(../images/icons/word.png) no-repeat; width:24px;}

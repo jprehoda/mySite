@@ -1,0 +1,7 @@
+/* ABOUT
+***********************************************/
+#beforeAfter{float:left;}
+.dualList{float:left;width:178px;margin-left:14px;list-style-type:none;}
+.listLeft{margin-left:0px}
+.dualList li{background:url(../images/list_circle.gif) 0 6px no-repeat;padding-left:14px;margin:0px 0px 7px 14px;}
+li.bottom{margin-bottom:0px;}

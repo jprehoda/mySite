@@ -1,0 +1,24 @@
+/* CONTACT STYLES
+***********************************************/
+#contactForm{float:left; width:488px; padding:21px; background:#FFF;border: 1px solid #BCBBAD;}
+#plus{margin-right:4px}
+.formLine{border-bottom:1px solid #BCBBAD; padding:0px; margin: 0px 14px 28px;}
+label{float:left; font-family:Helvetica, Arial, sans-serif; color:#73736F; font-size:16px;}
+.commentHead{margin-bottom:0px;}
+ul{list-style:none;}
+li{background:url(../images/list_circle.gif) 0 6px no-repeat;padding-left:14px;margin: 0px 0px 14px 14px;line-height: 18px;}
+li a{color:#8a8a8a;text-decoration:none;font-weight:bold;-webkit-transition:color 0.35s ease-in;-moz-transition:color 0.35s ease-in;-0-transition:color 0.35s ease-in;transition:color 0.35s ease-in; background:none; padding:0px;}
+li a:hover{color:#a24d29;}
+li.bottom{margin-bottom:0px;}
+.sub{font-size:14px;}
+
+/* INPUTS
+***********************************************/
+.formLine input{float:right; background:none; border:none; outline:none;font-family:Helvetica, Arial, sans-serif; color:#8A8A8A; font-size:16px; padding:0px; line-height:16px;}
+#name{width:395px;}
+#email{width:395px;}
+#comments{border-bottom:1px solid #BCBBAD; margin: 0px 14px 28px;}
+#comments textarea{width:462px;height:300px;border:none;outline:none;resize: none;font-family:Helvetica, Arial, sans-serif; color:#8A8A8A; font-size:16px; line-height:24px;}
+#submit input{margin: 0px auto; background: url(../images/submit_button.jpg) no-repeat 0 -34px; height:34px; width:165px; cursor:pointer;display:block; border:none; outline:none;color: transparent; text-indent:-9999px;}
+#submit input:hover{background-position: 0 0px;}
+.noMargin{margin:0px;}

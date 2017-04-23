@@ -1,0 +1,15 @@
+/* PORTFOLIO
+*********************************************************/
+a.prev{background:url(../images/carousel_ctrls.png) no-repeat;cursor:pointer;width:35px;height:35px;display:block;position:absolute;bottom:14px;left:14px;z-index:1000;}
+a.prev:hover{background-position:0px -35px;}
+a.next{background:url(../images/carousel_ctrls.png) no-repeat -35px 0px;cursor:pointer;width:35px;height:35px;display:block;position:absolute;bottom:14px;left:49px;z-index:1000;}
+a.next:hover{background-position:-35px -35px;}
+.carousel{width:631px;float:right;margin:0px 14px;}
+.description{width:315px;float:left;margin-left:14px;}
+.text{font-family:Verdana, Arial, Helvetica, sans-serif;color:#FFFFFF; font-size:.8em;padding-left:7px;}
+.text a{color:#CECD76;text-decoration:none;}
+.text a:hover{color:#ffffff;text-decoration:none;}
+h1{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:1.4em;font-weight:700;margin-top:0px;}
+h1 a{color:#CECD76;text-decoration:none;}
+h1 a:hover{color:#ffffff;text-decoration:none;}
+li{display:none;}
