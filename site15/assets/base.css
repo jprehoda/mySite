@@ -164,6 +164,7 @@ nav p a:hover{
 }
 #slide-nav.nav-clicked{
 	transform: translateX(0px);
+	overflow: auto;
 }
 #slide-nav ul ul{
 	display:none;

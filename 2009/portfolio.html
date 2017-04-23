@@ -17,17 +17,6 @@
 	<script type="text/javascript" src="assets/jquery.fancybox-1.3.1.js"></script>
 	<script type="text/javascript" src="assets/jcarousellite_1.0.1.min.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function() {
-			//fancybox init
-			$("#contact_nav").fancybox({
-				'titleShow'		: false
-			});
-			$("#contact_footer").fancybox({
-				'titleShow'		: false
-			});
-		});
-	</script>
-	<script type="text/javascript">
 		$(function() {
 			$(".prepzone").jCarouselLite({
 				btnNext: ".prepzone .next",
@@ -71,20 +60,8 @@
 				<a id="portfolio_nav" href="portfolio.html" title="portfolio"></a>
 				<a id="resume_nav" class="unselected" href="resume.html" title="resume"></a>
 				<a id="about_nav" class="unselected" href="about.html" title="about"></a>
-				<a id="contact_nav" class="unselected" href="/?forSUbmit=true" title="contact" style="padding-right:0px;border-right:none;"></a>
+				<a id="contact_nav" class="unselected" href="/?formSubmit=true" title="contact" style="padding-right:0px;border-right:none;"></a>
 			</div><!-- end #nav -->
-			<div style="display:none">
-				<script type="text/javascript">var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));</script>
-				<script type="text/javascript">
-					var z7x4a3 = new WufooForm();
-					z7x4a3.initialize({
-						'userName':'joeprehoda', 
-						'formHash':'z7x4a3', 
-						'autoResize':false,
-						'height':'570'});
-						z7x4a3.display();
-				</script>
-			</div><!-- end hidden wufoo div -->
 		</div><!-- end #header -->
 		<img src="images/content_top.png" alt="" class="border" />
 		<div id="content_wrapper" class="clear">
