@@ -121,6 +121,7 @@ nav p a:hover{
     transition: transform .25s ease-in-out;
     right:0px;
     bottom:0%;
+	overflow: hidden;
 }
 #slide-nav ul,
 #slide-nav li{
@@ -128,6 +129,9 @@ nav p a:hover{
 	margin:0%;
 	padding:0%;
 	list-style: none;
+}
+#slide-nav li{
+	position: relative;
 }
 #slide-nav li a:hover{
 	background-color:#eeeeee;
@@ -160,7 +164,17 @@ nav p a:hover{
 #slide-nav.nav-clicked{
 	transform: translateX(0px);
 }
-
+#slide-nav ul ul{
+	position:absolute;
+	width:100%;
+    transform: translateX(100%);
+    transition: transform .25s ease-in-out;
+    top:0%;
+    left:0%;
+}
+#slide-nav ul.active-nav-item ul{
+	transform: translateX(0px);
+}
 
 /***************************************************/
 /* CONTACT FORM */
