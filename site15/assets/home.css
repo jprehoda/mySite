@@ -178,6 +178,10 @@ section, footer{
 #what-i-know-section{
 	background-color: #ffffff;
 }
+#what-i-know-section .section-image{
+	margin-left: 5%;
+	margin-right: 0%;
+}
 
 /***************************************************/
 /* TABLET LANDSCAPE ADJUSTMENTS */

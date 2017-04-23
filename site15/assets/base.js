@@ -129,9 +129,9 @@ joesApp
 		}
 	};
     
-}).directive("scroll", function ($window) {
+}).directive("data-scroll", function ($window) {
     return function(scope, element, attrs) {
-        angular.element($window).bind("scroll", function() {
+        angular.element($window).bind("data-scroll", function() {
              if (this.pageYOffset >= 1) {
                  scope.isScrolled = true;
              } else {

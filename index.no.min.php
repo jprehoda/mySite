@@ -192,7 +192,7 @@ if ($_POST["g-recaptcha-response"]) {
 			</div><!-- End #hover-circle -->
 			<div id="skill-text" class="section-text float-right">
 				<h4 class="raleway">Languages and Programs I know</h4>
-				<p class="raleway">HTML, XHTML, HTML5, CSS, CSS3, JavaScript, jQuery, Angular, JSON, AJAX, SOAP, XML, REST, Cross-browser compatibilty, Responsive design, Media queries, PHP, Django, .jsp, Git, SEO, ADA compliance, WordPress, Movable Type, Notepad++, Filezilla, YouTube API, Facebook API, Twitter API, Pinterest API, Email creation from scratch, Constant Contact, Wufoo, Survey Monkey, Omniture, Google Analytics, Adobe Photoshop, Adobe Illustrator, Adobe Dreamweaver (No I don’t use the code wizard), Brackets, Jira, Trello, Zendesk, Agile, Scrum.</p>
+				<p class="raleway">Web Development, HTML, XHTML, HTML5, CSS, CSS3, JavaScript, jQuery, Angular, JSON, AJAX, SOAP, XML, REST, Cross-browser compatibility, Responsive design, Media queries, PHP, Django, .jsp, Git, GitHub, SVN, SEO, ADA compliance, WordPress, Movable Type, Notepad++, Filezilla, YouTube API, Facebook API, Twitter API, Pinterest API, Email creation from scratch, Constant Contact, Wufoo, Survey Monkey, Omniture, Google Analytics, Adobe Photoshop, Adobe Illustrator, Adobe Dreamweaver (No I don’t use the code wizard), Brackets, Jira, Trello, Zendesk, Agile, Scrum.</p>
 				<p class="raleway">I’m a pretty fast learner so if you have a proprietary system or something not in the list above, chances are I’ll pick it up pretty quickly. Interested in what you see here? <a href="#" tabindex="36" ng-click="showContactForm($event)">Drop me a line and let’s chat</a>.</p>
 			</div><!-- End .section-text -->
 		</div><!-- End .responsive-wrapper -->
