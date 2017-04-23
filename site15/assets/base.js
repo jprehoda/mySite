@@ -1,15 +1,5 @@
 'use strict';
 
-if(window.innerWidth > 991){
-	var bLazy = new Blazy({
-		loadInvisible: true
-	});
-} else {
-	var bLazy_mobile = new Blazy({
-		selector: '.blazy-mobile'
-	});
-}
-
 var setContactHeight = function(){
 	if(window.innerHeight < 768){
 		document.getElementById('contact-form-wrapper').style.height = window.innerHeight +'px';
@@ -83,6 +73,7 @@ joesApp
 	$scope.isScrolled = false;
 	$scope.showContact = (getValues('formSubmit', window.location) === 'true') ? true : false;
 	$scope.showreCaptchaError = false;
+	$scope.setNavItemActive = false;
 	
 	$scope.checkNav = function($event){
 		if ($scope.isNavOpen && ($event.target.className.indexOf('no-nav-check') < 0)){

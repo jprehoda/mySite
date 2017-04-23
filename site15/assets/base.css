@@ -81,7 +81,8 @@ section h4{
 	font-weight: normal;
 	line-height: 1.5rem;
 }
-.hide-dt{
+.hide-dt,
+.visible-sm{
 	display:none;
 }
 .disabled{
@@ -165,15 +166,20 @@ nav p a:hover{
 	transform: translateX(0px);
 }
 #slide-nav ul ul{
-	position:absolute;
-	width:100%;
-    transform: translateX(100%);
-    transition: transform .25s ease-in-out;
-    top:0%;
-    left:0%;
+	display:none;
 }
-#slide-nav ul.active-nav-item ul{
-	transform: translateX(0px);
+#slide-nav ul .active-nav-item + ul{
+	display: block;
+}
+#slide-nav ul ul li{
+	padding-left:10%;
+	padding-right:0%;
+}
+#slide-nav ul ul li img{
+	transform: rotate(270deg);
+	padding-top:5%;
+	width:auto;
+	max-width: none;
 }
 
 /***************************************************/
@@ -376,17 +382,30 @@ footer p{
 /***************************************************/
 /* PHONE PORTRAIT ADJUSTMENTS */
 /***************************************************/
-@media only screen and (max-width:400px){
+@media only screen and (max-width:415px){
 	#slide-nav{
 		width: 90%;
 	}
 	section h4{
-		line-height: 2rem;
+		line-height: 2.5rem;
 	}
 	.show-contact .contact-form-feilds{
 		width: 90%;
 	}
 	.contact-text-input, .contact-textarea{
 		width: 88%;
+	}
+	#scroll-nav img{
+		padding-top: 1.75%;
+		padding-right: 2%;
+	}
+}
+
+/***************************************************/
+/* PHONE PORTRAIT ADJUSTMENTS */
+/***************************************************/
+@media only screen and (max-width:340px){
+	.visible-sm{
+		display: block;
 	}
 }

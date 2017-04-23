@@ -31,19 +31,6 @@
 			);
 		});
 	</script>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-19423886-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 </head>
 <body>
 	<div id="page_wrapper">
@@ -54,7 +41,7 @@
 				<a id="portfolio_nav" class="unselected" href="portfolio.html" title="portfoilio"></a>
 				<a id="resume_nav" href="resume.html" title="resume"></a>
 				<a id="about_nav" class="unselected" href="about.html" title="about"></a>
-				<a id="contact_nav" class="unselected" href="#wufooFormz7x4a3" title="contact" style="padding-right:0px;border-right:none;"></a>
+				<a id="contact_nav" class="unselected" href="/?forSUbmit=true" title="contact" style="padding-right:0px;border-right:none;"></a>
 			</div><!-- end #nav -->
 			<div style="display:none">
 				<script type="text/javascript">var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));</script>
@@ -149,10 +136,20 @@
 				<a href="http://twitter.com/Prehoda" class="social_link" id="twitter_link" title="Twitter"></a>
 			</div><!-- end #social_media -->
 			<div id="copyright" class="clear">
-				All trademarks belong to their authoritative owners. <a id="contact_footer" href="#wufooFormz7x4a3" title="contact" style="padding-right:0px;border-right:none;">Send Joe an email.</a>
+				All trademarks belong to their authoritative owners. <a id="contact_footer" href="/?formSubmit=true" title="contact" style="padding-right:0px;border-right:none;">Send Joe an email.</a>
 			</div><!-- end #copyright -->
 		</div><!-- end #footer -->
 		<img src="images/content_bottom.png" alt="" class="border"/>
 	</div><!-- end #page_wrapper -->
+	
+	<script type="text/javascript">
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-19423886-1', 'auto');
+		ga('send', 'pageview');
+	</script>
 </body>
 </html>
