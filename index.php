@@ -198,6 +198,7 @@ if ($_POST["g-recaptcha-response"]) {
 		</section><!-- End #what-i-know-section -->
 	</main>
 
+
 	<footer class="wrapper_small float-wrapper">
 		<p class="float-left raleway white-text">All trademarks belong to their authoritative owners.</p>
 		<p class="float-right raleway">
