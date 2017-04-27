@@ -1,5 +1,5 @@
 User-agent: *
 Disallow: /2011/
-Disallow: /old_site/
+Disallow: /2009/
 Disallow: /2011/*
-Disallow: /old_site/*
+Disallow: /2009/*
