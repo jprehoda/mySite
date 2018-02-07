@@ -1,0 +1,201 @@
+				<div id="drawer-promo-example" class="inline-modal-content">
+					<div class="modal-sections relative-element">
+						<div class="modal-section about">
+							<h2>ABOUT</h2>
+							<hr>
+							<img src="/site15/assets/examples/cashstar.jpg" alt="CashStar Integration" />
+							<p>I was given the task to integrate a third party vendor called CashStar into Chico's, Whitehouse Blackmarket and Soma to use for electronic gift card purchases. The integration was quite simple, as the main sites just required a link to CashStar's purchase portal. The real fun was setting up the google analytics to mirror our checkout funnel. The end result was a javascript solution utilizing custom tags, triggers and variables that supplied a perfect mirror of the core site's checkout funnel. You can see an example of the CashStar funnel on <a href="https://www.chicos.com/store/page.jsp?id=114109276">chicos.com</a></p>
+						</div>
+						<div class="modal-section max-height-adjust js">
+							<h2>JavaScript</h2>
+							<hr>
+							<pre><code>
+							
+
+	var lines = {{lines}}
+	var addedProducts = [];
+	
+	function setCookie(cname, cvalue, exdays) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		var expires = "expires="+d.toUTCString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+
+	function getCookie(cname) {
+		var name = cname + "=";
+		var ca = document.cookie.split(';');
+		for(var i = 0; i < ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	}
+
+	function checkCookie(cname) {
+		var user = getCookie(cname);
+		if (user != "") {
+			return user;
+		} else {
+			return 0;
+		}
+	}
+	//IF THERE ARE ITEMS IN THE CART TRIGGER EVENT
+	if(lines.length > 0){
+		$.each(lines[0].items, function(itr,item){
+			addedProducts.push({
+				'name': 'E-Gift Card',
+				'id': 'EGIFTCERTCH',
+				'price': item.baseCost,
+				'brand': {{brand}},
+				'category': '0009',
+				'variant': item.faceplateCode,
+				'quantity': '1',
+				'coupon': '',
+				'dimension1': '0009',
+				'dimension2': '',
+				'dimension9': {{currency}},
+				'dimension10': {{currency}},
+				'dimension12': item.faceplateCode,
+				'dimension13': '',
+				'dimension14': ''
+			});
+			if(itr === (lines[0].items.length - 1)){
+				if(parseInt(checkCookie("addToCart")) !== lines[0].items.length){
+					if(parseInt(checkCookie("addToCart")) < lines[0].items.length){
+						dataLayer.push({
+							'event': 'addToCart',
+							'ecommerce': {
+								'currencyCode': {{currency}},
+								'add': {
+									'products':[{
+										'name': 'E-Gift Card',
+										'id': 'EGIFTCERTCH',
+										'price': lines[0].items[lines[0].items.length - 1].baseCost,
+										'brand': {{brand}},
+										'category': '0009',
+										'variant': lines[0].items[lines[0].items.length - 1].faceplateCode,
+										'quantity': '1',
+										'dimension1':'0009',
+										'dimension12': lines[0].items[lines[0].items.length - 1].faceplateCode,
+										'dimension13': 'EGIFTCERTCH'
+									}]
+								}
+							}
+						});
+					}
+					setCookie("addToCart", lines[0].items.length, 365);
+				}
+				
+				//FIRE FAUX FUNNEL EVENTS @ CHECKOUT
+				if(location.pathname === '/gift-card/payment/'){
+					dataLayer.push({
+						'event':'checkout',
+							'ecommerce':{
+								'checkout':{
+									'actionField': {
+										'step':1,
+										'option':''
+									},
+									'products': addedProducts
+								}
+							}
+					});
+					
+					dataLayer.push({
+						'event':'login',
+							'ecommerce':{
+								'checkout':{
+									'actionField': {
+										'step':2,
+										'option':''
+									},
+									'products': addedProducts
+								}
+							}
+					});
+				}
+
+
+				//FIRE FAUX FUNNEL EVENTS @ CONFIRMATION
+				if(location.pathname === '/gift-card/confirmation/'){
+					dataLayer.push({
+						'event': 'shipping',
+						'ecommerce': {
+							'checkout': {
+								'actionField': {
+									'step': 3,
+									'option': "Shipping"
+								},
+								'products': addedProducts
+							}
+						}
+					});
+					
+					dataLayer.push({
+						'event': 'payment',
+						'ecommerce': {
+							'checkout': {
+								'actionField': {
+									'step': 4,
+									'option': ""
+								},
+								'products': addedProducts
+							}
+						}
+					});
+
+					dataLayer.push({
+						'event': 'review',
+						'ecommerce': {
+							'currencyCode': {{currency}},
+							'checkout': {
+								'actionField': {
+									'step': 5,
+									'option': ""
+								},
+								'products': addedProducts
+							}
+						}
+					});
+					
+					dataLayer.push({
+						'event': 'purchase',
+						'ecommerce': {
+							'currencyCode': {{currency}},
+							'purchase': {
+								'actionField':{
+									'id': {{orderNumber}}, // Transaction ID. Required for purchases and refunds.
+									'affiliation': 'Online Store',
+									'revenue': {{totalCost}},
+									'tax': '',
+									'shipping': '',
+									'coupon': 'false'
+								},
+								'products': addedProducts // include our GTM-ready array of products
+							}
+						}
+
+					});
+					setCookie("addToCart", 0, 0);
+					setCookie("intialProdView", 0, 0);
+				}
+			}
+		});
+	}
+
+
+							</code></pre>
+						</div>
+					</div>
+					<div class="modal-nav">
+						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".about">About</a>
+						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+						<span>&#9656;</span><a href="#" class="toggle-modal">Close</a>
+					</div>
+				</div>

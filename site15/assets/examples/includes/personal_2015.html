@@ -1,0 +1,719 @@
+				<div id="drawer-promo-example" class="inline-modal-content">
+					<div class="modal-sections relative-element">
+						<div class="modal-section about">
+							<h2>ABOUT</h2>
+							<hr>
+							<img src="/site15/assets/examples/homepage.jpg" alt="Personal Code" />
+							<p>This is my third update to this site and my first version being truly responsive. I think you can tell by the design that I'm not the best designer, I can get by, but I'm no Picasso. Instead, I like to focus on the code, making it as crisp as possible. <a href="/">My homepage</a>.</p>
+						</div>
+						<div class="modal-section max-height-adjust html">
+							<h2>HTML</h2>
+							<hr>
+							<p>Just a snippet</p>
+							<pre><code>
+<header>
+		<nav>
+			<div id="scroll-nav" class="force-block highlight">
+				<div class="responsive-wrapper float-wrapper wrapper-small">
+					<p class="float-left raleway raleway-bold"><a href="/" tabindex="1">JoePrehoda.com</a></p>
+					<a href="#" class="float-right toggle-nav"><img src="/site15/assets/navigation_menu.png" alt="Operate Navigation" /></a>
+				</div><!-- End .responsive-wrapper -->
+			</div><!-- End #scroll-nav -->
+			<div id="slide-nav">
+				<ul>
+					<li class="raleway"><a href="#" data-anchor="#top-anchor" tabindex="1" class="operate-nav"><img src="/site15/assets/nav_icon_home.png" alt="" role="presentation" /><span>Home</span></a></li>
+					<li class="raleway"><a href="#" data-anchor="#my-story-section" tabindex="1" class="operate-nav"><img src="/site15/assets/nav_icon_book.png" alt="" role="presentation" /><span>About</span></a></li>
+					<li class="raleway"><a href="#" data-anchor="#what-i-know-section" tabindex="1" class="operate-nav"><img src="/site15/assets/nav_icon_know.png" alt="" role="presentation" /><span>Development Skills</span></a></li>
+					<li class="raleway"><a href="/site15/work.html" tabindex="1"><img src="/site15/assets/nav_icon_code.png" alt="" role="presentation" /><span>Work Examples</span></a></li>
+					<li class="raleway"><a href="#" tabindex="1" class="toggle-modal" aria-haspopup="true"><img src="/site15/assets/nav_icon_mail.png" alt="" role="presentation" /><span>Contact</span></a></li>
+					<li class="raleway"><a href="https://www.linkedin.com/in/joe-prehoda-8040a325" tabindex="1" ><img src="/site15/assets/nav_icon_linkedin.png" alt="" role="presentation" /><span>LinkedIn</span></a></li>
+					<li class="raleway"><a href="#" tabindex="1" class="archive-nav"><img src="/site15/assets/nav_icon_archive.png" alt="" role="presentation" /><span>Archive</span></a>
+						<ul>
+							<li class="raleway"><a href="/2009/index.html" tabindex="1"><img src="/site15/assets/arrow.png" alt="" role="presentation" /><span>2009 Site</span></a></li>
+							<li class="raleway"><a href="/2011/index.html" tabindex="1"><img src="/site15/assets/arrow.png" alt="" role="presentation" /><span class="no-nav-check">2011 Site</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- End #slideNav -->
+		</nav>
+	</header>
+
+	<main>
+		<section id="hero-background" class="hide-tp">
+			<img src="/site15/assets/family_hero.jpg" role="presentation" alt="" />
+			<img class="alt-hero" src="/site15/assets/solo_hero.jpg" role="presentation" alt="" />
+		</section>
+
+		<section id="contact-form" class="modal">
+			<div class="modal-body-mask toggle-modal">&nbsp;</div>
+			<div id="contact-form-wrapper" class="contact-form-feilds">
+				<div class="relative-element">
+					<?php
+						if ($response != null && $response->success) {
+							$mail_to_send_to = "contact@joeprehoda.com";
+							$your_feedbackmail = "noreply@joeprehoda.com";
+
+							echo '<p class="raleway contact-thank-you">Thank you '.$_POST['contact-name'].' for contacting me.<br />I should be contacting you shortly. <br /><a href="#" tabindex="100" class="toggle-modal" aria-haspopup="true">Close</a><p>';
+
+							$name = $_POST['contact-name'] ;
+							$email = $_POST['contact-email'] ;
+							$subject = $_POST['contact-subject'] ;
+							$message = $_POST['contact-message'] ;
+							$finalMessage = '<p><strong>Name:</strong> '.$name.'</p><br /><br/>'.'<p><strong>Email:</strong> '.$email.'</p><br /><br/>'.'<p><strong>Subject:</strong> '.$subject.'</p><br /><br/>'.'<p><strong>Message:</strong> '.$message.'</p><br /><br/>' ;
+								$headers = "From: $your_feedbackmail" . "\r\n" . "Reply-To: $email" . "\r\n"."Content-type: text/html; charset=iso-8859-1\r\n" ;
+								$a = mail( $mail_to_send_to, "Feedback Form Results", $finalMessage, $headers );
+						} else {
+					?>
+					<h4 class="raleway">Contact</h4>
+					<form method="post" action="?formSubmit=true" name="contact-joe-prehoda" id="contact-joe-prehoda">
+						<fieldset>
+							<label class="contact-label raleway" for="contact-name" id="contact-name-label">Your Name</label>
+							<input autocomplete="off" class="contact-text-input raleway" name="contact-name" id="contact-name" tabindex="20" type="text" maxlength="50" placeholder="Your Name" required />
+							<label class="contact-label raleway" for="contact-email" id="contact-email-label">Your Email</label>
+							<input autocomplete="off" class="contact-text-input raleway" name="contact-email" id="contact-email" tabindex="21" type="email" maxlength="75" placeholder="Your Email" required />
+							<label class="contact-label raleway" for="contact-subject" id="contact-subject-label">Your Subject</label>
+							<input autocomplete="off" class="contact-text-input raleway" name="contact-subject" id="contact-subject" tabindex="22" type="text" maxlength="100" placeholder="Your Subject" />
+							<label class="contact-label raleway" for="contact-message" id="contact-message-label">Your Message</label>
+							<textarea autocomplete="off" class="contact-textarea raleway" name="contact-message" id="contact-message" tabindex="23" placeholder="Your Message..." required ></textarea>
+							<input class="contact-submit-button raleway white-text highlight" type="submit" value="Submit" tabindex="24" />
+							<div class="relative-element">
+								<p class="captcha-error raleway">Please verify you are not a robot</p>
+								<div class="g-recaptcha" id="g-recaptcha" data-sitekey="6Lf3eiMTAAAAAAkyNNybRFNfdqO2Va0OsmDrTwIy" data-tabindex="25"></div>
+							</div>
+						</fieldset>
+					</form>
+					<?php } ?>
+					<div class="close-contact-form raleway toggle-modal">X</div>
+				</div>
+			</div><!-- End .contact-form-feilds -->
+		</section><!-- End #contact-form -->
+
+		<section id="hp-hero">
+
+			<img src="/site15/assets/hero_filler.png" alt="" class="hide-tp hero-filler" />
+			<img class="mobile-hero-img hide-dt" src="/site15/assets/hero_mobile.jpg" alt="Joe Prehoda's family" />
+			<div class="responsive-wrapper hero-wrapper float-wrapper wrapper-large">
+				<h1 class="raleway">Hi, I&rsquo;m <span class="highlight-text">Joe</span> Prehoda</h1>
+				<h2 class="raleway">A web developer using inspired creativity<br class="visible-sm" /> to engage an audience.</h2>
+
+				<div class="float-wrapper">
+					<div class="nav-bucket operate-nav" data-anchor="#my-story-section" tabindex="1">
+						<div class="bucket-title highlight wrapper-inset raleway white-text"><h3 class="raleway">My Story</h3></div>
+						<div class="bucket-description wrapper-inset">
+							<p class="raleway">I&rsquo;m a fast-learning front-<br class="hide-tp" />end web developer always on the lookout for new ways to solve complex problems.</p>
+						</div>
+						<div class="bucket-image">
+							<img src="/site15/assets/my_story_icon.png" alt="Book" />
+						</div>
+					</div><!-- End .nav-bucket -->
+
+					<div class="nav-bucket operate-nav" data-anchor="#what-i-know-section" tabindex="1">
+						<div class="bucket-title highlight wrapper-inset white-text"><h3 class="raleway">What I Know</h3></div>
+						<div class="bucket-description wrapper-inset">
+							<p class="raleway">Specializing in HTML,<br class="hide-tp" />CSS and JavaScript, but these are just a few things that make up my portfolio.</p>
+						</div>
+						<div class="bucket-image">
+							<img src="/site15/assets/what_i_know_icon.png" alt="My Thoughts" />
+						</div>
+					</div><!-- End .nav-bucket -->
+
+					<div id="snippet-bucket" class="nav-bucket">
+						<a href="/site15/work.html" tabindex="1">
+							<div class="bucket-title highlight wrapper-inset raleway white-text"><h3 class="raleway">What I can do</h3></div>
+							<div class="bucket-description wrapper-inset">
+								<p class="raleway">Check out some<br class="hide-tp" />examples of my work or view my repository where I keep all of my code snippets.</p>
+							</div>
+							<div class="bucket-image">
+								<img src="/site15/assets/my_work_icon.png" alt="Code Snippets" />
+							</div>
+						</a>
+					</div><!-- End .nav-bucket -->
+				</div><!-- End .float-wrapper -->
+			</div><!-- End .hero-wrapper -->
+		</section><!-- End #hp-hero -->
+
+		<section id="my-story-section">
+			<div class="float-wrapper responsive-wrapper wrapper-large">
+				<div id="hover-circle" class="section-image float-left">
+					<img src="/site15/assets/history_bw.jpg" alt="" role="presentation" />
+					<div class="webkit-radius-fix">
+						<img src="/site15/assets/history_color.jpg" alt="" role="presentation" />
+					</div>
+					<div class="my-story-image-description highlight">
+						<p class="raleway white-text">Professional Design<br/>on a deadline</p>
+					</div>
+				</div><!-- End #hover-circle -->
+				<div id="about-text" class="section-text float-right">
+					<h4 class="raleway white-text">A bit about my experience</h4>
+					<p class="raleway white-text">I&rsquo;ve been involved in the graphic design field since the early 2000s and moved over to web development in 2007 at the Naples Daily News. There I was given the chance to wear many hats, among them being web designer and web developer. Working for NDN provided a solid foundation which allowed me to move into a Senior Web Designer role at Sony Electronics. At Sony, I didn't just add to my coding experience, but I also gained knowledge in the business aspects of web design and development. The experience I gained from both Sony and NDN have allowed me to apply those talents today at Chico's as a Front End Developer.</p>
+					<p class="raleway white-text">I’m always on the lookout for new opportunities that will provide me a chance to learn and expand my talents in web development. <a href="https://www.linkedin.com/in/joe-prehoda-8040a325" tabindex="1">Feel free to check out my LinkedIn profile</a>.</p>
+				</div><!-- End .section-text -->
+			</div><!-- End .responsive-wrapper -->
+		</section><!-- End #my-story-section -->
+
+		<section id="what-i-know-section">
+			<div class="float-wrapper responsive-wrapper wrapper-large">
+				<div id="skill-text" class="section-text float-left">
+					<h4 class="raleway">Languages and Programs I know</h4>
+					<p class="raleway">Web Development, HTML, XHTML, HTML5, CSS, CSS3, JavaScript, jQuery, Angular, JSON, AJAX, SOAP, XML, REST, Bootstrap, Cross-browser compatibility, Responsive design, Media queries, PHP, Django, .Java, Git, SVN, SEO, ADA compliance, WordPress, Movable Type, Oracle’s ATG BCC, Filezilla, YouTube API, Facebook API, Twitter API, Pinterest API, Third party pixel integration, Email creation, Constant Contact, Wufoo, Survey Monkey, Omniture, Google Analytics, Google Tag Manager, Adobe Photoshop, Adobe Illustrator, Adobe Dreamweaver, Notepad++, Brackets, Jira, Trello, Zendesk, Agile, Scrum.</p>
+					<p class="raleway">I’m a pretty fast learner so if you have a proprietary system or something not in the list above, chances are I’ll pick it up pretty quickly. Interested in what you see here? <a href="#" tabindex="1">Drop me a line and let’s chat</a>.</p>
+				</div><!-- End .section-text -->
+				<div class="section-image float-right">
+					<img src="/site15/assets/past_employment.gif" alt="Tribune Media Services | Naples Daily News | Sony Electronics | Chicos FAS" />
+				</div><!-- End #hover-circle -->
+			</div><!-- End .responsive-wrapper -->
+		</section><!-- End #what-i-know-section -->
+	</main>
+
+	<footer class="wrapper_small float-wrapper">
+		<p class="float-left raleway white-text">All trademarks belong to their authoritative owners.</p>
+		<p class="float-right raleway">
+			<a href="#" class="toggle-modal" tabindex="1" aria-haspopup="true">Contact Me</a>
+			<span class="footer-divider white-text">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+			<a href="https://www.linkedin.com/in/joe-prehoda-8040a325" tabindex="1">View My LinkedIn profile</a>
+		</p>
+	</footer>
+
+							</code></pre>
+						</div>
+						<div class="modal-section max-height-adjust css">
+							<h2>CSS</h2>
+							<hr>
+							<pre><code>
+/***************************************************/
+/* GLOBALS */
+/***************************************************/
+body{
+	background-color:#f6efef;
+	font-size:14px;
+	margin: 0px;
+	padding:0px;
+}
+@media only screen and (min-width:1367px){
+	body{
+		font-size: 16px;
+	}
+}
+*:focus{
+	outline: 1px solid #7a9dff;
+}
+a{
+	text-decoration:none;
+	color:#7a9dff;
+}
+a:hover{
+	text-decoration:none;
+	color:#faa300;
+}
+.force-block{
+	width:100%;
+	height:auto;
+	display:block;
+}
+.responsive-wrapper{
+	width:98%;
+	max-width:1680px;
+	margin:0 auto;
+}
+.float-wrapper{
+	overflow:hidden;
+}
+.wrapper-large{
+	width:86%;
+	padding:5% 7%;
+}
+.wrapper-small{
+	padding:1%;
+}
+.wrapper-inset{
+	padding:5% 10%;
+	width:80%;
+}
+.float-right{
+	float:right;
+}
+.float-left{
+	float:left;
+}
+.relative-element{
+	position: relative;
+}
+.raleway{
+	font-family:Raleway, arial, sans-serif;
+	font-weight:400;
+}
+.raleway-bold{
+	font-weight:700;
+}
+.white-text{
+	color: #ffffff;
+}
+img{
+    width: 100%;
+    height:auto;
+}
+section{
+	width: 100%;
+	line-height: 0rem;
+}
+section h4{
+	font-size:2.15rem;
+	margin: 0% 0% 5% 0%;
+	padding: 0%;
+	font-weight: normal;
+	line-height: 1.5rem;
+}
+.hide-dt,
+.visible-sm{
+	display:none;
+}
+.disabled{
+	opacity: 0.25;
+}
+
+/***************************************************/
+/* NAVIGATION */
+/***************************************************/
+nav p{
+	font-size:1.7rem;
+	text-transform:uppercase;
+	margin: 0px;
+}
+nav img{
+	width: auto;
+	padding-top: .5%;
+}
+nav p a,
+nav p a:hover{
+	color:#ffffff;
+}
+#scroll-nav{
+	position:fixed;
+	opacity: .2;
+	transition: opacity .25s ease-in-out;
+}
+#scroll-nav:hover,
+#scroll-nav.scrolling{
+	opacity: 1;
+}
+#slide-nav{
+	position:fixed;
+	width:30%;
+	background-color:#ffffff;
+    transform: translateX(100%);
+    transition: transform .25s ease-in-out;
+    right:0px;
+    bottom:0%;
+	overflow: hidden;
+}
+#slide-nav ul,
+#slide-nav li{
+	display: block;
+	margin:0%;
+	padding:0%;
+	list-style: none;
+}
+#slide-nav li{
+	position: relative;
+}
+#slide-nav li a:hover{
+	background-color:#eeeeee;
+}
+#slide-nav li img{
+	display: block;
+	float: left;
+	width:30%;
+	max-width:32px;
+}
+#slide-nav li span{
+	display: block;
+	float: left;
+	width:60%;
+	margin-left: 5%;
+	vertical-align: top;
+	padding: 2% 0% 1%;
+	border-bottom: 1px solid #dddddd;
+}
+#slide-nav li a{
+	color:#555555;
+	padding: 4% 5% 5%;
+	display: block;
+	overflow:hidden;
+}
+#scroll-nav,
+#slide-nav{
+	z-index: 2;
+}
+#slide-nav.nav-clicked{
+	transform: translateX(0px);
+	overflow: auto;
+}
+#slide-nav ul ul{
+	display:none;
+}
+#slide-nav ul .active-nav-item ul{
+	display: block;
+}
+#slide-nav ul ul li{
+	padding-left:10%;
+	padding-right:0%;
+}
+#slide-nav ul ul li img{
+	transform: rotate(270deg);
+	padding-top:5%;
+	width:auto;
+	max-width: none;
+}
+
+/***************************************************/
+/* CONTACT FORM */
+/***************************************************/
+#contact-form {
+    z-index: 3;
+	display:none;
+}
+#contact-form.show-modal {
+	display:block;
+}
+#contact-form *:focus{
+    outline: 2px solid #7a9dff;
+}
+#contact-form .ng-invalid-required{
+	outline: 2px solid #ff3300;
+}
+.modal-body-mask{
+	background-color: #000000;
+	opacity: 0;
+	transition: opacity .25s ease-in-out;
+	position: absolute;
+	height: 0%;
+	width: 0%;
+	z-index:100;
+}
+.show-modal .modal-body-mask{
+	opacity: 0.6;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+}
+.contact-form-feilds{
+	width: 0%;
+	opacity: 0;
+	max-width:500px;
+	position: absolute;
+	padding: 2% 4%;
+	top:-1000px;
+	left:0;
+	right:0;
+	margin: 0 auto;
+	transition: opacity .5s ease-in-out;
+	background-color: #ffffff;
+	z-index: 101;
+}
+.show-modal .contact-form-feilds{
+	opacity: 1;
+	top:0%;
+	position: fixed;
+	width: 40%;
+}
+#contact-joe-prehoda{
+	margin:0;
+	padding:0;
+	display: none;
+}
+.contact-form-feilds h4{
+	line-height:3rem;
+}
+#contact-joe-prehoda fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+.contact-label{
+	height: 1px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: -500px;
+    width: 1px;
+}
+.contact-text-input,
+.contact-textarea{
+	font-size:.8rem;
+	line-height: 2.5rem;
+	margin: 0% 0% 5%;
+	padding: 0 3%;
+    width: 94%;
+	display: block;
+	height: auto;
+	background-color: #eeeeee;
+	border: 1px solid #dddddd;
+	min-height: 40px;
+}
+.contact-text-input:focus{
+	background-color: #dddddd;
+	border: 1px solid #cccccc;
+}
+.contact-textarea{
+	height:5%;
+	line-height: 2rem;
+    padding-top: 2%;
+	min-height: 75px;
+}
+.captcha-error{
+	display:none;
+	color: #ff3300;
+	position: absolute;
+	font-size:1rem;
+	top: -.9rem;
+	left:0%;
+	margin:0%;
+	padding:0%;
+}
+.show-captcha-error{
+	display: block;
+}
+.close-contact-form{
+	position: absolute;
+	right: -9%;
+    top: -4.5%;
+	z-index: 102;
+	padding:2%;
+	font-size: 1.5rem;
+	line-height: 1rem;
+	cursor: pointer;
+	display: none;
+}
+.contact-submit-button{
+	font-size: 0.8rem;
+    line-height: 2.5rem;
+	border:1px solid #dddddd;
+	padding:0 5%;
+	margin-bottom:5%;
+}
+.show-modal .close-contact-form,
+.show-modal #contact-joe-prehoda{
+	display: block;
+}
+.contact-thank-you{
+	padding: 40% 0;
+	text-align:center;
+	line-height: 2rem;
+}
+
+/***************************************************/
+/* FOOTER */
+/***************************************************/
+footer{
+	background-color:#000000;
+}
+footer p{
+	padding: 0 7%;
+}
+
+/***************************************************/
+/* TABLET LANDSCAPE ADJUSTMENTS */
+/***************************************************/
+@media only screen and (max-width:1024px){
+	.wrapper-large{
+		width:90%;
+		padding:5%;
+	}
+	.wrapper-inset{
+		padding:5% 7%;
+		width:86%;
+	}
+	.show-modal .contact-form-feilds{
+		width: 70%;
+		overflow: auto;
+	}
+	.close-contact-form{
+		right: 0%;
+		top: 0%;
+	}
+	#slide-nav{
+		overflow: auto;
+	}
+}
+
+/***************************************************/
+/* TABLET PORTRAIT ADJUSTMENTS */
+/***************************************************/
+@media only screen and (max-width:991px){
+	.hide-dt{
+		display:block;
+	}
+	.hide-tp{
+		display:none;
+	}
+	#slide-nav{
+		width: 70%;
+	}
+	footer p {
+		padding: 0 5%;
+	}
+}
+
+/***************************************************/
+/* PHONE LANDSCAPE ADJUSTMENTS */
+/***************************************************/
+@media only screen and (max-width:767px){
+	footer p.float-left,
+	footer p.float-right{
+		float:none;
+		text-align: center;
+	}
+	#scroll-nav .responsive-wrapper{
+		width: 90%;
+    	padding: 5%;
+	}
+}
+
+/***************************************************/
+/* PHONE PORTRAIT ADJUSTMENTS */
+/***************************************************/
+@media only screen and (max-width:415px){
+	#slide-nav{
+		width: 90%;
+	}
+	section h4{
+		line-height: 2.5rem;
+	}
+	.show-modal .contact-form-feilds{
+		width: 90%;
+	}
+	.contact-text-input, .contact-textarea{
+		width: 88%;
+	}
+	#scroll-nav img{
+		padding-top: 1.75%;
+		padding-right: 2%;
+	}
+}
+
+/***************************************************/
+/* PHONE PORTRAIT ADJUSTMENTS */
+/***************************************************/
+@media only screen and (max-width:340px){
+	.visible-sm{
+		display: block;
+	}
+}							</code></pre>
+						</div>
+						<div class="modal-section max-height-adjust js">
+							<h2>JavaScript</h2>
+							<hr>
+							<pre><code>
+							
+'use strict';
+
+/* SWITH LAYOUT DESIGN EVERY 20 Seconds */
+if(!$('body').hasClass('no-layout-switch')){
+	window.setInterval(function(){
+		$('body').toggleClass('alt-layout');
+	}, 20000);
+}
+
+/* NAVIGATION SETUP */
+$(window).on('scroll', function(){
+	if (this.pageYOffset >= 1) {
+		if(!$('#scroll-nav').hasClass('scrolling')){
+			$('#scroll-nav').addClass('scrolling');
+		}
+	} else {
+		if($('#scroll-nav').hasClass('scrolling')){
+			$('#scroll-nav').removeClass('scrolling');
+		}
+	}
+});
+
+$('.operate-nav').on('click', function(e){
+	var $destinationAnchor = $(this).attr('data-anchor');
+	e.preventDefault();
+	$('html,body').animate({
+		scrollTop: $($destinationAnchor).offset().top - (parseInt($('#scroll-nav').css('height')) * 2)
+	}, 500);
+	if($('#slide-nav').hasClass('nav-clicked')){
+		$('#slide-nav').removeClass('nav-clicked');
+	}
+});
+
+var setSlideHeight = function(){
+	return $('#slide-nav').css('height', (window.innerHeight - parseInt($('#scroll-nav').css('height'))) + 'px');
+}
+
+setSlideHeight();
+
+$(window).on('orientationchange resize', function(){
+	setSlideHeight();
+});
+
+$('body').on('click', function(){
+	if($('#slide-nav').hasClass('nav-clicked')){
+		$('#slide-nav').removeClass('nav-clicked');
+	}
+});
+
+$('.toggle-nav').on('click', function(e){
+	e.preventDefault();
+	e.stopPropagation();
+	$('#slide-nav').toggleClass('nav-clicked');
+});
+
+$('.archive-nav').on('click', function(e){
+	e.preventDefault();
+	e.stopPropagation();
+	$(this).parent().toggleClass('active-nav-item');
+});
+
+
+/* CONTACT FORM SETUP */
+if(window.location.search.indexOf('formSubmit=true') >= 0 && $('#contact-form').length > 0){
+	$('#contact-form').addClass('show-modal');
+}
+
+$('.toggle-modal').on('click', function(e){
+	e.preventDefault();
+	$('.modal').toggleClass('show-modal');
+});
+
+if(window.innerHeight < 768){
+	$('.modal').css('height', window.innerHeight +'px');
+}
+
+$('.contact-submit-button').on('click', function(e){
+	e.preventDefault();
+	var captchaPassed = true;
+
+	//CHECK IF RECAPTCHA HAS BEEN SELECTED
+	if((grecaptcha.getResponse()).length <= 0){
+		$('.captcha-error').show();
+		captchaPassed = false;
+		return false;
+	}
+	
+	if(captchaPassed){
+	   $("#contact-joe-prehoda").submit();
+	}
+});
+
+
+/* CIRCLE HOVER */
+$('#hover-circle').mouseover(function(){
+	$(this).addClass('circle-hovered');
+});
+$('#hover-circle').mouseout(function(){
+	$(this).removeClass('circle-hovered');
+});
+								}
+							</code></pre>
+						</div>
+					</div>
+					<div class="modal-nav">
+						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".about">About</a>
+						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+						<span>&#9656;</span><a href="#" class="toggle-modal">Close</a>
+					</div>
+				</div>

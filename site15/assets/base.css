@@ -169,7 +169,7 @@ nav p a:hover{
 #slide-nav ul ul{
 	display:none;
 }
-#slide-nav ul .active-nav-item + ul{
+#slide-nav ul .active-nav-item ul{
 	display: block;
 }
 #slide-nav ul ul li{
@@ -188,6 +188,10 @@ nav p a:hover{
 /***************************************************/
 #contact-form {
     z-index: 3;
+	display:none;
+}
+#contact-form.show-modal {
+	display:block;
 }
 #contact-form *:focus{
     outline: 2px solid #7a9dff;
@@ -195,7 +199,7 @@ nav p a:hover{
 #contact-form .ng-invalid-required{
 	outline: 2px solid #ff3300;
 }
-.contact-body-mask{
+.modal-body-mask{
 	background-color: #000000;
 	opacity: 0;
 	transition: opacity .25s ease-in-out;
@@ -204,7 +208,7 @@ nav p a:hover{
 	width: 0%;
 	z-index:100;
 }
-.show-contact .contact-body-mask{
+.show-modal .modal-body-mask{
 	opacity: 0.6;
 	position: fixed;
 	height: 100%;
@@ -224,7 +228,7 @@ nav p a:hover{
 	background-color: #ffffff;
 	z-index: 101;
 }
-.show-contact .contact-form-feilds{
+.show-modal .contact-form-feilds{
 	opacity: 1;
 	top:0%;
 	position: fixed;
@@ -305,8 +309,8 @@ nav p a:hover{
 	padding:0 5%;
 	margin-bottom:5%;
 }
-.show-contact .close-contact-form,
-.show-contact #contact-joe-prehoda{
+.show-modal .close-contact-form,
+.show-modal #contact-joe-prehoda{
 	display: block;
 }
 .contact-thank-you{
@@ -337,7 +341,7 @@ footer p{
 		padding:5% 7%;
 		width:86%;
 	}
-	.show-contact .contact-form-feilds{
+	.show-modal .contact-form-feilds{
 		width: 70%;
 		overflow: auto;
 	}
@@ -377,7 +381,10 @@ footer p{
 		float:none;
 		text-align: center;
 	}
-
+	#scroll-nav .responsive-wrapper{
+		width: 90%;
+    	padding: 5%;
+	}
 }
 
 /***************************************************/
@@ -390,7 +397,7 @@ footer p{
 	section h4{
 		line-height: 2.5rem;
 	}
-	.show-contact .contact-form-feilds{
+	.show-modal .contact-form-feilds{
 		width: 90%;
 	}
 	.contact-text-input, .contact-textarea{

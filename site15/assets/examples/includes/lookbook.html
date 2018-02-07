@@ -1,0 +1,915 @@
+				<div id="drawer-promo-example" class="inline-modal-content">
+					<div class="modal-sections relative-element">
+						<div class="modal-section about">
+							<h2>ABOUT</h2>
+							<hr>
+							<img src="/site15/assets/examples/lookbook.jpg" alt="Lookbook Code" />
+							<p>This was my first project with dynamic product placement using ajax on json data for Chico's. Originally I was worried that the mobile version of this experience would be incredibly heavy on page load. But I thought of a solution to create the product information on the fly. This meant that the carousel information was only updated if the user decided to keep going through the carousel to look at more product. The experience can be viewed on the <a href="https://web.archive.org/web/20150910235448/https://www.whitehouseblackmarket.com/store/page.jsp?id=110411174" target="_blank">wayback machine</a>. I later improved this code with Chico's release of Black Label. The reason for the small amount of HTML is because they were looking for quick turn around on product updates. I was able to provide and experience that could be updated in one day.</p>
+							<p>Looking back, the majority of this project should have been handled by the back end, providing the products assigned to the outfit, but given the project list at the time, this was considered a low priority.</p>
+						</div>
+						<div class="modal-section max-height-adjust html">
+							<h2>HTML</h2>
+							<hr>
+							<pre><code>
+<!-- ?ver=1 -->
+<div class="moovweb_landingPage">
+<div class="moovweb_tablet">
+
+	<!--------------------------------------------------------------------------------
+		WHBM QUICK VIEW INCLUDE START
+	--------------------------------------------------------------------------------->
+	<!-- javascript files -->
+	<script src="/web_assets/js/vendor/jquery-1.11.1.min.js"></script>
+	<script src="/web_assets/js/vendor/ratings_and_reviews/BazaarVoiceRatings.js"></script>
+	<script src="/web_assets/js/vendor/product_videos/video.js"></script>
+	<script src="/web_assets/js/vendor/product_videos/KSCTechnologiesProductVideo.js"></script>
+	<script src="/web_assets/js/pages/ProductDetails.js"></script>
+	<script src="/web_assets/js/utils/ProductZoomTool.js"></script>
+	<script type="text/javascript" src="//cdn.gigya.com/js/gigya.js?apiKey=3_jZBj6-x5ZSGBi9PL5RDx-h1xXuYrboch29lyWmiIQL9SIKbR220HwLAvwIoAJyqE"></script>
+	<script type="text/javascript" src="/web_assets/js/gigya/whbm_gigya.js"></script>
+	<!-- CSS files -->
+	<link href="/web_assets/css/foundation.css" rel="stylesheet" type="text/css">
+	<link href="/web_assets/css/pages/product_details.css" rel="stylesheet" type="text/css">
+	<link href="/web_assets/css/pages/product_details_brand.css" rel="stylesheet" type="text/css">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<!--------------------------------------------------------------------------------
+		WHBM QUICK VIEW INCLUDE END
+	--------------------------------------------------------------------------------->
+
+	<script type="text/javascript" src="/web_assets/js/sm.1.3.js"></script>
+	<script type="text/javascript" src="/web_assets/js/productLoad.js?ver=1"></script>
+	<script type="text/javascript" src="/web_assets/js/ui/jquery.sliderMain.1.3.js"></script>
+	<script type="text/javascript" src="/web_assets/js/jquery.touchwipe.1.1.2.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="/web_assets/projects/2015/lookbook/lookbook.css?ver=1" />
+	<script type="text/javascript" src="/web_assets/projects/2015/lookbook/lookbook.js?ver=1"></script>
+
+	<div id="lp-wrapper">
+
+		<div id="back-top-wrapper">
+			<img src="/web_assets/ui/icon_backToTop.png" alt="Back to top" />
+		</div><!-- div wrapper is needed to fix ie png transparency -->
+
+		<div id="click-shop-wrapper">
+			<img src="/web_assets/projects/2015/lookbook/img/click_to_shop.png" alt="Click to Shop" />
+		</div><!-- div wrapper is needed to fix ie png transparency -->
+
+		<div id="lp-container">
+
+			<h1 id="header-title"><img src="/web_assets/projects/2015/lookbook/img/title.png?ver=1" alt="White House | Black Market: The Lookbook" /><span class="na-title">Shop The Collection<img src="/web_assets/projects/2015/lookbook/img/title_arrow.png?ver=1" alt="" /></span></h1>
+
+			<div id="products-container"><!-- see lookbook.js for products --></div><!-- End #products-container -->
+
+			<h1 id="footer-title"><img src="/web_assets/projects/2015/lookbook/img/title.png?ver=1" alt="White House | Black Market: The Lookbook" /><span class="na-title">Shop The Collection<img src="/web_assets/projects/2015/lookbook/img/title_arrow.png?ver=1" alt="" /></span></h1>
+
+		</div><!-- End #lp-container -->
+
+	</div><!-- End #lp-wrapper -->
+
+</div><!-- End .moovweb_tablet -->
+</div><!-- End .moovweb_landingPage -->
+							</code></pre>
+						</div>
+						<div class="modal-section max-height-adjust css">
+							<h2>CSS</h2>
+							<hr>
+							<pre><code>
+							/* OVERRIDE DEFAULTS
+******************************/
+#content, #main-content{
+	width:100%;
+	max-width:1000px;
+	margin: 0 auto;
+}
+#dtmdiv{
+display:none;
+}
+
+/* CONTENT
+******************************/
+#lp-wrapper{
+	font-family: Arial;
+	position:relative;
+	visibility:hidden;
+	*overflow:auto;
+}
+#lp-wrapper h1{
+	font-weight:normal;
+	color:#000;
+	text-align:center;
+	margin:43px 0 22px;
+	padding:0;
+	letter-spacing:2px;
+	text-transform:uppercase;
+}
+#lp-wrapper a, #lp-wrapper a:hover{
+	text-decoration:none;
+}
+#lp-wrapper h1 > img{
+	position:relative;
+	left:0%;
+}
+.na-title{
+	padding-left:2%;
+	vertical-align: middle;
+}
+.na-title img{
+	padding-left:.5%;
+	position:relative;
+	right:0%;
+}
+#lp-wrapper h1#footer-title{
+	margin:22px 0 43px;
+}
+#back-top-wrapper{
+	display:none;
+	position: fixed;
+	top: 235px;
+	margin-left: 1025px;
+	z-index: 4;
+}
+#click-shop-wrapper{
+	opacity:0;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	position: absolute;
+	left: 0;
+	z-index: 4;
+}
+#products-container{
+	min-height:1000px;
+}
+.outfit{
+	position: relative;
+	width: 100%;
+	height:560px;
+	margin-bottom: 5px;
+	overflow:hidden;
+}
+.spacer{
+	width:100%;
+	height:100%;
+	border:none;
+	display:block;
+}
+#back-top-wrapper,
+.outfit > img,
+.arrowUp,
+.arrowDown,
+.close-drawer,
+.products .slp-details,
+.products .slp-image,
+.spacer{
+	cursor:pointer;
+}
+
+/* PRODUCT DRAWER STYLES
+******************************/
+.outfit-drawer{
+	width:34%;
+	height:99.7%;
+	display:block;
+	position:absolute;
+	top:0;
+	right:-34%;
+	background:white;
+	border: 1px solid #ddd;
+	color: #000000;
+	overflow: hidden;
+}
+.close-drawer{
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #000;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-align: right;
+	padding-top: 4%;
+	padding-right: 4%;
+	position:relative;
+	z-index:2;
+}
+.products{
+	margin: 0;
+	padding: 0 5%;
+	position: relative;
+	overflow:hidden;
+	height:91%
+}
+.slp-template{
+	top:0;
+	border-bottom: 1px solid #CECECE;
+	list-style-type: none;
+	margin-bottom: 6%;
+	padding-bottom: 6%;
+	position: relative;
+	overflow: auto;
+	z-index:1;
+}
+.slp-template:last-child{
+	border-bottom: none;
+}
+.slp-image{
+	width:37.4%;
+	float:left;
+}
+.slp-info{
+	float: left;
+	font-size: 125%;
+	padding: 5%;
+	width: 52.6%;
+	line-height: 150%;
+}
+.slp-info a{
+	text-decoration:none;
+}
+.slp-details{
+	padding-top:15%;
+}
+.arrowUp{
+	padding:5% 20% 0%;
+	position:absolute;
+	left:27%;
+	z-index:3;
+	top:0;
+}
+.arrowDown{
+	padding:0% 20% 2%;
+	position:absolute;
+	z-index:2;
+	bottom:0;
+	left:27%;
+}
+
+/* SOCIAL
+******************************/
+.social-icon{
+	position:absolute;
+	bottom:2%;
+	background-image:url('/web_assets/projects/2015/lookbook/img/social_black_sprite.png');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	height:26px;
+	width:24px;
+}
+.white-social{
+	background-image:url('/web_assets/projects/2015/lookbook/img/social_white_sprite.png');
+}
+.social-icon:hover{
+	background-position: 0 -26px;
+}
+.pinterest{
+	left:1.8%;
+}
+.facebook{
+	left:5.6%;
+	background-position: -38px 0;
+}
+.facebook:hover{
+	background-position: -38px -26px;
+}
+.twitter{
+	left:9.2%;
+	background-position: -74px 0;
+}
+.twitter:hover{
+	background-position: -74px -26px;
+}
+
+/* PHONE FIXES
+******************************/
+@media only screen and (max-device-width: 767px){
+	#lp-wrapper h1{
+		margin-top:0;
+	}
+	#lp-wrapper h1 > img {
+		display:block;
+		position:static;
+		left:auto;
+	}
+	h1 .na-title{
+		font-weight: normal;
+		font-size:50%;
+		padding: 0;
+		letter-spacing:2px;
+		position:static;
+	}
+	.slider-wrapper{
+		position:relative;
+	}
+	.pager{
+		width:100%;
+		text-align:center;
+	}
+	.shop-look{
+		width:100%;
+	}
+	.loading-gif{
+		width:47px;
+		height:39px;
+		margin: 35% auto 0;
+		display: block;
+	}
+	.loading-wrapper{
+		position:absolute;
+		width:100%;
+		height:100%;
+		background-color:#fff;
+		top:0;
+		left:0;
+	}
+	.slp-image{
+		float:none;
+		width:55%;
+		margin:0 auto;
+		display:block;
+	}
+	.slp-info {
+		float:none;
+		text-align:center;
+		font-size:110%;
+		line-height:125%;
+		padding:2% 0 0;
+		margin: 0 auto;
+	}
+	.pager{
+		margin-bottom:5%;
+	}
+	.usl-pagerItems{
+		color:#d7d7d7;
+		font-size:36px !important;
+		padding: 0 3% !important;
+	}
+	.usl-currentThumb{
+		color:#000000;
+	}
+	.social-icon {
+		bottom:4%;
+	}
+	.pinterest{
+    	left: 3%;
+	}
+	.facebook {
+    	left: 15%;
+	}
+	.twitter {
+    	left: 27%;
+	}
+}
+
+/* TABLET FIXES
+******************************/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait){
+	.mw_tablet .outfit{
+		height:430px;
+	}
+	.mw_tablet #back-top-wrapper{
+		margin-left: 718px;
+	}
+	.mw_tablet .slp-info{
+		font-size:90%;
+	}
+	.mw_tablet .slp-details{
+		padding-top:10%;
+	}
+	.mw_tablet .slp-image{
+		width:30%;
+	}
+	.mw_tablet .slp-info{
+		width: 57.6%;
+	}
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape){
+	.mw_tablet #page-content-nonav{
+		margin: 0 auto;
+	}
+	.mw_tablet #back-top-wrapper{
+		margin-left: 945px;
+	}
+	.mw_tablet .slp-info{
+		font-size:100%;
+	}
+}
+.mw_tablet #content, .mw_tablet #lp-wrapper{
+	margin-top:60px;
+}
+.mw_tablet #footer{
+	background-color:#000;
+}
+.mw_tablet #footer.mw_new_footer #whbm-footer-parent{
+	margin:0 20px;
+}
+							</code></pre>
+						</div>
+						<div class="modal-section max-height-adjust js">
+							<h2>JavaScript</h2>
+							<hr>
+							<pre><code>
+							/* START VARIABLES THAT NEED TO BE CHANGED EACH LAUNCH
+**********************************************************************************************************/
+
+// PRODUCT IDS GO HERE. IF THEY HAVE A PINUP, ADD ext# AFTER THE ID
+var products = [
+'#outfit1 .products,570157998ext4:570158588ext4:570151122ext4:570126828ext4:570158147ext4',
+'#outfit2 .products,570157998ext4:570159549ext4:570159325ext4:570162677ext4:570159628ext4:570158145ext4',
+'#outfit3 .products,570160471ext4:570158532ext4:570162307ext4:570161185ext4:570158147ext4',
+'#outfit4 .products,570158298ext4:570158588ext4:570156830ext4:570159563ext4:570158147ext4',
+'#outfit5 .products,570157996ext4:570159318ext4:570159250ext4:570153214ext4:570164389ext4:570152137ext1',
+'#outfit6 .products,570157927ext4:570158311ext4:570160164ext4:570161031ext4:570158145ext4',
+'#outfit7 .products,570157034ext4:570158588ext4:570156830ext4:570126828ext4:570163666ext4:570157179ext4',
+'#outfit8 .products,570158975ext4:570162673ext4:570159413ext4:570158569ext4:570158536ext4',
+'#outfit9 .products,570159640ext4:570158339ext4:570159876ext4:570159805ext4:570160506ext4',
+'#outfit10 .products,570158002ext4:570160230ext4:570160164ext4:570160780ext4:570161897ext4'
+];
+
+//PINTEREST DESCRIPTION FOLLOWED BY PRODUCT ID THAT PINTEREST WILL LINK TO
+var socialDesc =[
+["Fuse unexpected pairings and luxe styling this season. #whbm","//www.whitehouseblackmarket.com/store/product/soft-drape-wide-leg-pants/570151122?color=1271&catId=cat210003&fromSearch=true&scPos=1-1501-3854"],
+["Add a ladylike feel with a touch of lace. #whbm","//www.whitehouseblackmarket.com/store/product/scalloped-lace-crop-bodice/570159549?color=001&catId=cat210001&fromSearch=true&scPos=3-6801-7361"],
+["Get personal with an initial charm. #whbm","//www.whitehouseblackmarket.com/store/category/initial-necklaces/cat7159281"],
+["Add a sparkle of champagne with shimmer suede. #whbm","//www.whitehouseblackmarket.com/store/product/olivia-shimmer-suede-heels/570158147?color=1111&catId=&fromSearch=true&scPos=1-0-0"],
+["Go the extra mile with long layers. #whbm","//www.whitehouseblackmarket.com/store/product/pleated-bib-tunic/570159318?color=001&catId=cat9109282&fromSearch=true&scPos=1-1001-1792"],
+["Define your look with a sleek bustier. #whbm","//www.whitehouseblackmarket.com/store/product/asymmetrical-hem-bustier/570158311?color=001&catId=cat7359275&fromSearch=true&scPos=2-5001-5200"],
+["Go with faux fur trims and metallic embellishments. #whbm","//www.whitehouseblackmarket.com/store/product/tweed-faux-fur-collar-vest/570157034?color=1292&catId=cat470054&fromSearch=true&scPos=1-901-1082"],
+["Bring the shine factor with glittering accessories. #whbm","//www.whitehouseblackmarket.com/store/product/glitter-minaudiere/570158569?color=1332&catId=cat210015&fromSearch=true&scPos=1-701-710"],
+["Mix textures and fabrics for a modern feel. #whbm","//www.whitehouseblackmarket.com/store/product/textured-tunic-sweater/570159640?color=1348&catId=cat6379289&fromSearch=true&scPos=1-2501-3140"],
+["Do a flattering asymmetric hem. #whbm", "//www.whitehouseblackmarket.com/store/product/asymmetrical-slit-tunic/570160230?color=1325&catId=cat470050&fromSearch=true&scPos=3-7201-7339"]
+];
+
+//PROJECT VERSION
+var projectVersion = 3;
+
+//PINTEREST CAMPAIGN FROM SOCIAL
+var pinterestCampaign = '';
+
+//OUTFIT NUMBERS THAT HAVE WHITE SOCIAL ICONS
+var outfitWhiteIcons = [1, 2, 4, 5, 6, 8, 9, 10];
+
+/* END VARIABLES THAT NEED TO BE CHANGED EACH LAUNCH
+**********************************************************************************************************/
+
+/* START GLOABAL VARIABLE/FUNCTIONS
+**********************************************************************************************************/
+var outfitHTML = '';
+
+//SET ICIDs
+function icidsSetter(icidName){
+    var s=s_gi(s_account);
+    s.tl(this,'o', icidName);
+}
+/* END GLOABAL VARIABLE/FUNCTIONS
+**********************************************************************************************************/
+
+if(window.matchMedia && window.matchMedia('(max-device-width: 767px)').matches){
+/* START MOBILE PHONE CODE
+**********************************************************************************************************/
+var slider_settings = [];
+var slider_thisEl = [];
+var initCounter = 0;
+var productCounter = 0;
+var sliderRatio = .875;
+
+function showProduct(slideId){
+    $(slideId).children('.loading-wrapper').fadeOut(750, function(){
+        $(this).remove();
+    });
+}
+
+    var slider_width = $('#lp-container').width();
+    var slider_height = slider_width * sliderRatio;
+
+    $('#lp-wrapper').html("<div id='lp-container'><h1><img src='/web_assets/projects/2015/lookbook/img/mob_title.png?ver=" + projectVersion + "' alt='White House | Black Market: The Lookbook' /><span class='na-title'><a href='/store/category/2015-fall-lookbook-collection/cat5189282?icid=LP_Lookbook_Holiday_2015_Mobile_Header_Shop Collections'>Shop The Collection<img src='/web_assets/projects/2015/lookbook/img/title_arrow.png?ver=" + projectVersion + "' alt='' /></span></a></h1></div>");
+    //BUILD OUTFIT HMTL
+    for(productCounter; productCounter < products.length; productCounter++){
+
+        //GET JUST PRODUCT IDS FROM PRODUCT LIST
+        var productIds = products[productCounter].split(/[,:]+/);
+        var slideHTML ='';
+        productIds.shift();
+
+        $.each(productIds,function(i,k){
+            slideHTML += "<div id='outfit" + (productCounter+1) + "_" + k + "' class='slide'><div class='loading-wrapper'><img class='loading-gif' src='/web_assets/skins/loading.gif' alt='Loading...' /></div><div class='products'></div></div>"
+        });
+
+        outfitHTML += "<div id='slider-wrapper" + productCounter + "' class='slider-wrapper'><div id='slider" + (productCounter+1) + "' class='outfit'><div id='outfit" + (productCounter+1) + "_intro' class='slide'><img src='/web_assets/projects/2015/lookbook/img/mob_outfit" + (productCounter+1) + ".jpg?ver=" + projectVersion + "' alt='" + socialDesc[productCounter][0] + "' class='shop-look' /><a data-type='pinterest' data-image='//www.whitehouseblackmarket.com/web_assets/projects/2015/lookbook/img/outfit" + (productCounter+1) + "_pin.jpg?ver=" + projectVersion + "' data-summary='" + socialDesc[productCounter][0] + "' href='" + socialDesc[productCounter][1] + pinterestCampaign + "' class='social-icon white-social pinterest' data-track='LP_Lookbook_Holiday_2015_Mobile_Outfit" + (productCounter+1) + "_Pinterest'><img src='/web_assets/global/spacer.gif' alt='Share on Pinterest' class='spacer' /></a><a data-type='facebook' data-image='//www.whitehouseblackmarket.com/web_assets/projects/2015/lookbook/img/outfit" + (productCounter+1) + "_pin.jpg?ver=" + projectVersion + "' data-summary='" + socialDesc[productCounter][0] + "' href='" + socialDesc[productCounter][1] + pinterestCampaign + "' class='social-icon white-social facebook' data-track='LP_Lookbook_Holiday_2015_Mobile_Outfit" + (productCounter+1) + "_Facebook'><img src='/web_assets/global/spacer.gif' alt='Share on Facebook' class='spacer' /></a><a data-type='twitter' data-summary='" + socialDesc[productCounter][0] + "' href='" + socialDesc[productCounter][1] + pinterestCampaign + "' class='social-icon white-social twitter' data-track='LP_Lookbook_Holiday_2015_Mobile_Outfit" + (productCounter+1) + "_Twitter'><img src='/web_assets/global/spacer.gif' alt='Share on Twitter' class='spacer' /></a></div>" + slideHTML + "</div><div class='pager'></div></div>";
+    }
+
+    $('#lp-container').append(outfitHTML);
+
+    //GIVE THE SLIDER AND SLIDES THIER INITIAL HIEGHT AND WIDTH
+    $('.outfit, .slide').css('width', slider_width + 'px');
+    $('.outfit, .slide').css('height', slider_height + 'px');
+    $('#lp-wrapper').css('visibility', 'visible');
+
+    $.each(products,function(i,k){
+        //INITIALIZE ULSLIDE PLUGIN FOR EACH OUTIFT
+        $('#slider'+(i+1)).ulslide({
+            width: slider_width,
+            height: slider_height,
+            autoPager:'#slider-wrapper'+i+' .pager',
+            duration: 750,
+            easing:'easeInOutQuad',
+            onAnimateStart: function(settings, thisEl){
+                slider_settings.push(settings);
+                slider_thisEl.push(thisEl);
+                if (initCounter > products.length - 1){
+                    var $sliderId = $(slider_thisEl[i]).attr('id');
+                    var $currentSlideId = '#' + $('#' + $sliderId + ' .slide').eq(slider_settings[i].current).attr('id');
+                    var slideProductId = $currentSlideId.split('_');
+                    var productArray =  [$currentSlideId + ' .products,' + slideProductId[1]];
+                    icidsSetter('LP_Lookbook_Holiday_2015_Mobile_Slideto_' + $currentSlideId.replace('#','') + '_Slide')
+                    if($($currentSlideId + ' img').hasClass('loading-gif')){
+                        $($currentSlideId).productLoad({
+                            width:false,
+                            link_text:'',
+                            icid_img_suffix: '_Image',
+                            icid_autoSlide:false,
+                            icid_text_suffix: '_Text',
+                            icid_prefix:'LP_Lookbook_Holiday_2015_Mobile',
+                            prod_array: productArray,
+                            currency_prefix:'$',
+                            cleanup: false,
+                            template:'<div class="slp-template"><a class="slp-image" href="#"></a><div class="slp-info"><div class="slp-name"><a class="slp-name-link" href="#"></a></div><div class="slp-price"><a class="slp-price-link" href="#"></a></div></div></div>',
+                            link_targets:'.slp-link,.slp-image,.slp-name-link,.slp-price-link',
+                            onComplete: showProduct($currentSlideId)
+                        });
+                    }
+                }
+                initCounter++;
+            }
+        });
+
+        //INTIALIZE THE PLUGIN FOR SWIPE RECOGNITION
+        $('#slider'+(i+1)).touchwipe({
+            wipeLeft: function(e) {
+                e.preventDefault();
+                slider_settings[i].gotoNext();
+                return false;
+            },
+            wipeRight: function(e) {
+                e.preventDefault();
+                slider_settings[i].gotoPrev();
+                return false;
+            },
+            min_move_x: 20,
+            min_move_y: 20,
+            preventDefaultEvents: false
+        });
+    });
+
+    //UPDATE THE SLIDER'S WIDTH AND HEIGHT EVERY TIME THE WINDOW ORIENTATION CHANGES FOR TABLET/PHONE
+    $(window).bind('orientationchange resize', function() {
+        $('.outfit, .slide').css('width', $('#lp-container').width() + 'px');
+        $('.outfit, .slide').css('height', ($('.outfit').width() * sliderRatio) + 'px');
+        $(".slide:not('.usl-currentSlide')").css('left', '-' + $('#lp-container').width() + 'px');
+        initCounter = 0;
+        $.each(products,function(i,k){
+            slider_settings[i].width = $('.outfit').width();
+            slider_settings[i].height = $('.outfit').height();
+            slider_thisEl[i].currentHeight = $('.outfit').height();
+            slider_thisEl[i].uslRefresh();
+        });
+    });
+
+    //PINTEREST SHARE
+    $('.social-icon').click(sm_click);
+
+
+} else {
+/* START DESKTOP/TABLET CODE
+**********************************************************************************************************/
+var checkAnimate = false;
+var total_products, max_distance, curr_distance, $drawerWidth;
+var drawerMinDistance = 0;
+var omni_tracking = [];
+for (var i = 0; i < 10; i++){
+    omni_tracking[i] = false;
+}
+var has_tracked = 0;
+var scroll_percent = 0;
+var buttonIsStopped = false;
+
+
+// END SCROLL EXTENSION http://bit.ly/1HivCGw
+$.fn.scrollEnd = function(callback, timeout) {
+  $(this).scroll(function(){
+    var $this = $(this);
+    if ($this.data('scrollTimeout')) {
+      clearTimeout($this.data('scrollTimeout'));
+    }
+    $this.data('scrollTimeout', setTimeout(callback,timeout));
+  });
+};
+
+//ACTIONS FOR DRAWER DOWN BUTTON
+function arrowDown($activeArrow, $scrollHeight){
+
+    total_products = $activeArrow.siblings(".products").find(".slp-template").length;
+    max_distance = (total_products - 3) * - $scrollHeight;
+    curr_distance = parseInt($activeArrow.siblings(".products").find(".slp-template").eq(0).css('top'));
+
+    if (curr_distance > max_distance){
+        if (!checkAnimate){
+            checkAnimate = true;
+            icidsSetter('LP_Lookbook_Holiday_2015_' + $activeArrow.parents('.outfit').attr('id') + '_Drawer_Arrow_Down');
+
+            if (!$activeArrow.siblings('.arrowUp').is(':visible')){
+                $activeArrow.siblings('.arrowUp').css('display','block');
+            }
+
+            $activeArrow.parent().find('.products .slp-template').animate({top: "-=" + $scrollHeight}, function(){
+                checkAnimate = false;
+                curr_distance = parseInt($(this).css('top'));
+                if (curr_distance <= max_distance){
+                    $(this).parent('.products').siblings(".arrowUp").css('display','block');
+                    $(this).parent('.products').siblings(".arrowDown").css('display','none');
+                }
+            });
+        }
+    }
+}
+
+//ACTIONS FOR DRAWER UP BUTTON
+function arrowUp($activeArrow, $scrollHeight){
+
+    total_products = $activeArrow.siblings(".products").find(".slp-template").length;
+    curr_distance = parseInt($activeArrow.siblings(".products").find(".slp-template").eq(0).css('top'));
+
+    if (curr_distance <= drawerMinDistance){
+        if (!checkAnimate){
+            checkAnimate = true;
+            icidsSetter('LP_Lookbook_Holiday_2015_' + $activeArrow.parents('.outfit').attr('id') + '_Drawer_Arrow_Up');
+            if (!$activeArrow.siblings('.arrowDown').is(':visible')){
+                $activeArrow.siblings('.arrowDown').css('display','block');
+            }
+            $activeArrow.parent().find('.products .slp-template').animate({top: "+=" + $scrollHeight}, function(){
+                checkAnimate = false;
+                curr_distance = parseInt($(this).css('top'));
+                if (curr_distance >= drawerMinDistance){
+                    $(this).parent('.products').siblings('.arrowUp').css('display','none');
+                    $(this).parent('.products').siblings('.arrowDown').css('display','block');
+                }
+            });
+        }
+    }
+}
+
+function setArrows(){
+    $('.outfit-drawer').each(function(){
+
+        //DETERMINE IF DRAWERS NEED ARROWS
+        if ($(this).find('.slp-template').length > 3 ) {
+            $(this).append("<div class='arrowDown'><img src='/web_assets/projects/2015/lookbook/img/drawer_down_arrow.png' alt='Arrow Down' /></div>");
+            $(this).prepend("<div class='arrowUp' style='display:none'><img src='/web_assets/projects/2015/lookbook/img/drawer_up_arrow.png' alt='Arrow Up' /></div>");
+        }
+
+        //SET DRAWER ARROW CLICK
+        $('.arrowDown').bind('click', function(){
+            arrowDown($(this), $(this).siblings('.products').children('.slp-template').eq(0).outerHeight(true));
+        });
+        $('.arrowUp').bind('click', function(){
+            arrowUp($(this), $(this).siblings('.products').children('.slp-template').eq(0).outerHeight(true));
+        });
+
+        return true;
+    });
+}
+
+//RESET DRAWER SCROLL AND DRAWER ARROWS
+function resetDrawer(){
+    $(".arrowUp").css('display','none');
+    $(".arrowDown").css('display','block');
+    $('.slp-template').animate({top: 0}, {duration: 750, queue: false, easing: 'easeInOutQuart'});
+    return false;
+}
+
+//FIX TRANSPARENCY ISSUE FOR IE
+function msiePNGfix() {
+    //check user agent string for MSIE
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)){
+        //IE PNG FADE FIX
+        var i;
+        for (i in document.images) {
+            if (document.images[i].src) {
+                var imgSrc = document.images[i].src;
+                if (imgSrc.substr(imgSrc.length-4) === '.png' || imgSrc.substr(imgSrc.length-4) === '.PNG') {
+                    document.images[i].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='crop',src='" + imgSrc + "')";
+                }
+            }
+        }
+    }
+   return false;
+}
+
+
+    var btp_default_pos = parseInt($('#back-top-wrapper').css('top'));
+    var btp_offset = Math.abs(btp_default_pos+$('#back-top-wrapper').height());
+
+    //BUILD OUTFIT HMTL
+    for(var i=0; i < products.length; i++){
+
+        var socialColor = (($.inArray((i+1), outfitWhiteIcons) != -1) ? 'white-social' : '');
+
+        outfitHTML += "<div id='outfit" + (i+1) + "' class='outfit'><img src='/web_assets/projects/2015/lookbook/img/outfit" + (i+1) + ".jpg?ver=" + projectVersion + "' alt='" + socialDesc[i][0] + "' class='shop-look' /><div class='outfit-drawer'><div class='close-drawer'>CLOSE</div><div class='products'></div></div><a data-type='pinterest' data-image='//www.whitehouseblackmarket.com/web_assets/projects/2015/lookbook/img/outfit" + (i+1) + "_pin.jpg?ver=" + projectVersion + "' data-summary='" + socialDesc[i][0] + "' href='" + socialDesc[i][1] + pinterestCampaign + "' class='social-icon pinterest " + socialColor + "' data-track='LP_Lookbook_Holiday_2015_Outfit" + (i+1) + "_Pinterest'><img src='/web_assets/global/spacer.gif' alt='Share on Pinterest' class='spacer' /></a><a data-type='facebook' data-image='//www.whitehouseblackmarket.com/web_assets/projects/2015/lookbook/img/outfit" + (i+1) + "_pin.jpg?ver=" + projectVersion + "' data-summary='" + socialDesc[i][0] + "' href='" + socialDesc[i][1] + pinterestCampaign + "' class='social-icon facebook " + socialColor + "' data-track='LP_Lookbook_Holiday_2015_Outfit" + (i+1) + "_Facebook'><img src='/web_assets/global/spacer.gif' alt='Share on Facebook' class='spacer' /></a><a data-type='twitter' data-summary='" + socialDesc[i][0] + "' href='" + socialDesc[i][1] + pinterestCampaign + "' class='social-icon twitter " + socialColor + "' data-track='LP_Lookbook_Holiday_2015_Outfit" + (i+1) + "_Twitter'><img src='/web_assets/global/spacer.gif' alt='Share on Twitter' class='spacer' /></a></div>";
+
+        //FINAL LOOP ITERATION
+        if(i === products.length - 1){
+            // FILL IN HTML
+            $('#products-container').html(outfitHTML);
+
+            // SHOW EXPERIENCE
+            $('#lp-wrapper').css('visibility', 'visible');
+
+            // PLACE SHOP LOOK ARROW
+            var shopWrapperOffset = ($('#header-title').outerHeight(true)+($('.outfit:first-child').height()/2)) - ($('#click-shop-wrapper').height()/2) - parseInt($('#header-title').css('margin-top'));
+            $('#click-shop-wrapper').css('top', shopWrapperOffset);
+
+            // GET RESPONSIVE DRAWER WIDTH AND UPDATE IT EACH TIME THE ORIENTATION CHANGES
+            $drawerWidth = $('.outfit-drawer').width() + 2;
+            $('.outfit-drawer').not( ".active" ).css('right', '-' + $drawerWidth + 'px' );
+            $(window).bind("orientationchange", function() {
+                $drawerWidth = $('.outfit-drawer').width() + 2;
+                $('.outfit-drawer').not( ".active" ).css('right', '-' + $drawerWidth + 'px' );
+
+            });
+
+        }
+    }
+
+    $(window).scrollEnd(function(){
+        $('#click-shop-wrapper').animate({opacity: 0}, 500);
+    }, 2000);
+
+    //SCROLL BACK TO TOP OF PAGE
+    $('#back-top-wrapper').click(function (){
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
+        icidsSetter('LP_Lookbook_Holiday_2015_Back_To_Top');
+        return false;
+    });
+
+    //PRODUCT LOAD USING productLoad.js PLUGIN
+    $('#products-container').productLoad({
+        width:false,
+        icid_prefix:'LP_Lookbook_Holiday_2015',
+        link_text:'&rsaquo; SEE DETAILS',
+        icid_img_suffix: '_Image',
+        icid_text_suffix: '_Text',
+        prod_array:products,
+        onComplete:setArrows,
+        currency_prefix:'$'
+    });
+
+    //OPEN OUTIFT DRAWER
+    $('.shop-look').bind('click', function(){
+        var $childDrawer = $(this).siblings('.outfit-drawer');
+        if(!$('.products .slp-template, .active').is(':animated')){
+
+            //SET ICID
+            icidsSetter('LP_Lookbook_Holiday_2015_Open_' + $(this).parent('.outfit').attr('id') + '_Drawer');
+
+            //RESET DRAWERS
+            resetDrawer();
+
+            if($childDrawer.hasClass('active')){
+                //close any open drawers
+                $('.active').animate({right: '-=' + $drawerWidth}, {duration: 750, queue: false, easing: 'easeInOutQuart'});
+                $('.outfit-drawer').removeClass('active');
+            }else{
+                //open the new drawer
+                $childDrawer.animate({right: '+=' + $drawerWidth}, {duration: 750, queue: false, easing: 'easeInOutQuart'});
+
+                //close any open drawers
+                $('.active').animate({right: '-=' + $drawerWidth}, {duration: 750, queue: false, easing: 'easeInOutQuart'});
+                $('.outfit-drawer').removeClass('active');
+                $childDrawer.addClass('active');
+            }
+        }
+        return false;
+    });
+
+    //CLOSE OUTIFT DRAWER
+    $('.close-drawer').bind('click', function(){
+        if(!$('.products .slp-template, .active').is(':animated')){
+
+            //SET ICID
+            icidsSetter('LP_Lookbook_Holiday_2015_Close_' + $(this).parents('.outfit').attr('id') + '_Drawer');
+
+            //CLOSE DRAWER
+            $('.active').animate({right: '-=' + $drawerWidth}, {duration: 750, queue: false, easing: 'easeInOutQuart'});
+            $(this).parent('.outfit-drawer').removeClass('active');
+
+            //RESET DRAWERS
+            resetDrawer();
+        }
+        return false;
+    });
+
+    //PINTEREST SHARE
+    $('.social-icon').click(sm_click);
+
+    //FIX PNG TRANSPARENCY
+    msiePNGfix();
+
+    //SHOW/HIDE PAGE SCROLL BUTTONS
+    $(window).scroll(function (){
+
+        if (($(this).scrollTop() - $('.outfit:first-child').offset().top) < 0){
+            if($('#click-shop-wrapper').css('position') == "fixed"){
+                $('#click-shop-wrapper').css({
+                    position: 'absolute',
+                    left: '0px',
+                    top: ($('#header-title').outerHeight(true)+($('.outfit:first-child').height()/2)) - ($('#click-shop-wrapper').height()/2) - parseInt($('#header-title').css('margin-top'))
+                });
+            }
+        } else {
+            if(($(this).scrollTop() - $('.outfit:last-child').offset().top) >= 0){
+                if($('#click-shop-wrapper').css('opacity') == 1){
+                    $('#click-shop-wrapper').animate({opacity: 0}, 500);
+                }
+            } else {
+                if($('#click-shop-wrapper').css('opacity') == 0){
+                    if ($('#click-shop-wrapper').css('position') != "fixed"){
+                        $('#click-shop-wrapper').css({
+                            position: 'fixed',
+                            left: 'auto',
+                            top: (($('.outfit:first-child').height())/2) - ($('#click-shop-wrapper').height()/2)
+                        });
+                        $('#click-shop-wrapper').animate({opacity: 1}, 500);
+                    } else {
+                        if($('#click-shop-wrapper').css('opacity') == 0){
+                            $('#click-shop-wrapper').animate({opacity: 1}, 500);
+                        }
+                    }
+                } else {
+                    if ($('#click-shop-wrapper').css('position') != "fixed"){
+                        $('#click-shop-wrapper').css({
+                            position: 'fixed',
+                            left: 'auto',
+                            top: (($('.outfit:first-child').height())/2) - ($('#click-shop-wrapper').height()/2)
+                        });
+                        $('#click-shop-wrapper').animate({opacity: 1}, 500);
+                    }
+                }
+            }
+
+        }
+
+        if(($(this).scrollTop() - ($('.outfit:first-child').height() + $('.outfit:first-child').offset().top)) >= 0){
+            if(!$('#back-top-wrapper').is(':visible')){
+                $('#back-top-wrapper').fadeIn();
+            }
+
+            var page_offset = Math.abs(($('#lp-container').offset().top-$(window).scrollTop())+$('#lp-container').height());
+
+            if(page_offset <= btp_offset && !buttonIsStopped){
+                buttonIsStopped = true;
+                $('#back-top-wrapper').css({position:'absolute',bottom:0+'px',top:'auto'});
+            }else if(buttonIsStopped && page_offset > btp_default_pos){
+                buttonIsStopped = false;
+                $('#back-top-wrapper').css({position:'fixed',bottom:'auto',top: btp_default_pos+'px'});
+            };
+        }else{
+            if($('#back-top-wrapper').is(':visible')){
+                $('#back-top-wrapper').fadeOut();
+            }
+        }
+
+        scroll_percent = ($(window).scrollTop() / ($(document).height() - $(window).height())) * 100;
+        //SCROLL TRACKING
+        if(!omni_tracking[has_tracked] && scroll_percent >= ((has_tracked + 1) * omni_tracking.length) && has_tracked < omni_tracking.length){
+
+            if(omni_tracking.indexOf(false) + 1 < Math.floor(scroll_percent / omni_tracking.length)){
+                for(var i = 0; i < Math.floor(scroll_percent / omni_tracking.length); i++){
+                    if(omni_tracking[i] != true){
+                        omni_tracking[i] = true;
+                        icidsSetter('LP_Lookbook_Holiday_2015_Page_Tracking_'+((has_tracked + 1) * omni_tracking.length)+'_Percent');
+                        if(has_tracked < omni_tracking.length - 1){
+                            has_tracked++;
+                        }
+                    }
+                }
+            } else {
+                omni_tracking[has_tracked] = true;
+                icidsSetter('LP_Lookbook_Holiday_2015_Page_Tracking_'+((has_tracked+1) * omni_tracking.length)+'_Percent');
+                has_tracked++;
+            }
+        }
+
+    });
+
+}
+
+							</code></pre>
+						</div>
+					</div>
+					<div class="modal-nav">
+						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".about">About</a>
+						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+						<span>&#9656;</span><a href="#" class="toggle-modal">Close</a>
+					</div>
+				</div>

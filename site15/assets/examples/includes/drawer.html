@@ -1,0 +1,353 @@
+				<div id="drawer-promo-example" class="inline-modal-content">
+					<div class="modal-sections relative-element">
+						<div class="modal-section about">
+							<h2>ABOUT</h2>
+							<hr>
+							<img src="/site15/assets/examples/drawer_promo.jpg" alt="Drawer Promo Code" />
+							<p>The Soma brand was looking to expand their exposure to promotions on their site. They came to me with a request to create a drawer that slid up from the bottom of the page to display the promotions. The initial ask came before the site's move to a responsive bootstrap framework. So, after doing some research, I came across a <a href="http://idangero.us/swiper/" target="_blank">responsive js agnostic slider</a> which I thought was perfect for the project. Knowing that this would eventually move over to bootstrap, I coded the entire project with bootstrap classes and filled in the CSS that was missing from the site pre-bootstrap. The end result worked so well, our sister brands also decided to incorporate the new promotion tool and can be seen today on <a href="https://www.chicos.com" target="_blank">Chico's</a>, <a href="https://www.soma.com" target="_blank">Soma</a> and <a href="https://www.whbm.com" target="_blank">Whitehouse Blackmarket</a>.</p>
+						</div>
+						<div class="modal-section max-height-adjust html">
+							<h2>HTML</h2>
+							<hr>
+							<pre><code>
+<div id="promo-skin" data-toggle="promo-footer"></div>
+
+<div id="promo-footer">
+
+	<div class="promo-tab">
+		<a href="#" data-toggle="promo-footer" data-track="DWP_Toggle_Promo">
+			<span class="promo-toggle-icon"> 
+<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-up"></use></svg> 
+<span class="sr-only">Toggle Today's Offers</span>
+			</span>
+			Today's Offers
+		</a>
+	</div>
+	<!-- .promo-tab -->
+
+	<a href="#" class="promo-close visible-xs" data-toggle="promo-footer" data-track="DWP_Mob_Toggle_Promo">
+		<svg> 
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use> 
+</svg>
+	</a>
+
+	<!-- start footer carousel -->
+	<div class="content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<div id="carousel-footer-lg" class="carousel slide drawer-promo hidden-xs hidden-sm" data-ride="carousel" data-interval="false">
+						<div class="carousel-inner">
+							<div class="item active">
+							</div>
+						</div>
+						<!-- START Carousel Arrows -->
+						<!-- START Previous Arrow -->
+						<a class="left carousel-control" href="#carousel-footer-lg" data-slide="prev" aria-label="previous" data-track="DWP_Previous_Arrow">
+							<svg class="icon-arrow-left dp-arrow" role="presentation"> 
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use> 
+</svg>
+						</a>
+						<!-- END Previous Arrow -->
+
+						<!-- START Next Arrow-->
+						<a class="right carousel-control" href="#carousel-footer-lg" data-slide="next" aria-label="next" data-track="DWP_Next_Arrow">
+							<svg class="icon-arrow-right dp-arrow" role="presentation"> 
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use> 
+</svg>
+						</a>
+						<!-- END Next Arrow-->
+						<!-- END Carousel Arrows -->
+
+						<!-- START CAROUSEL INDICATORS -->
+						<!-- CUSTOMIZE TO YOUR NUMBER OF SLIDES FOR DESKTOP -->
+						<ol class="carousel-indicators">
+							<li data-target="#carousel-footer-lg" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-footer-lg" data-slide-to="1"></li>
+						</ol>
+						<!-- END CAROUSEL INDICATORS -->
+					</div>
+
+					<div id="carousel-footer-sm" class="carousel slide drawer-promo hidden-xs visible-sm hidden-lg" data-ride="carousel" data-interval="false">
+						<div class="carousel-inner">
+							<div class="item active">
+							</div>
+						</div>
+						<!-- START Carousel Arrows -->
+						<!-- START Previous Arrow -->
+						<a class="left carousel-control" href="#carousel-footer-sm" data-slide="prev" aria-label="previous" data-track="DWP_Previous_Arrow">
+							<svg class="icon-arrow-left dp-arrow" role="presentation"> 
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use> 
+</svg>
+						</a>
+						<!-- END Previous Arrow -->
+
+						<!-- START Next Arrow-->
+						<a class="right carousel-control" href="#carousel-footer-sm" data-slide="next" aria-label="next" data-track="DWP_Next_Arrow">
+							<svg class="icon-arrow-right dp-arrow" role="presentation"> 
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use> 
+</svg>
+						</a>
+						<!-- END Next Arrow-->
+						<!-- END Carousel Arrows -->
+
+						<!-- START CAROUSEL INDICATORS -->
+						<!-- CUSTOMIZE TO YOUR NUMBER OF SLIDES FOR TABLET PORTAIT -->
+						<ol class="carousel-indicators">
+							<li data-target="#carousel-footer-sm" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-footer-sm" data-slide-to="1"></li>
+							<li data-target="#carousel-footer-sm" data-slide-to="2"></li>
+						</ol>
+						<!-- END CAROUSEL INDICATORS -->
+					</div>
+
+					<div id="carousel-footer-xs" class="carousel slide drawer-promo visible-xs hidden-sm" data-ride="carousel" data-interval="false">
+						<div class="carousel-inner">
+							
+							<!-- START SAS -->
+							<div class="item active">
+								<div class="col-xs-12 col-sm-4 col-md-3 footer-promo-clone">
+									<article class="promo">
+										<a href="/store/sale" data-track="DWP_SAS70_ShopNow" class="module-link-wrap">
+											<p class="promo-head">Limited Time</p>
+											<div class="product-thumb-wrap">
+												<img class="img-responsive lazyload" data-svg-src="800:450" data-src="/web_assets/img/20171225/dwp_sas.png" alt="Semi Annual Sale">
+											</div>
+											<h2 class="promo-name">Up to 70% Off</h2>
+											<p class="text-uppercase details">Shop Now</p>
+										</a>
+										<p><a href="#" class="light11" data-track="DWP_SAS70_Details" class="light11" tabindex="0" data-toggle="modal" aria-haspopup="true" data-target="#modal_drawer1_details">Details</a></p>
+									</article>
+								</div>
+							</div>
+							<!-- END SAS -->
+                           
+							<!-- START FREE SHIPPING -->
+							<div class="item">
+								<div class="col-xs-12 col-sm-4 col-md-3 footer-promo-clone">
+									<article class="promo">
+										<a href="/store/" data-track="DWP_FreeShip100_ShopNow" class="module-link-wrap">
+											<p class="promo-head">Limited Time</p>
+											<div class="product-thumb-wrap">
+												<img class="img-responsive lazyload" data-svg-src="800:450" data-src="/web_assets/img/20171018/dwp_freeship.gif" alt="Free Shipping">
+											</div>
+											<h2 class="promo-name">With $100+ Purchase</h2>
+											<p class="text-uppercase details">Shop Now</p>
+										</a>
+										<p><a href="#" class="light11" data-track="DWP_FreeShip100_Details" class="light11" tabindex="0" data-toggle="modal" aria-haspopup="true" data-target="#modal_drawerX_details">Details</a></p>
+									</article>
+								</div>
+							</div>
+							<!-- END FREE SHIPPING -->
+							
+							<!-- START MAILER COUPON -->
+                            <div class="item">
+                                <div class="col-xs-12 col-sm-4 col-md-3 footer-promo-clone">
+                                    <article class="promo">
+                                        <a href="/store/" data-track="DWP_MailerCoupon_Shop_Now" class="module-link-wrap">
+                                            <p class="promo-head">Limited Time</p>
+                                            <div class="product-thumb-wrap"> <img class="img-responsive lazyload" data-svg-src="800:450" data-src="/web_assets/img/20170807/dwp_mailercoupon.gif" alt="$20 Off"> </div>
+                                            <h2 class="promo-name">Your $100 Purchase</h2>
+                                            <h3 class="promo-sub">Try anything, you'll want everything</h3>
+                                            <p class="text-uppercase details">Shop Now</p>
+                                        </a>
+                                        <p>USE CODE: 74070 | <a href="#" class="light11" data-track="DWP_MailerCoupon_Details" class="light11" tabindex="0" data-toggle="modal" aria-haspopup="true" data-target="#modal_drawer20_details">Details</a></p>
+                                    </article>
+                                </div>
+                            </div>
+                            <!-- END MAILER COUPON -->
+							
+							<!-- START FRAGRANCES -->
+							<div class="item">
+								<div class="col-xs-12 col-sm-4 col-md-3 footer-promo-clone">
+									<article class="promo">
+										<a href="/store/category/beauty/cat6079275/" data-track="DWP_Beauty_ShopNow" class="module-link-wrap">
+											<p class="promo-head">Gorgeous Gifts</p>
+											<div class="product-thumb-wrap">
+												<img class="img-responsive lazyload" data-svg-src="800:450" data-src="/web_assets/img/20171102/dwp_beauty30.jpg?resize=400px:*&output-quality=80" alt="30% Off">
+											</div>
+											<h2 class="promo-name">All Fine Fragrances</h2>
+											<h3 class="promo-sub">Including Eau de Parfum,<br/>creams, and souffl&#233;s<br/>Reg $10-69</h3>
+											<p class="text-uppercase details">Shop Now</p>
+										</a>
+										<p><a href="#" class="light11" data-track="DWP_Beauty_Details" tabindex="0" data-toggle="modal" aria-haspopup="true" data-target="#modal_drawer6_details">Details</a></p>
+									</article>
+								</div>
+							</div>
+							<!-- END FRAGRANCES -->
+							
+							<!-- START FREE RETURNS -->
+							<div class="item">
+								<div class="col-xs-12 col-sm-4 col-md-3 footer-promo-clone">
+									<article class="promo">
+										<a href="/store/category/bras/cat40089/" data-track="DWP_FreeBraReturns_ShopNow" class="module-link-wrap">
+											<p class="promo-head">Limited Time</p>
+											<div class="product-thumb-wrap">
+												<img class="img-responsive lazyload" data-svg-src="800:450" data-src="/web_assets/img/20171129/dwp_freereturns.gif" alt="Free Returns">
+											</div>
+											<h2 class="promo-name">On Full Price Bras</h2>
+											<p class="text-uppercase details">Shop Now</p>
+										</a>
+										<p><a href="#" class="light11" data-track="DWP_FreeBraReturns_Details" class="light11" tabindex="0" data-toggle="modal" aria-haspopup="true" data-target="#modal_drawer8_details">Details</a></p>
+									</article>
+								</div>
+							</div>
+							<!-- END FREE RETURNS -->
+
+							<!-- START FULL PRICED SWIM -->
+							<div class="item">
+								<div class="col-xs-12 col-sm-4 col-md-3 footer-promo-clone">
+									<article class="promo">
+										<a href="/store/category/swim/cat2060003" data-track="DWP_Free_Shipping_Swim_ShopNow" class="module-link-wrap">
+											<p class="promo-head">Limited Time</p>
+											<div class="product-thumb-wrap">
+												<img class="img-responsive lazyload" data-svg-src="800:450" data-src="/web_assets/img/final/freeshipping_dwp.jpg?resize=400px:*&output-quality=80" alt="" role="presentation">
+											</div>
+											<h2 class="promo-name">Free Shipping<br>&amp; Free Returns</h2>
+											<h3 class="promo-sub">On Full-Price Swim</h3>
+											<p class="text-uppercase details">Shop Now</p>
+										</a>
+										<p><a href="#" class="light11" data-track="DWP_Free_Shipping_Swim_Details" tabindex="0" data-toggle="modal" aria-haspopup="true" data-target="#modal_drawer9_details">Details</a></p>
+									</article>
+								</div>
+							</div>
+							<!-- END FULL PRICED SWIM -->
+
+							<!-- START DOUBLE POINTS -->
+							<div class="item">
+								<div class="col-xs-12 col-sm-4 col-md-3 footer-promo-clone">
+									<article class="promo">
+										<a href="/store/" data-track="DWP_Loyalty_Shop_Now" class="module-link-wrap">
+											<p class="promo-head">Every Day</p>
+											<div class="product-thumb-wrap">
+												<img class="img-responsive lazyload" data-svg-src="800:450" data-src="/web_assets/img/final/loyalty.jpg?resize=400px:*&output-quality=80" alt="Love Soma Rewards">
+											</div>
+											<h2 class="promo-name">Get Double Points</h2>
+											<h3 class="promo-sub">on Sleepwear and Bras</h3>
+											<p class="text-uppercase details">Shop Now</p>
+										</a>
+										<a href="/store/page.jsp?id=100809372" data-track="DWP_Loyalty_Learn_More" class="promo-link-padding">Learn More</a>
+									</article>
+								</div>
+							</div>
+							<!-- END DOUBLE POINTS -->
+
+						</div>
+
+						<!-- START Carousel Arrows -->
+						<!-- START Previous Arrow -->
+						<a class="left carousel-control" href="#carousel-footer-xs" data-slide="prev" aria-label="previous" data-track="DWP_Previous_Arrow">
+							<svg class="icon-arrow-left dp-arrow" role="presentation"> 
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use> 
+</svg>
+						</a>
+						<!-- END Previous Arrow -->
+
+						<!-- START Next Arrow-->
+						<a class="right carousel-control" href="#carousel-footer-xs" data-slide="next" aria-label="next" data-track="DWP_Next_Arrow">
+							<svg class="icon-arrow-right dp-arrow" role="presentation"> 
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use> 
+</svg>
+						</a>
+						<!-- END Next Arrow-->
+						<!-- END Carousel Arrows -->
+
+						<!-- START CAROUSEL INDICATORS -->
+						<!-- CUSTOMIZE TO YOUR NUMBER OF SLIDES FOR MOBILE -->
+						<ol class="carousel-indicators dwp-dots">
+							<li data-target="#carousel-footer-xs" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-footer-xs" data-slide-to="1"></li>
+							<li data-target="#carousel-footer-xs" data-slide-to="2"></li>
+							<li data-target="#carousel-footer-xs" data-slide-to="3"></li>
+							<li data-target="#carousel-footer-xs" data-slide-to="4"></li>
+							<li data-target="#carousel-footer-xs" data-slide-to="5"></li>
+							<li data-target="#carousel-footer-xs" data-slide-to="6"></li>
+						</ol>
+						<!-- END CAROUSEL INDICATORS -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+							</code></pre>
+						</div>
+						<div class="modal-section max-height-adjust css">
+							<h2>CSS</h2>
+							<hr>
+							<p>Taken from a minified file</p>
+							<code>
+								#promo-footer{position:fixed;bottom:-4rem;left:0;right:0;z-index:600;padding:4rem 0 2rem 0;background:#fff;-webkit-transform:translateY(100%);-ms-transform:translateY(100%);transform:translateY(100%);transition:all .4s ease}.sticky #promo-footer{bottom:0}#promo-footer.open{bottom:0}#promo-footer .promo-close{display:block;position:absolute;top:2rem;right:2rem;width:1.2rem;height:1.2rem}#promo-footer .promo-close svg{width:1.2rem;height:1.2rem}#promo-footer .promo-tab{position:absolute;z-index:605;top:0;left:50%;min-width:35rem;height:4rem;margin-top:-4rem;background:#000;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}#promo-footer .promo-tab a{display:block;position:relative;font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1.6rem;font-weight:500;line-height:1.1;text-transform:uppercase;line-height:2rem;padding:1rem 1.5rem;overflow:hidden;font-weight:400;font-size:1.3rem;text-transform:uppercase;text-decoration:none;text-overflow:ellipsis;letter-spacing:.1rem;color:#fff}@media screen and (max-width:767px){#promo-footer .promo-tab{max-width:100%;width:100%;border-left:0;border-right:0;left:0;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0)}}#promo-footer .promo-toggle-icon{width:1.4rem;height:1.4rem}#promo-footer.open .promo-toggle-icon{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}#promo-footer .carousel{padding:0 4rem 4rem 4rem}#promo-footer .carousel .promo{max-width:40rem;margin:0 auto;text-align:center}#promo-footer .carousel .promo h2{margin:1.5rem 0 .5rem 0;font-size:1.8rem}#promo-footer .carousel .promo h3{margin:0 0 .5rem 0;font-size:1.1rem}#promo-footer .carousel .promo p{margin:0 0 1.5rem 0;text-transform:uppercase}@media screen and (min-width:768px){#promo-footer .carousel h2,#promo-footer .carousel p{margin-left:0;margin-right:0}}@media screen and (max-width:767px){#promo-footer .carousel{padding:0 2rem 5rem 2rem}#promo-footer .carousel .carousel-control.right [class*='icon-arrow']{right:-1rem}#promo-footer .carousel .carousel-control.left [class*='icon-arrow']{left:-1rem}}#promo-footer .carousel-control{width:2rem}#promo-footer.open{-webkit-transform:translateY(0%);-ms-transform:translateY(0%);transform:translateY(0%)}
+							</code>
+						</div>
+						<div class="modal-section max-height-adjust js">
+							<h2>JavaScript</h2>
+							<hr>
+							<pre><code>
+							
+		if($('#promo-footer').length > 0){
+
+        //BUILD OUT TABLET AND DESKTOP FOOTER PROMOS
+        jQuery('#promo-footer').find('.carousel').each(function(numFooterPromoCarousels){
+
+            if ($(this).attr('id') !== 'carousel-footer-xs'){
+                //Clone items for other devices
+                var $footerPromoItemClone = $('#carousel-footer-xs').find('.footer-promo-clone').clone();
+
+                var footerPromoThisId = $(this).attr('id')
+                var footerPromoNumSlides = (footerPromoThisId === 'carousel-footer-lg') ? 4:3;
+
+                $footerPromoItemClone.each(function(k){
+
+                    var footerPromoItemIndex = Math.floor(k / footerPromoNumSlides);
+
+                    if(k % footerPromoNumSlides === 0 && k !== 0){
+                        $('#' + footerPromoThisId + ' .carousel-inner').append('');
+                    }
+                    $('#' + footerPromoThisId + ' .item:eq(' + footerPromoItemIndex +')').append(this);
+
+                    if (k === ($footerPromoItemClone.length - 1)){
+                        if($footerPromoItemClone.length > footerPromoNumSlides){
+                            $('#' + footerPromoThisId + ' .carousel-inner').append('');
+                        }
+                        //Initialize this carousel
+                        jQuery('#' + footerPromoThisId).carousel();
+                    }
+                });
+            } else {
+                //Initialize mobile carousel
+                jQuery(this).carousel();
+            }
+
+            if(numFooterPromoCarousels === (jQuery('#promo-footer').find('.carousel').length - 1)){
+                var checkImagesLoaded = function(){
+                    if(numCarouselImagesLoaded === ($('#promo-footer .product-thumb-wrap img').length - 1)){
+                        carouselNormalization();
+                    } else {
+                        numCarouselImagesLoaded++;
+                    }
+                }
+                jQuery('#promo-footer .product-thumb-wrap img').each(function(){
+                    if($(this)[0].complete){
+                        numCarouselImagesLoaded++;
+                    }else{
+                        jQuery(this).on('load', checkImagesLoaded);
+                    }
+                });
+            }
+        });
+								}
+							</code></pre>
+						</div>
+					</div>
+					<div class="modal-nav">
+						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".about">About</a>
+						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+						<span>&#9656;</span><a href="#" class="toggle-modal">Close</a>
+					</div>
+				</div>
