@@ -1,0 +1,136 @@
+				<div id="drawer-promo-example" class="inline-modal-content">
+					<div class="modal-sections relative-element">
+						<div class="modal-section about">
+							<h2>ABOUT</h2>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section selected" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+							</div>
+							<img src="/site15/assets/examples/muddy_site.jpg" alt="personal 2009 Code" />
+							<p>My first take on a portfolio site. It’s an extremely simple design, but I wanted to work on something to show I knew the basics of front end development. I was happy when I finished it, but knew there several ways I could improve it after the first day of publishing. I immediately started researching design sites which lead to the 2011 redesign. My first site can be viewed <a href="/2009/index.html">here</a>.</p>
+						</div>
+						<div class="modal-section max-height-adjust html">
+							<h2>HTML</h2>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section selected" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+							</div>
+							<textarea>
+<div id="page_wrapper">
+		<div id="header" class="clear">
+			<img src="images/spade.png" alt="" class="spade" />
+			<div id="logo"><a href="/" title="joeprehoda.com"></a></div><!-- end #logo -->
+			<div id="nav">
+				<a id="portfolio_nav" href="portfolio.html" title="portfolio"></a>
+				<a id="resume_nav" href="resume.html" title="resume"></a>
+				<a id="about_nav" href="about.html" title="about"></a>
+				<a id="contact_nav" href="/?formSubmit=true" title="contact" style="padding-right:0px;border-right:none;"></a>
+			</div><!-- end #nav -->
+		</div><!-- end #header -->
+		<img src="images/content_top.png" alt="" class="border" />
+		<div id="content_wrapper" class="clear">
+			<div id="poster" class="clear" title="View Portfolio">
+				<img src="images/placeads_poster.jpg" alt="" style="border:none;" />
+				<img src="images/prepzone_poster.jpg" alt="" style="display:none;border:none;" />
+				<img src="images/panther_poster.jpg" alt="" style="display:none;border:none;" />
+			</div><!-- end #poster -->
+			<div id="bucket_container" class="clear">
+				<div id="portfolio" onclick="window.location.href = 'http://www.joeprehoda.com/portfolio.html'" title="portfolio" class="bucket">
+					<a href="portfolio.html" title="portfolio"></a>
+					<div class="bucket_text">
+						I put all of my genius into my<br/>life; I put only my talent<br/>into my works. <span class="author">- Oscar Wilde</span>
+					</div>
+				</div><!-- end #portfolio -->
+				<div id="resume" onclick="window.location.href = 'http://www.linkedin.com/profile/view?id=86807236'" title="resume" class="bucket">
+					<a href="resume.html" title="resume"></a>
+					<div class="bucket_text" style="text-align:right;" onclick="window.location.href = '/resume.html'">
+						The only source of knowledge<br/>is experience. <span class="author">- Albert Einstein</span>
+					</div>
+				</div><!-- end #resume -->
+				<div id="about" onclick="window.location.href = 'http://www.joeprehoda.com/about.html'" title="about" class="bucket">
+					<a href="about.html" title="about"></a>
+					<div class="bucket_text" onclick="window.location.href = '/about.html'">
+						Professional design<br/>on a deadline. <span class="author">- Joe Prehoda</span>
+					</div>
+				</div><!-- end #about -->
+			</div><!-- end #buckets_3col -->
+		</div><!-- end #content_wrapper -->
+		<div id="footer" class="clear">
+			<div id="social_media" class="clear">
+				<a href="gtalk:chat?jid=[joe.prehoda]@gmail.com" class="social_link" id="google_link" title="Google Talk"></a>
+				<a href="http://www.facebook.com/joe.prehoda" class="social_link" id="facebook_link" title="Facebook"></a>
+				<a href="aim:goim?screenname=jpprehoda" class="social_link" id="aim_link" title="AOL Instant Messenger"></a>
+				<a href="http://www.linkedin.com/profile/view?id=86807236" class="social_link" id="linkedin_link" title="Linked In"></a>
+				<a href="http://twitter.com/Prehoda" class="social_link" id="twitter_link" title="Twitter"></a>
+			</div><!-- end #social_media -->
+			<div id="copyright" class="clear">
+				All trademarks belong to their authoritative owners. <a id="contact_footer" href="/?formSubmit=true" title="contact" style="padding-right:0px;border-right:none;">Send Joe an email.</a>
+			</div><!-- end #copyright -->
+		</div><!-- end #footer -->
+		<img src="images/content_bottom.png" alt="" class="border"/>
+	</div><!-- end #page_wrapper -->
+							</textarea>
+						</div>
+						<div class="modal-section max-height-adjust css">
+							<h2>CSS</h2>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section selected" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+							</div>
+							<textarea>
+body{margin:0px;padding:0px;background:#222923 url(../images/body_bg.jpg) repeat-x;}
+a{outline:0px;}
+.clear{display:block;clear:both;}
+#page_wrapper{margin:0px auto;width:988px;}
+img.border{margin:0px;padding:0px;line-height:0px;display:block;border:none;clear:both;}
+img.spade{border:none;float:left;width:51px;height:58px;}
+/* HEADER
+*********************************************************/
+#header{margin:14px 0px;padding:0px 14px;}
+#logo{float:left;height:53px;width:222px;}
+#logo a{width:222px;height:53px;background:url(../images/logo.png) no-repeat; display:block;}
+#logo a:hover, #logo a:active, #logo a:focus{background-position:0px -53px;}
+/* NAVIGATION
+*********************************************************/
+#nav{display:block;float:right;margin:40px 0px 0px;}
+#nav a{float:left;margin-left:14px;padding-right:14px;border-right:1px solid #ffffff;}
+#nav a:hover{background-position: 0px -13px;}
+#nav a.unselected{background-position: 0px -13px;}
+#nav a.unselected:hover, #nav a.unselected:active, #nav a.unselected:focus{background-position: 0px 0px;}
+#portfolio_nav{background:url(../images/portfolio.png) no-repeat;width:70px;height:13px;}
+#resume_nav{background:url(../images/resume.png) no-repeat;width:55px;height:13px;}
+#about_nav{background:url(../images/about.png) no-repeat;width:47px;height:13px;}
+#contact_nav{background:url(../images/contact.png) no-repeat;width:56px;height:13px;}
+/* CONTENT
+*********************************************************/
+#content_wrapper{background:url(../images/content_bg.png) repeat-y;}
+/* Footer
+*********************************************************/
+#footer{background:url(../images/footer_bg.png) repeat-y;padding:0px 14px 14px;}
+/* SOCIAL MEDIA
+*********************************************************/
+#social_media{background:url(../images/social_bg.jpg) no-repeat;padding:14px 179px;margin:0px auto;width:262px;height:30px;}
+a.social_link{display:block;float:left;width:30px;height:30px;margin-left:28px;}
+a#google_link{background:url(../images/google_icon.png) no-repeat;margin:0px;}
+a#google_link:hover, a#google_link:active, a#google_link:focus{ background-position:0px -30px;}
+a#facebook_link{background:url(../images/facebook_icon.png) no-repeat;}
+a#facebook_link:hover, a#facebook_link:active, a#facebook_link:focus{ background-position:0px -30px;}
+a#aim_link{background:url(../images/aim_icon.png) no-repeat;}
+a#aim_link:hover, a#facebook_link:active, a#facebook_link:focus{ background-position:0px -30px;}
+a#linkedin_link{background:url(../images/linkedin_icon.png) no-repeat;}
+a#linkedin_link:hover, a#facebook_link:active, a#facebook_link:focus{ background-position:0px -30px;}
+a#twitter_link{background:url(../images/twitter_icon.png) no-repeat;}
+a#twitter_link:hover, a#twitter_link:active, a#twitter_link:focus{ background-position:0px -30px;}
+/* COPYRIGHT
+*********************************************************/
+#copyright{background:url(../images/copyright_bg.jpg) no-repeat;width:958px;height:29px;padding-top:7px;text-align:center;font-family:Verdana, Arial, Helvetica, sans-serif;color:#cecd76;font-size:1em;letter-spacing:-1px;line-height:1.3em;}
+#copyright a{color:#cecd76;text-decoration:none;}
+#copyright a:hover, #copyright a:active,#copyright a:focus{color:#FFFFFF;}
+#contact_footer{margin:0px;}
+							</textarea>
+						</div>
+					</div>
+				</div>

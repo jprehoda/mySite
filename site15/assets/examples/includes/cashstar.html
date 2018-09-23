@@ -2,14 +2,20 @@
 					<div class="modal-sections relative-element">
 						<div class="modal-section about">
 							<h2>ABOUT</h2>
-							<hr>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section selected" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+							</div>
 							<img src="/site15/assets/examples/cashstar.jpg" alt="CashStar Integration" />
 							<p>I was given the task to integrate a third party vendor called CashStar into Chico's, Whitehouse Blackmarket and Soma to use for electronic gift card purchases. The integration was quite simple, as the main sites just required a link to CashStar's purchase portal. The real fun was setting up the google analytics to mirror our checkout funnel. The end result was a javascript solution utilizing custom tags, triggers and variables that supplied a perfect mirror of the core site's checkout funnel. You can see an example of the CashStar funnel on <a href="https://www.chicos.com/store/page.jsp?id=114109276">chicos.com</a></p>
 						</div>
 						<div class="modal-section max-height-adjust js">
 							<h2>JavaScript</h2>
-							<hr>
-							<pre><code>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section selected" data-modal-section=".js">JavaScript</a>
+							</div>
+							<textarea>
 							
 
 	var lines = {{lines}}
@@ -190,12 +196,7 @@
 	}
 
 
-							</code></pre>
+							</textarea>
 						</div>
-					</div>
-					<div class="modal-nav">
-						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".about">About</a>
-						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
-						<span>&#9656;</span><a href="#" class="toggle-modal">Close</a>
 					</div>
 				</div>

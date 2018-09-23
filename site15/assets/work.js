@@ -18,14 +18,12 @@ $('.update-modal').on('click', function(e){
 				$('#example-modal').find('.modal-section').removeClass('display-section');
 				$($showThisClass).addClass('display-section');
 			}
-			return true;
+			return false;
 		});
-		$('.modal-body').find('.toggle-modal').on('click', function(){
-			$('#example-modal').removeClass('show-modal');
-		});
-		$('.max-height-adjust').each(function(){
-			var nodeHtml = $(this).find('code').html();
-			$(this).find('code').html(document.createTextNode(nodeHtml))
+		
+		$('.modal-nav').find('.toggle-modal').on('click', function(e){
+			e.preventDefault();
+			$('.modal').toggleClass('show-modal');
 		});
 		
 		$('#example-modal').css('height', '0px');

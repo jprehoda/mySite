@@ -2,15 +2,25 @@
 					<div class="modal-sections relative-element">
 						<div class="modal-section about">
 							<h2>ABOUT</h2>
-							<hr>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section selected" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+							</div>
 							<img src="/site15/assets/examples/legging.jpg" alt="legging Code" />
 							<p>Yet another example of an experienmental landgin page. This was one of the reasons I loved doing projects for WHBM. They always wanted to try something new, a new way to present the product to the consumer and were scared to push the functionality of the site. Looking back is was a simple carousel, but I managed to tweak our carousel of choice at the time to navigate using unconditional methods. Here it is on the <a href="https://web.archive.org/web/20141215152344/https://www.whitehouseblackmarket.com/store/page.jsp?id=101909353" target="_blank">wayback machine</a>.</p>
 						</div>
 						<div class="modal-section max-height-adjust html">
 							<h2>HTML</h2>
-							<hr>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section selected" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+							</div>
 							<p>Just a snippet</p>
-							<pre><code>
+							<textarea>
 <div id="below-the-fold" class="relative">
 			<div id="below-fold-looks">
                 
@@ -271,12 +281,17 @@
 				</div><!-- End .relative -->
 			</div><!-- End #slider-wrapper -->
 		</div>
-							</code></pre>
+							</textarea>
 						</div>
 						<div class="modal-section max-height-adjust css">
 							<h2>CSS</h2>
-							<hr>
-							<pre><code>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section selected" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+							</div>
+							<textarea>
 /* WIDEN DEFAULTS TO FIT CREATIVE
 ***********************************/
 #content, #main-content{
@@ -689,12 +704,17 @@ width: 17.6%;
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait){
 	#legging-hero, #video-wrapper, #yt_player{height:437px;}
 	#slider{height:532px !important;}
-}							</code></pre>
+}							</textarea>
 						</div>
 						<div class="modal-section max-height-adjust js">
 							<h2>JavaScript</h2>
-							<hr>
-							<pre><code>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section selected" data-modal-section=".js">JavaScript</a>
+							</div>
+							<textarea>
 							
 var isAnimated = false;
 var slider1_settings;
@@ -818,14 +838,8 @@ $(document).ready(function(){
 			'scrollTop':   $('#skipHero').offset().top
 		}, 750);
 	}
-});							</code></pre>
+});							</textarea>
 						</div>
 					</div>
-					<div class="modal-nav">
-						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".about">About</a>
-						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
-						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
-						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
-						<span>&#9656;</span><a href="#" class="toggle-modal">Close</a>
-					</div>
+
 				</div>

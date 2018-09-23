@@ -234,6 +234,9 @@ nav p a:hover{
 	position: fixed;
 	width: 40%;
 }
+body.modal-open{
+	overflow: hidden;
+}
 #contact-joe-prehoda{
 	margin:0;
 	padding:0;

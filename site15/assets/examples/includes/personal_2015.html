@@ -2,15 +2,25 @@
 					<div class="modal-sections relative-element">
 						<div class="modal-section about">
 							<h2>ABOUT</h2>
-							<hr>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section selected" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+							</div>
 							<img src="/site15/assets/examples/homepage.jpg" alt="Personal Code" />
 							<p>This is my third update to this site and my first version being truly responsive. I think you can tell by the design that I'm not the best designer, I can get by, but I'm no Picasso. Instead, I like to focus on the code, making it as crisp as possible. <a href="/">My homepage</a>.</p>
 						</div>
 						<div class="modal-section max-height-adjust html">
 							<h2>HTML</h2>
-							<hr>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section selected" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+							</div>
 							<p>Just a snippet</p>
-							<pre><code>
+							<textarea>
 <header>
 		<nav>
 			<div id="scroll-nav" class="force-block highlight">
@@ -74,7 +84,7 @@
 							<label class="contact-label raleway" for="contact-subject" id="contact-subject-label">Your Subject</label>
 							<input autocomplete="off" class="contact-text-input raleway" name="contact-subject" id="contact-subject" tabindex="22" type="text" maxlength="100" placeholder="Your Subject" />
 							<label class="contact-label raleway" for="contact-message" id="contact-message-label">Your Message</label>
-							<textarea autocomplete="off" class="contact-textarea raleway" name="contact-message" id="contact-message" tabindex="23" placeholder="Your Message..." required ></textarea>
+												
 							<input class="contact-submit-button raleway white-text highlight" type="submit" value="Submit" tabindex="24" />
 							<div class="relative-element">
 								<p class="captcha-error raleway">Please verify you are not a robot</p>
@@ -174,12 +184,17 @@
 		</p>
 	</footer>
 
-							</code></pre>
+							</textarea>
 						</div>
 						<div class="modal-section max-height-adjust css">
 							<h2>CSS</h2>
-							<hr>
-							<pre><code>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section selected" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+							</div>
+							<textarea>
 /***************************************************/
 /* GLOBALS */
 /***************************************************/
@@ -598,12 +613,17 @@ footer p{
 	.visible-sm{
 		display: block;
 	}
-}							</code></pre>
+}							</textarea>
 						</div>
 						<div class="modal-section max-height-adjust js">
 							<h2>JavaScript</h2>
-							<hr>
-							<pre><code>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section selected" data-modal-section=".js">JavaScript</a>
+							</div>
+							<textarea>
 							
 'use strict';
 
@@ -706,14 +726,7 @@ $('#hover-circle').mouseout(function(){
 	$(this).removeClass('circle-hovered');
 });
 								}
-							</code></pre>
+							</textarea>
 						</div>
-					</div>
-					<div class="modal-nav">
-						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".about">About</a>
-						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
-						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
-						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
-						<span>&#9656;</span><a href="#" class="toggle-modal">Close</a>
 					</div>
 				</div>

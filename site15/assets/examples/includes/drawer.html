@@ -2,14 +2,24 @@
 					<div class="modal-sections relative-element">
 						<div class="modal-section about">
 							<h2>ABOUT</h2>
-							<hr>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section selected" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+							</div>
 							<img src="/site15/assets/examples/drawer_promo.jpg" alt="Drawer Promo Code" />
 							<p>The Soma brand was looking to expand their exposure to promotions on their site. They came to me with a request to create a drawer that slid up from the bottom of the page to display the promotions. The initial ask came before the site's move to a responsive bootstrap framework. So, after doing some research, I came across a <a href="http://idangero.us/swiper/" target="_blank">responsive js agnostic slider</a> which I thought was perfect for the project. Knowing that this would eventually move over to bootstrap, I coded the entire project with bootstrap classes and filled in the CSS that was missing from the site pre-bootstrap. The end result worked so well, our sister brands also decided to incorporate the new promotion tool and can be seen today on <a href="https://www.chicos.com" target="_blank">Chico's</a>, <a href="https://www.soma.com" target="_blank">Soma</a> and <a href="https://www.whbm.com" target="_blank">Whitehouse Blackmarket</a>.</p>
 						</div>
 						<div class="modal-section max-height-adjust html">
 							<h2>HTML</h2>
-							<hr>
-							<pre><code>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section selected" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+							</div>
+							<textarea>
 <div id="promo-skin" data-toggle="promo-footer"></div>
 
 <div id="promo-footer">
@@ -273,20 +283,30 @@
 
 </div>
 
-							</code></pre>
+							</textarea>
 						</div>
 						<div class="modal-section max-height-adjust css">
 							<h2>CSS</h2>
-							<hr>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section selected" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+							</div>
 							<p>Taken from a minified file</p>
-							<code>
+							<textarea>
 								#promo-footer{position:fixed;bottom:-4rem;left:0;right:0;z-index:600;padding:4rem 0 2rem 0;background:#fff;-webkit-transform:translateY(100%);-ms-transform:translateY(100%);transform:translateY(100%);transition:all .4s ease}.sticky #promo-footer{bottom:0}#promo-footer.open{bottom:0}#promo-footer .promo-close{display:block;position:absolute;top:2rem;right:2rem;width:1.2rem;height:1.2rem}#promo-footer .promo-close svg{width:1.2rem;height:1.2rem}#promo-footer .promo-tab{position:absolute;z-index:605;top:0;left:50%;min-width:35rem;height:4rem;margin-top:-4rem;background:#000;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}#promo-footer .promo-tab a{display:block;position:relative;font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1.6rem;font-weight:500;line-height:1.1;text-transform:uppercase;line-height:2rem;padding:1rem 1.5rem;overflow:hidden;font-weight:400;font-size:1.3rem;text-transform:uppercase;text-decoration:none;text-overflow:ellipsis;letter-spacing:.1rem;color:#fff}@media screen and (max-width:767px){#promo-footer .promo-tab{max-width:100%;width:100%;border-left:0;border-right:0;left:0;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0)}}#promo-footer .promo-toggle-icon{width:1.4rem;height:1.4rem}#promo-footer.open .promo-toggle-icon{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}#promo-footer .carousel{padding:0 4rem 4rem 4rem}#promo-footer .carousel .promo{max-width:40rem;margin:0 auto;text-align:center}#promo-footer .carousel .promo h2{margin:1.5rem 0 .5rem 0;font-size:1.8rem}#promo-footer .carousel .promo h3{margin:0 0 .5rem 0;font-size:1.1rem}#promo-footer .carousel .promo p{margin:0 0 1.5rem 0;text-transform:uppercase}@media screen and (min-width:768px){#promo-footer .carousel h2,#promo-footer .carousel p{margin-left:0;margin-right:0}}@media screen and (max-width:767px){#promo-footer .carousel{padding:0 2rem 5rem 2rem}#promo-footer .carousel .carousel-control.right [class*='icon-arrow']{right:-1rem}#promo-footer .carousel .carousel-control.left [class*='icon-arrow']{left:-1rem}}#promo-footer .carousel-control{width:2rem}#promo-footer.open{-webkit-transform:translateY(0%);-ms-transform:translateY(0%);transform:translateY(0%)}
-							</code>
+							</textarea>
 						</div>
 						<div class="modal-section max-height-adjust js">
 							<h2>JavaScript</h2>
-							<hr>
-							<pre><code>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section selected" data-modal-section=".js">JavaScript</a>
+							</div>
+							<textarea>
 							
 		if($('#promo-footer').length > 0){
 
@@ -340,14 +360,7 @@
             }
         });
 								}
-							</code></pre>
+							</textarea>
 						</div>
-					</div>
-					<div class="modal-nav">
-						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".about">About</a>
-						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
-						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
-						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
-						<span>&#9656;</span><a href="#" class="toggle-modal">Close</a>
 					</div>
 				</div>

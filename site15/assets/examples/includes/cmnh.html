@@ -2,15 +2,25 @@
 					<div class="modal-sections relative-element">
 						<div class="modal-section about">
 							<h2>ABOUT</h2>
-							<hr>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section selected" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+							</div>
 							<img src="/site15/assets/examples/cmnh.jpg" alt="Children's Miracle Network, Chico's FAS Code" />
 							<p>The Chico's FAS company partners with the Children's miracle network every year to raise money for their cause. Each year we update the content and re-skin the site as needed with CSS updates. We are currently in the process of converting this site to feature all of the charities that Chico's FAS partners with. <a href="http://www.chicosfas-cares.com/">You can view the site here</a>.</p>
 						</div>
 						<div class="modal-section max-height-adjust html">
 							<h2>HTML</h2>
-							<hr>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section selected" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+							</div>
 							<p>Please note, this is the django rendered HTML, There is much more code involved in this project.</p>
-							<pre><code>
+							<textarea>
 <div class="navbar navbar-brands">
     <ul class="nav navbar-nav">
       <li class="navlogo cmnh" role="button"><a data-href="/"><img src="/static/images/logos/2016/cmnh@2x.png" alt="Children's Miracle Network Hospitals" /></a></li>
@@ -90,12 +100,17 @@
     </div>
 
 
-							</code></pre>
+							</textarea>
 						</div>
 						<div class="modal-section max-height-adjust css">
 							<h2>CSS</h2>
-							<hr>
-							<pre><code>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section selected" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+							</div>
+							<textarea>
 @charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /* line 9, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_normalize.scss */
@@ -7903,12 +7918,17 @@ float: right;
 		color:#555555;
 	}
 }
-							</code></pre>
+							</textarea>
 						</div>
 						<div class="modal-section max-height-adjust js">
 							<h2>JavaScript</h2>
-							<hr>
-							<pre><code>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section selected" data-modal-section=".js">JavaScript</a>
+							</div>
+							<textarea>
 							
 var youtube_id = CMNH.videoId;
 var tag = document.createElement('script');
@@ -8035,14 +8055,7 @@ CMNH.playVideo = function(player){
         $(this).css('display', 'none');
     });        
 }
-							</code></pre>
+							</textarea>
 						</div>
-					</div>
-					<div class="modal-nav">
-						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".about">About</a>
-						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
-						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
-						<span>&#9656;</span><a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
-						<span>&#9656;</span><a href="#" class="toggle-modal">Close</a>
 					</div>
 				</div>

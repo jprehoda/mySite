@@ -1,0 +1,1005 @@
+				<div id="drawer-promo-example" class="inline-modal-content">
+					<div class="modal-sections relative-element">
+						<div class="modal-section about">
+							<h2>ABOUT</h2>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section selected" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+							</div>
+							<img src="/site15/assets/examples/search.jpg" alt="Search Code" />
+							<p>The typeAhead search project is probably the best example I have of object oriented JavaScript and jQuery work. This project involved ajax calls on demand, parsing JSON, minimal memory consumption through cloning and storing jQuery reference objects in a site object, Accessibility controls and cookie manipulation, just to name a few of the highlights. Please feel free to use the navigation above, copy the code and paste into the IDE of your choosing for evaluation. Or better yet, you can visit <a href=https://www.chicos.com target=”_blank”>chicos.com</a> and use the search to see the final product in action.</p>
+						</div>
+						<div class="modal-section max-height-adjust html">
+							<h2>HTML</h2>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section selected" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+							</div>
+							<textarea rows="20">
+<div id="search-wrap" class="flex-search-ui">
+	<div id="search-outer">
+		<div class="search-container">
+			<div id="search">
+				<svg class="icon-search">
+					<use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+				</svg>
+				<div id="search-inner">
+					<div class="search-form">
+						<form action="/store/search/" name="noSubmit" id="typeAhead-search-form">
+							<div class="input-group">
+								<span class="endeca-typeahead">
+									<label class="sr-only" for="typeahead-search-input">Search</label>
+									<span class="typeahead-hint placeholder">Search</span>
+									<input name="typeahead-search-input" id="typeahead-search-input" type="text" class="typeahead form-control placeholder tt-input" placeholder="Search" data-provide="typeahead" autocomplete="off" />
+								</span>
+								<span class="input-group-btn">
+									<button class="header-search-button button btn btn-lg" role="button" aria-label="Product Search"><span class="search-btn-label">Go</span></button>
+									<a href="#" class="btn search-close" data-toggle="search" aria-label="Close Search">
+										<svg class="icon-close" role="presentation">
+											<use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+										</svg>
+										<span class="sr-only">Close Search</span>
+									</a>
+								</span>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div id="typeahead-results">
+				<div id="visual-search-flyout">
+					<h3 class="heading-styled" data-flyout-header-text=""></h3>
+					<div class="row">
+						<div id="visual-search-clone-item" data-product-id="" class="col-xs-6 product-block col-sm-4" id="" role="presentation">
+							 <article class="product" data-product-altimg-count="" itemscope="" itemtype="http://schema.org/Product">
+								<span itemprop="brand" itemscope="" itemtype="http://schema.org/Organization" class="hide">
+									<span itemprop="name"></span>
+								</span>
+								<div class="product-thumb-wrap">
+									<a href="" class="main-product-link" aria-label="">
+										<div class="item" role="option" data-collection-img="default">
+											<img itemprop="image" role="presentation" class="img-responsive product-default-img img-swap lazyload" data-src="" data-srcset="" sizes="(min-width: 768px) 25vw,50vw" alt="">
+										</div>
+									</a>
+								</div>
+								<h2 class="product-name">
+									<a href="" itemprop="name"></a>
+								</h2>
+
+								<div class="product-price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+									<span itemprop="priceCurrency" content="" class="hide"></span>
+									<span itemprop="category" class="hide">autosuggest</span>
+									<span class="product-price"></span>
+									<span class="hide" itemprop="price"></span>
+								</div>												
+
+								<div class="product-rating" itemscope="" itemtype="http://schema.org/Rating">
+									<meta itemprop="worstRating" class="hide" content="1" />
+									<span itemprop="bestRating" class="hide">5</span>
+									<span itemprop="ratingValue" class="hide"></span>
+									<img title="" alt="" class="BVImgOrSprite img-responsive bv-collection-stars lazyload" data-src="" />
+								</div>
+								<span class="product-msg"></span>
+								<span class="product-msg product-msg-special"></span>
+								<div class="swatch-wrap">
+									<span itemprop="color"></span>
+									<div class="swatch selected" data-swatch-id="">
+										<img class="img-responsive lazyload" data-src="" alt="" data-imgswap="" />
+									</div>
+									<a class="swatch-more-wrap hidden" aria-label="More Colors" href="" data-swatchcounter="1" data-quickview="standard" quickview-event="0" data-product-id="">
+										<svg class="icon-plus"><use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#icon-plus"></use></svg>
+									</a>
+									<span class="hide" itemprop="color">1 Colors</span>
+								</div><!-- .swatch-wrap -->
+							</article>
+						</div>
+					</div>
+				</div>
+				<ul id="search-history" class="dropdown-menu" role="listbox"></ul>
+			</div>
+		</div>
+	</div>
+</div><!-- #search-wrap -->
+
+							</textarea>
+						</div>
+						<div class="modal-section max-height-adjust css">
+							<h2>CSS</h2>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section selected" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section" data-modal-section=".js">JavaScript</a>
+							</div>
+							<textarea rows="20">
+/* Search and Typeahead*/
+#search-wrap.flex-search-ui{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.75);
+}
+#search-wrap.flex-search-ui .search-container{
+    position: relative;
+    padding: .5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#search-wrap.flex-search-ui #search{
+    position: relative;
+    padding: 0;
+    width: 50.4rem;
+    margin: 0 0 0 auto;
+}
+#search-wrap.flex-search-ui #search-inner,
+#search-wrap.flex-search-ui .input-group{
+    width: 100%;
+}
+#search-wrap.flex-search-ui .endeca-typeahead{
+    width: 100%;
+    padding-left: 10px;
+    background-color: #fff;
+}
+#search-wrap.flex-search-ui .icon-search{
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    margin: 1.4rem 0 0 0.9rem;
+    z-index: 3;
+}
+#search-wrap.flex-search-ui .input-group-btn{
+    vertical-align: top;
+}
+#search-wrap.flex-search-ui .header-search-button{
+    padding: 10px;
+    background-color: #E0E0E0;
+}
+#search-wrap.flex-search-ui .typeahead-wrapper{
+    margin-top: 0;
+}
+#search-wrap.flex-search-ui .header-search-button:hover{
+    background-color: #D6D6D5;
+}
+#search-wrap.flex-search-ui .search-close .icon-close,
+#search-wrap.flex-search-ui .search-close .icon-close:hover{
+    color: #fff;
+    fill:#fff;
+    width: 18px;
+    height: 15px;
+}
+#search-wrap.flex-search-ui .search-close {
+    padding: 0 10px 0 14px;
+}
+#search-wrap.flex-search-ui .form-control{
+    padding: 0;
+}
+#search-wrap.flex-search-ui .input-group .form-control{
+    float: none;
+    font-weight: 500;
+    color: #000;
+    position: relative;
+    vertical-align: top;
+    background-color: transparent;
+    margin: 7px 0px 4px;
+    padding: 0 20px 0 25px;
+}
+#search-wrap.flex-search-ui .input-group input.form-control.placeholder,
+#search-wrap.flex-search-ui .input-group .typeahead-hint.placeholder{
+    font-weight: normal;
+    font-family: "Playfair Display";
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+.typeahead-hint{
+    position: absolute;
+    width: 100%;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: #ccc;
+    vertical-align: top;
+    background-color: transparent;
+    margin: 7px 0px 4px;
+    padding: 5px 0px 0 26px;
+    display: table-cell;
+    line-height: 1.42857143;
+    height: 34px;
+}
+#typeahead-results{
+    position:relative;
+}
+#typeahead-results.flyout-active{
+    background-color: #fff;
+    max-width: 1170px;
+    right: 0;
+    left: 0;
+    top: auto;
+    width: 100%;
+    margin: 0 auto;
+    overflow:auto;
+}
+.typeahead.dropdown-menu,
+#search-history.dropdown-menu{
+    width: 42.4%;
+    position: static;
+    background: #fff;
+    font-size: 1.7rem;
+    color: #515151;
+    border-radius: unset;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin:0;
+    border:none;
+    float:right;
+}
+#search-wrap .typeahead.dropdown-menu li a,
+#search-wrap #search-history.dropdown-menu li a{
+    padding: 0.5rem 1.5rem;
+    color: #515151;
+    text-decoration: none;
+    white-space: normal;
+}
+#search-wrap .typeahead.dropdown-menu li.active a,
+#search-wrap #search-history.dropdown-menu li.active a{
+    background-color: #eeeeee;
+}
+#visual-search-flyout{
+    display:none;
+    border-right:1px solid #eeeeee;
+    width: 57.6%;
+    background-color:#fff;
+    float: left;
+}
+#visual-search-flyout h3{
+    text-align: center;
+    margin: 1rem auto;
+    display: block;
+}
+#visual-search-flyout .row{
+    margin: 0;
+    overflow: hidden;
+}
+#visual-search-clone-item{
+    display:none;
+}
+.flyout-active #visual-search-flyout{
+    display:block;
+}
+#visual-search-flyout .product-block:nth-child(5) {
+    clear: left;
+}
+#visual-search-flyout .item{
+    padding-bottom: 125.4%;
+}
+#visual-search-flyout .item img{
+    position: absolute;
+    width: 100%;
+}
+/* update this when ready to show swatches */
+#visual-search-flyout .swatch-wrap{
+    display:none;
+}
+
+
+@media (min-width: 992px) {
+    #search-wrap.flex-search-ui .search-container{
+        padding: 1.5rem .5rem;
+    }
+    #search-wrap.flex-search-ui #search {
+        width: 42.4%;
+        margin: 0 0 0 auto;
+    }
+    #search-wrap.flex-search-ui .header-search-button{
+        padding: 0.96rem;
+    }
+    #search-wrap.flex-search-ui input.typeahead{
+        margin-bottom: 4px;
+    }
+}
+@media (max-width: 991px) {
+    #search-wrap.flex-search-ui #search{
+        width:100%;
+    }
+    .typeahead-hint{
+        padding-top:7px;
+        font-size:1.6rem;
+    }
+    .typeahead-hint.placeholder{
+        padding-top:6px;
+    }
+    .typeahead.dropdown-menu,
+    #search-history.dropdown-menu {
+        width: 100%;
+    }
+    .flyout-active .typeahead.dropdown-menu{
+        width: 30%;
+    }
+    #visual-search-flyout{
+        width: 70%;
+        padding-bottom: 4rem;
+    }
+}
+@media (max-width: 767px) {
+    .typeahead.dropdown-menu,
+    #search-history.dropdown-menu{
+        width: 100%;
+    }
+    typeahead-results.flyout-active #visual-search-flyout{
+        display:none;
+    }
+}
+							</textarea>
+						</div>
+						<div class="modal-section max-height-adjust js">
+							<h2>JavaScript</h2>
+							<div class="modal-nav">
+								<a href="#" class="change-example-section" data-modal-section=".about">About</a>
+								<a href="#" class="change-example-section" data-modal-section=".html">HTML</a>
+								<a href="#" class="change-example-section" data-modal-section=".css">CSS</a>
+								<a href="#" class="change-example-section selected" data-modal-section=".js">JavaScript</a>
+							</div>
+							
+							<textarea rows="20">
+/*	Start Proprietary to Chico's FAS
+ *	Author:				Joe Prehoda
+ *	Version (dated):	18.02.28
+ *
+ *
+ *	Change Log:
+ *		VTA-01: Updated typeahead to intergrate with bootstrap3. removed old call to jquery10. Added visual results flyout.
+ *		VTA-02: Updated link URLs and added GA Impression recording.
+ *
+ *
+ *	Contents:
+ *		1. BIND SECTION
+ *			1.1 ADD VTA TO GLOBAL FAS OBJECT
+ *			1.2 SEARCH OPEN/CLOSE
+ *			1.3 SEARCH OVERLAY CLICK CLOSE
+ *			1.4 SEARCH OVERLAY TAB CLOSE
+ *			1.5 INPUT KEYDOWN fUNCTIONS
+ *			1.6 INPUT HOVER/CLICK
+ *			1.7 TEXT SUGGESTION FOCUS
+ *			1.8 INPUT RESET
+ *		2. SEARCH SUBMIT
+ *			2.1 SEARCH ICON SUBMIT
+ *		3. SEARCH HISTORY
+ *			3.1 UPDATE HISTORY DROPDOWN
+ *			3.2 HISTORY COOKIES
+ *		4. TYPEAHEAD OPTIONS
+ *			4.1 TYPEAHEAD URL
+ *			4.2 FLYOUT AJAX
+ *			4.3 FLYOUT UPDATE
+ *			4.4 FLYOUT DESTROY
+ *			4.5 SAVE INITAL INPUT
+ *			4.6 CHECK HINT
+ *			4.7 TYPEAHEAD INIT
+ *		5 SEARCH PAGE OPTIONS
+ */
+
+
+//1. BIND SECTION
+//1.1 ADD VTA TO GLOBAL FAS OBJECT
+var FAS = FAS || {};
+FAS.typeAhead = {};
+FAS.typeAhead.delay = 200;
+FAS.typeAhead.minLength = 3;
+FAS.typeAhead.domElements = {};
+FAS.typeAhead.domElements.$searchWrap = jQuery('#search-wrap')
+FAS.typeAhead.domElements.$inputField = jQuery('#typeahead-search-input');
+FAS.typeAhead.domElements.$searchClose = jQuery('.search-close');
+FAS.typeAhead.domElements.$searchIcon = jQuery('.header-search-button');
+FAS.typeAhead.domElements.$hint = jQuery('.typeahead-hint');
+FAS.typeAhead.domElements.$resultsDropDown = jQuery('#typeahead-results');
+FAS.typeAhead.domElements.$flyOut = jQuery('#visual-search-flyout');
+FAS.typeAhead.domElements.$searchHistory = jQuery('#search-history');
+FAS.typeAhead.showHistory = true;
+FAS.typeAhead.staticKeywords = {}; //add objects here to add different functions for specific search terms
+FAS.typeAhead.staticKeywords.openDrawer = []; //{site: 'whbm', keyWords:['promo','promotion']}
+FAS.typeAhead.search = {};
+FAS.typeAhead.search.maxHistory = 3;
+FAS.typeAhead.lastSearch = $.cookie('userSearchTerm') || '';
+
+//1.2 SEARCH OPEN/CLOSE
+jQuery('.search-toggle, .search-close, .menu-search').on('click', function(e){
+	e.preventDefault();
+	//If statement needed due to mobile.js method that hides search if nav is open
+	if(FAS.typeAhead.domElements.$searchWrap.css('display') === 'none'){
+		FAS.typeAhead.domElements.$searchWrap.css('height', window.innerHeight).fadeIn(100);
+		var notSearchElementsHeight = (jQuery('body').hasClass('sticky')) ? jQuery('#header').innerHeight() : jQuery('#header-wrap').innerHeight();
+		jQuery('#visual-search-flyout').css('max-height', (window.innerHeight - (notSearchElementsHeight + jQuery('#search-inner').innerHeight()) + 'px'));
+		jQuery('.search-toggle').hide();
+		FAS.typeAhead.domElements.$inputField.focus();
+		if(FAS.typeAhead.domElements.$inputField.val().length >= FAS.typeAhead.minLength){
+			FAS.typeAhead.domElements.$inputField.triggerHandler('input');
+		}
+		if(FAS.typeAhead.domElements.$searchHistory.find('li').length > 0){
+			FAS.typeAhead.domElements.$searchHistory = jQuery('#search-history');
+			if(FAS.typeAhead.showHistory){
+				FAS.typeAhead.domElements.$searchHistory.show();
+				FAS.typeAhead.domElements.$searchHistory.find('a').on('focus', function(){
+					if((FAS.typeAhead.domElements.$searchHistory.find('li').length - 1) === 0){
+						jQuery(this).on('keydown', function(e){
+							var keyCode = e.keyCode || e.which;
+							if(keyCode === 9 && !e.shiftKey){
+								e.preventDefault();
+								FAS.typeAhead.domElements.$searchIcon.focus();
+							} else if (keyCode === 9 && e.shiftKey){
+								e.preventDefault();
+								FAS.typeAhead.domElements.$inputField.focus();
+							}
+						});
+					} else {
+						if(jQuery(this).parent().index() === (FAS.typeAhead.domElements.$searchHistory.find('li').length - 1)){
+							jQuery(this).on('keydown', function(e){
+								var keyCode = e.keyCode || e.which;
+								if(keyCode === 9 && !e.shiftKey){
+									e.preventDefault();
+									FAS.typeAhead.domElements.$searchIcon.focus();
+								}
+							});
+						} else if(jQuery(this).parent().index() === 0){
+							jQuery(this).on('keydown', function(e){
+								var keyCode = e.keyCode || e.which;
+								if(keyCode === 9 && e.shiftKey){
+									e.preventDefault();
+									FAS.typeAhead.domElements.$inputField.focus();
+								}
+							});
+						}
+					}
+				});
+			} else {
+				FAS.typeAhead.domElements.$searchHistory.hide();
+			}
+
+		}
+	} else {
+		if(!jQuery('.typeahead.dropdown-menu').is(':visible')){
+			FAS.typeAhead.showHistory = true;
+		}
+		FAS.typeAhead.domElements.$searchWrap.fadeOut(100);
+		jQuery('.search-toggle').show();
+
+	}
+});
+
+//1.3 SEARCH OVERLAY CLICK CLOSE
+FAS.typeAhead.domElements.$searchWrap.on('click', function(e) {
+	if(!jQuery(e.target).parents('#search-outer').length) {
+		if(FAS.typeAhead.domElements.$searchWrap.is(':visible')) {
+			FAS.typeAhead.domElements.$searchClose.click();
+		}
+	}
+});
+
+//1.4 SEARCH OVERLAY TAB CLOSE
+FAS.typeAhead.domElements.$searchClose.on('keydown', function(e){
+	var keyCode = e.keyCode || e.which;
+	if(keyCode === 9){
+		FAS.typeAhead.domElements.$searchClose.click();
+	}
+});
+
+//1.5 INPUT KEYDOWN fUNCTIONS
+FAS.typeAhead.domElements.$inputField.on('keydown', function(e){
+	var keyCode = e.keyCode || e.which;
+	var keysToIgnore = [8, 9, 27, 37, 38, 39, 40, 16]; // ignore some keys on initial input
+	if(jQuery(this).hasClass('placeholder') && jQuery(this).val().length === 0 && keysToIgnore.indexOf(keyCode) < 0){
+		//REMOVE PLACEHOLDER AFTER KEY INPUT
+		jQuery(this).removeClass('placeholder');
+		FAS.typeAhead.domElements.$hint.removeClass('placeholder').text('');
+		FAS.typeAhead.domElements.$searchHistory.hide();
+	}
+
+	switch (keyCode) {
+		case 13:
+			//RETURN
+			if(FAS.typeAhead.domElements.$resultsDropDown.find('li.active').length === 0){
+				FAS.typeAhead.domElements.$searchIcon.click();
+			}
+			break;
+		case 27:
+			//ESCAPE
+			FAS.typeAhead.domElements.$searchClose.click();
+			break;
+		case 38:
+			//ARROW UP
+			if(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li').index(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li.active')) === 0){
+				FAS.typeAhead.domElements.$inputField.val(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li').eq(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li').length - 1).text());
+				FAS.typeAhead.domElements.$hint.text('');
+				FAS.typeAhead.flyoutAjax(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li').eq(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li').length - 1));
+			} else {
+				FAS.typeAhead.domElements.$inputField.val(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li.active').prev('li').text());
+				FAS.typeAhead.domElements.$hint.text('');
+				FAS.typeAhead.flyoutAjax(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li.active').prev('li'));
+			}
+			break;
+		case 9:
+			//TAB
+			if(e.shiftKey){
+				if(!FAS.typeAhead.domElements.$searchHistory.is(':visible')){
+					if(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li').index(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li.active')) === 0){
+						jQuery(this).prev('a').focus();
+					} else {
+						e.preventDefault();
+						var keyEvent = jQuery.Event("keydown");
+						keyEvent.keyCode = 38;
+						jQuery(this).trigger(keyEvent);
+					}
+				}
+			} else {
+				if(!FAS.typeAhead.domElements.$searchHistory.is(':visible')){
+					if(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li').index(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li.active')) === (FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li').length - 1)){
+						jQuery(this).next('a').focus();
+					} else {
+						e.preventDefault();
+						var keyEvent = jQuery.Event("keydown");
+						keyEvent.keyCode = 40;
+						jQuery(this).trigger(keyEvent);
+					}
+				} else {
+					if(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li.active').length <= 0){
+						e.preventDefault();
+						FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible').find('li').eq(0).find('a').focus();
+					}
+				}
+			}
+			break;
+		case 40:
+			//ARROW DOWN
+			if(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li').index(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li.active')) === (FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li').length - 1) || FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li.active').length <= 0){
+				FAS.typeAhead.domElements.$inputField.val(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li').eq(0).text());
+				FAS.typeAhead.domElements.$hint.text('');
+				FAS.typeAhead.flyoutAjax(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li').eq(0));
+			} else {
+				FAS.typeAhead.domElements.$inputField.val(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li.active').next('li').text());
+				FAS.typeAhead.domElements.$hint.text('');
+				FAS.typeAhead.flyoutAjax(FAS.typeAhead.domElements.$resultsDropDown.find('.dropdown-menu:visible li.active').next('li'));
+			}
+			break;
+		default:
+			return;
+	}
+});
+
+//1.6 INPUT HOVER/CLICK
+FAS.typeAhead.domElements.$inputField.on('mouseover click', function(){
+	if(FAS.typeAhead.domElements.$resultsDropDown.find('li.active').length !== 0 && FAS.typeAhead.domElements.$inputField.val().length > 0){
+		FAS.typeAhead.domElements.$resultsDropDown.find('li').removeClass('active');
+		FAS.typeAhead.domElements.$inputField.val(FAS.typeAhead.domElements.$inputField.attr('data-save-init-input'));
+		FAS.typeAhead.domElements.$hint.text(FAS.typeAhead.domElements.$hint.attr('data-saved-hint'));
+	}
+});
+
+//1.7 TEXT SUGGESTION HOVER
+FAS.typeAhead.listItemFocus = function(){
+	if(!isTouchEnabled()){
+		//TIMEOUT COMEPENSATES FOR QUICK MOUSE
+		FAS.typeAhead.domElements.$resultsDropDown.find('.typeahead li').on('mouseover', function(){
+			var $hoveredElement = jQuery(this);
+			var hoverTimer = setTimeout(function() {
+				FAS.typeAhead.flyoutAjax($hoveredElement);
+			}, FAS.typeAhead.delay);
+			jQuery(this).on('mouseout', function(){
+				clearTimeout(hoverTimer);
+			});
+		});
+	} else {
+		FAS.typeAhead.domElements.$resultsDropDown.find('.typeahead li a').attr('data-clicked-once', 'false');
+	}
+}
+
+//1.8 INPUT RESET
+FAS.typeAhead.domElements.$inputField.on('change keyup input', function(e){
+	if(jQuery(this).val().length === 0 && !jQuery(this).hasClass('placeholder')){
+		jQuery(this).addClass('placeholder');
+		FAS.typeAhead.domElements.$hint.addClass('placeholder').text('Search');
+		FAS.typeAhead.flyoutDestroy();
+		jQuery('.typeahead.dropdown-menu').hide();
+		FAS.typeAhead.domElements.$inputField.attr('data-save-init-input', '');
+	} else if(jQuery(this).val().length < FAS.typeAhead.minLength && jQuery('.typeahead.dropdown-menu').is(':visible')){
+		if(FAS.typeAhead.domElements.$resultsDropDown.hasClass('flyout-active')){
+			FAS.typeAhead.flyoutDestroy();
+		}
+		if(FAS.typeAhead.domElements.$hint.text().length > 0){
+			FAS.typeAhead.domElements.$hint.text('');
+		}
+		jQuery('.typeahead.dropdown-menu').hide();
+	} else {
+		if(!jQuery('.typeahead.dropdown-menu').is(':visible')){
+			FAS.typeAhead.domElements.$resultsDropDown.removeClass('flyout-active');
+		}
+		var keyCode = e.keyCode || e.which;
+		var keysToIgnore = [8, 9, 27, 37, 38, 39, 40, 16];
+		if(typeof keyCode !== 'undefined'){
+			if(keysToIgnore.indexOf(keyCode) < 0){
+				if(FAS.typeAhead.showHistory){
+					FAS.typeAhead.showHistory = false;
+					FAS.typeAhead.domElements.$searchHistory.hide();
+				}
+				FAS.typeAhead.saveSearch(jQuery(this).val());
+			}
+		}
+	}
+});
+
+
+//2. SEARCH SUBMIT
+FAS.typeAhead.searchSubmit = function(e){
+	e.preventDefault();
+	if(FAS.typeAhead.domElements.$inputField.val() !== ''){
+		var searchVal = encodeURIComponent(FAS.typeAhead.domElements.$inputField.val().trim()).replace(/%2B/g,'+').replace(/%E2%80%99/g,'%27').replace(/%3E/g,'').replace(/%3C/g,'') || '';
+		FAS.typeAhead.search.historyManager(encodeURIComponent(FAS.typeAhead.domElements.$inputField.val().trim()).replace(/%2B/g,'+').replace(/%E2%80%99/g,'%27').replace(/%3E/g,'').replace(/%3C/g,''));
+
+		//ADD STATICKEYWORD OPTION IF STATEMENTS HERE
+		if(FAS.typeAhead.staticKeywords.openDrawer.length > 0){
+			for(var i = 0; 1 < FAS.typeAhead.staticKeywords.openDrawer.length; i++){
+				if(siteObj.siteInfo.brand.toLowerCase() === FAS.typeAhead.staticKeywords.openDrawer[i].site && FAS.typeAhead.staticKeywordsList.openDrawer[i].keyWords.indexOf(searchVal) >= 0){
+					//CLOSE SEARCH OPEN DRAWER
+					FAS.typeAhead.domElements.$searchClose.click();
+					jQuery('#promo-skin, #promo-footer').addClass('open');
+				} else {
+					window.location = '/store/search/?searchTerms='+searchVal+'&emptySearch=true&searchLabel='+searchVal;
+				}
+			}
+		} else {
+			window.location = '/store/search/?searchTerms='+searchVal+'&emptySearch=true&searchLabel='+searchVal;
+		}
+	}
+}
+
+//2.1 SEARCH ICON SUBMIT
+FAS.typeAhead.domElements.$searchIcon.on('click', function(e){
+	FAS.typeAhead.searchSubmit(e);
+});
+
+
+//3. SEARCH HISTORY
+//3.1 UPDATE HISTORY DROPDOWN
+FAS.typeAhead.search.createHistoryDropDown = function(){
+	if (!!$.cookie('searchHistory')){
+		var numSearches = [];
+		if($.cookie('searchHistory').indexOf('::') != -1){
+			numSearches = $.cookie('searchHistory').split('::');
+		} else {
+			numSearches = [$.cookie('searchHistory')];
+		}
+		for(var i = 0; i < numSearches.length; i++){
+			var searchHistoryInput = decodeURIComponent(numSearches[i].replace(/%2B/g,' ').replace(/%E2%80%99/g,'%27').replace(/%3E/g,'').replace(/%3C/g,''));
+			FAS.typeAhead.domElements.$searchHistory.append('<li><a class="dropdown-item" href="#" role="option">'+searchHistoryInput+'</a></li>');
+			if(i === numSearches.length - 1){
+				//REMAP SEARCH HISTORY OBJECT
+				FAS.typeAhead.domElements.$searchHistory = jQuery('#search-history');
+				FAS.typeAhead.domElements.$searchHistory.find('a').on('click', function(){
+					FAS.typeAhead.domElements.$inputField.text(jQuery(this).text()).val(jQuery(this).text()).removeClass('placeholder');
+					FAS.typeAhead.domElements.$searchIcon.click();
+				}).on('mouseover', function(){
+					FAS.typeAhead.domElements.$searchHistory.find('li').removeClass('active');
+					jQuery(this).parent().addClass('active');
+				});
+			}
+		}
+	}
+}
+FAS.typeAhead.search.createHistoryDropDown();
+
+//3.2 HISTORY COOKIES
+FAS.typeAhead.search.historyManager = function(searchTerm){
+	if(searchTerm !== ''){
+		var expire = new Date();
+		expire.setTime(expire.getTime() + 3600000*24*14);
+		$.cookie('endecaSearchStatus',true,{path: '/', expires:expire});
+		$.cookie('userSearchTerm',searchTerm,{path:'/', expires:expire});
+		var numSearches = [];
+
+		if (!!$.cookie('searchHistory')){
+			if($.cookie('searchHistory').indexOf('::') != -1){
+				numSearches = $.cookie('searchHistory').split('::');
+			} else {
+				numSearches.push($.cookie('searchHistory'));
+			}
+			if (numSearches.length < FAS.typeAhead.search.maxHistory && numSearches.indexOf(searchTerm) === -1){
+				numSearches.unshift(searchTerm)
+				$.cookie('searchHistory',numSearches.join('::').toString(),{path:'/', expires:expire});
+			} else if (numSearches.length === FAS.typeAhead.search.maxHistory && numSearches.indexOf(searchTerm) === -1){
+				numSearches.pop();
+				numSearches.unshift(searchTerm);
+				$.cookie('searchHistory',numSearches.join('::').toString(),{path:'/', expires:expire});
+			}
+		} else {
+			$.cookie('searchHistory',searchTerm,{path:'/', expires:expire});
+		}
+	}
+}
+
+
+//4. TYPEAHEAD OPTIONS
+//4.1 TYPEAHEAD URL
+FAS.typeAhead.jsonUrl = function(searchTerm){
+	return '/store/search/?searchTerms='+encodeURIComponent(searchTerm).replace(/%2B/g,'+').replace(/%E2%80%99/g,'%27').replace(/%3E/g,'').replace(/%3C/g,'')+'*&format=typeahead&typeAhead=true';
+}
+
+//4.2 FLYOUT AJAX
+FAS.typeAhead.flyoutAjax = function($this){
+	if(typeof $this.attr('data-focus-enabled') === "undefined"){
+		FAS.typeAhead.domElements.$resultsDropDown.find('li').attr('data-focus-enabled', 'true')
+	}
+	if($this.attr('data-focus-enabled') === "true"){
+		jQuery(document).ajaxStop();
+		FAS.typeAhead.domElements.$resultsDropDown.find('li').attr('data-focus-enabled', 'false');
+		var trimmedText = $this.text().trim().replace('...', '');
+		FAS.typeAhead.domElements.$inputField.val(trimmedText);
+		FAS.typeAhead.domElements.$hint.text('');
+		jQuery.getJSON(FAS.typeAhead.jsonUrl(trimmedText)).always(function(data){
+			if(typeof data.flyOutPanel !== "undefined" && typeof data.flyOutPanel.productResultsHeaderText !== "undefined"){
+				if(data.flyOutPanel.productResultsHeaderText.toLowerCase() !== FAS.typeAhead.domElements.$flyOut.find('h3').attr('data-flyout-header-text').toLowerCase()){
+					FAS.typeAhead.flyoutUpdate(data);
+				}
+			} else {
+				if(FAS.typeAhead.domElements.$resultsDropDown.hasClass('flyout-active')){
+					FAS.typeAhead.domElements.$flyOut.find('h3').html("");
+					FAS.typeAhead.domElements.$flyOut.find('.product-block').not('#visual-search-clone-item').remove();
+				}
+			}
+		});
+		FAS.typeAhead.domElements.$resultsDropDown.find('li').attr('data-focus-enabled', 'true');
+	}
+}
+
+//4.3 FLYOUT UPDATE
+FAS.typeAhead.flyoutUpdate = function(data){
+	if(typeof data.flyOutPanel !== "undefined" && jQuery('.typeahead.dropdown-menu').is(':visible')){
+		var flyOutPanel = data.flyOutPanel;
+		if(data.typeAheadPanel.showProductResults === "true" && flyOutPanel.products.length > 0 && !(window.matchMedia("(max-width: 767px)").matches)){
+
+			FAS.typeAhead.domElements.$resultsDropDown.addClass('flyout-active');
+
+			//SET RESULT LIMITS
+			var flyoutResults = flyOutPanel.productsCount;
+
+			if(FAS.typeAhead.domElements.$flyOut.find('.product-block').length > 1){
+				FAS.typeAhead.domElements.$flyOut.find('.product-block').not('#visual-search-clone-item').remove();
+			}
+			
+			var impressionProducts = [];
+
+			//INJECT JSON VALUES FOR EACH ITEM
+			for(var i = 0; i < flyoutResults && i < flyOutPanel.products.length; i++){
+
+				var $flyOutItemClone = jQuery('#visual-search-clone-item').clone();
+				$flyOutItemClone.removeAttr('id role');
+
+				//SET TITLE
+				FAS.typeAhead.domElements.$flyOut.children('h3').attr('data-flyout-header-text', flyOutPanel.productResultsHeaderText)
+				if(flyOutPanel.showProductResultsHeaderText === "true"){
+					FAS.typeAhead.domElements.$flyOut.children('h3').html(flyOutPanel.productResultsHeaderText.split(" ").splice(0,7).join(" "));
+				}
+				var currentFlyoutItem = flyOutPanel.products[i];
+				var currentFlyoutId = currentFlyoutItem.productId;
+
+				//UPDATE BRAND
+				$flyOutItemClone.find('[itemprop="brand"] span').text(siteObj.siteInfo.brand);
+
+				//UPDATE A TAGS
+				$flyOutItemClone.find('a').each(function(){
+					var brandDomain = siteObj.siteInfo.brand.toLowerCase(),
+						environment = String(location.host).split('.')[0],
+						cashstarEnv = (environment == 'www' || environment == 'atgstg' || environment == 'delta' || environment == 'dr')?'':'.semi';
+
+					//Brand Name Override (WHBM & COTR)
+					if(siteObj.siteInfo.brand.toLowerCase() === 'whbm') brandDomain='whitehouseblackmarket';
+					if(siteObj.siteInfo.brand.toLowerCase() === 'chicosoutlet') brandDomain='chicos';
+
+					$(this).attr({
+						'href': (currentFlyoutItem.productId.indexOf('EGIFTCERT') === -1 )? '/store/product/' + currentFlyoutItem.productName.replace(/ /g, '+').replace(/\%20/g, '+').replace(/\//g, '').toLowerCase() + '/' + currentFlyoutId + ((currentFlyoutItem.productColor !== '') ? ('?color='+currentFlyoutItem.productColor)+ '&catId=autosuggest' : '?catId=autosuggest') : ('https://' + brandDomain +cashstarEnv+ '.cashstar.com'),
+						'target': (currentFlyoutItem.productId.indexOf('EGIFTCERT') === -1 )? '' : '_blank'
+					});
+				});
+				$flyOutItemClone.find('.main-product-link').attr('aria-label', "Product: " + currentFlyoutItem.productName);
+
+				//UPDATE IMAGE
+				$flyOutItemClone.find('.product-default-img').attr({
+					'data-srcset': '/Product_Images/'+currentFlyoutId+((currentFlyoutItem.productColor !== '') ? ('_'+currentFlyoutItem.productColor) : '')+'.jpg?resize=270px:338px&output-quality=85 270w, /Product_Images/'+currentFlyoutId+((currentFlyoutItem.productColor !== '') ? ('_'+currentFlyoutItem.productColor) : '')+'.jpg?output-quality=85 450w',
+					'data-src':'/Product_Images/'+currentFlyoutId+((currentFlyoutItem.productColor !== '') ? ('_'+currentFlyoutItem.productColor) : '')+'.jpg?resize=300px:*&output-quality=85',
+					'data-svg-src': '200:250',
+					'alt': currentFlyoutItem.productName
+				});
+
+				//UPDATE PRODUCT NAME
+				var flyoutProdName = (window.matchMedia && window.matchMedia('(max-width: 1024px)').matches) ? currentFlyoutItem.productName.split(" ").splice(0,4).join(" ") + '...' : currentFlyoutItem.productName.split(" ").splice(0,7).join(" ");
+				$flyOutItemClone.find('.product-name a').html(flyoutProdName);
+
+				//UPDATE PRICE
+				$flyOutItemClone.find('[itemprop="priceCurrency"]').attr('content', currentFlyoutItem.currencyCode);
+				$flyOutItemClone.find('[itemprop="priceCurrency"]').text(currentFlyoutItem.currencySymbol);
+				if(currentFlyoutItem.originalPrice !== '' || currentFlyoutItem.prefixText !== ''){
+					var ttprefixPrice = (currentFlyoutItem.prefixText !== '') ? (currentFlyoutItem.prefixText +' ' + currentFlyoutItem.listPrice) : currentFlyoutItem.listPrice;
+					$flyOutItemClone.find('.product-price .product-price').addClass('product-price-special product-price-sale').html('<span class="product-prefix-text">'+ttprefixPrice+'</span>');
+					if(currentFlyoutItem.originalPrice !== ''){
+						$flyOutItemClone.find('.product-prefix-text').after('<span class="product-price-regular">'+currentFlyoutItem.originalPrice+'</span>');
+					}
+					if(currentFlyoutItem.clearanceTitle !== ''){
+						$flyOutItemClone.find('.product-prefix-text').append(' ' +currentFlyoutItem.clearanceTitle);
+					}
+				} else {
+					$flyOutItemClone.find('.product-price .product-price').html(currentFlyoutItem.listPrice);
+					$flyOutItemClone.find('[itemprop="price"]').html(parseFloat(currentFlyoutItem.listPrice.replace(/[^0-9-.]/g, '')));
+				}
+
+				//UPDATE RATINGS
+				if(flyOutPanel.showRatingsInProductResults === 'true'){
+
+					var ratRound = function ratRound(value, precision) {
+						var multiplier = Math.pow(10, precision || 0);
+						return Math.round(value * multiplier) / multiplier;
+					}
+					var flyoutItemRating = ratRound(currentFlyoutItem.reviewsRating,1).toString();
+					flyoutItemRating = (flyoutItemRating.indexOf('.') != -1) ? flyoutItemRating.replace('.', '_') : flyoutItemRating + '_0';
+					$flyOutItemClone.find('[itemprop="ratingValue"]').html(flyoutItemRating);
+
+					$flyOutItemClone.find('.BVImgOrSprite').attr({
+						'title': flyoutItemRating + ' / 5',
+						'alt': ' ' + flyoutItemRating + ' / 5',
+						'src': '/web_assets/core/img/stars/rating-'+flyoutItemRating+'.png',
+					});
+				} else {
+					$flyOutItemClone.find('.product-rating').remove();
+				}
+
+				//AVAILABILITY & SPECIAL MESSAGES
+				if(flyOutPanel.showMsgsInProductResults === 'true'){
+					$flyOutItemClone.find('.product-msg').html(currentFlyoutItem.promoSurname);
+					$flyOutItemClone.find('.product-msg-special').html(currentFlyoutItem.promoMessage);
+				}
+
+				FAS.typeAhead.domElements.$flyOut.find('.row').append($flyOutItemClone);
+				
+				//IMPRESSIONS ANALYTICS
+				impressionProducts.push({
+					'name': trim(decodeEntity(currentFlyoutItem.productName)),
+					'id': currentFlyoutId,
+					'price':convertPrice(currentFlyoutItem.listPrice),
+					'brand': siteObj.siteInfo.brand,
+					'category': currentFlyoutItem.skuId,
+					'variant': currentFlyoutItem.productColor,
+					'list': 'autosuggest',
+					'position': (i + 1),
+					'dimension16': 'autosuggest'
+				});
+
+				if(impressionProducts.length > 0 && i === (flyOutPanel.products.length - 1)) {
+					dataLayer.push({
+						'event': 'productImpression',
+						'ecommerce':{
+							'currencyCode':'USD',
+							'impressions': impressionProducts
+						}
+					});
+				}
+			}
+			
+			FAS.typeAhead.domElements.$flyOut.find('a').on('click', function(){
+				var expire = new Date();
+				expire.setTime(expire.getTime() + 3600000*24*14);
+				$.cookie('flyoutclickinput', flyOutPanel.productResultsHeaderText,{path: '/', expires:expire})
+			})
+
+		} else {
+			if(FAS.typeAhead.domElements.$resultsDropDown.hasClass('flyout-active')){
+				FAS.typeAhead.domElements.$flyOut.find('h3').html("");
+				FAS.typeAhead.domElements.$flyOut.find('.product-block').not('#visual-search-clone-item').remove();
+			}
+		}
+	} else {
+		if(FAS.typeAhead.domElements.$resultsDropDown.hasClass('flyout-active')){
+			FAS.typeAhead.domElements.$flyOut.find('h3').html("");
+			FAS.typeAhead.domElements.$flyOut.find('.product-block').not('#visual-search-clone-item').remove();
+		}
+	}
+}
+
+//4.4 FLYOUT DESTROY
+FAS.typeAhead.flyoutDestroy = function(){
+	if(FAS.typeAhead.domElements.$resultsDropDown.hasClass('flyout-active')){
+		FAS.typeAhead.domElements.$resultsDropDown.removeClass('flyout-active');
+		FAS.typeAhead.domElements.$flyOut.find('h3').html('');
+		FAS.typeAhead.domElements.$flyOut.find('.product-block').not('#visual-search-clone-item').remove();
+	}
+}
+
+//4.5 SAVE INITAL INPUT
+FAS.typeAhead.saveSearch = function($thisText){
+	FAS.typeAhead.domElements.$inputField.attr('data-save-init-input', FAS.typeAhead.domElements.$inputField.val());
+	FAS.typeAhead.domElements.$inputField.val($thisText);
+}
+
+//4.6 CHECK HINT
+FAS.typeAhead.checkHint = function(text){
+	if(text.indexOf(FAS.typeAhead.domElements.$inputField.val().toLowerCase().trim()) === 0){
+		text = text.replace(FAS.typeAhead.domElements.$inputField.attr('data-save-init-input').toLowerCase(),'');
+		text = FAS.typeAhead.domElements.$inputField.attr('data-save-init-input') + text;
+		FAS.typeAhead.domElements.$hint.text(text).attr('data-saved-hint', text);
+	} else {
+		FAS.typeAhead.domElements.$hint.text('').attr('data-saved-hint', '');
+	}
+}
+
+//4.7 TYPEAHEAD INIT
+FAS.typeAhead.domElements.$inputField.typeahead({
+	autoSelect:false,
+	source: function(query, process){
+		if (query.length >= FAS.typeAhead.minLength){
+			return jQuery.getJSON(
+				FAS.typeAhead.jsonUrl(FAS.typeAhead.domElements.$inputField.val().trim()),
+				function(data) {
+					var textSuggestions = [];
+					if(data.typeAheadPanel.typeAheadSuggestions.length > 0){
+						FAS.typeAhead.checkHint(data.typeAheadPanel.typeAheadSuggestions[0].typeAheadWord);
+						for(var i = 0; i < data.typeAheadPanel.typeAheadSuggestions.length; i++){
+							var typeAheadWord = (data.typeAheadPanel.typeAheadSuggestions[i].typeAheadWord.length < 40) ? data.typeAheadPanel.typeAheadSuggestions[i].typeAheadWord.replace(/&amp;/g,'&').replace(/&#39;/g,'\'') : data.typeAheadPanel.typeAheadSuggestions[i].typeAheadWord.replace(/&amp;/g,'&').replace(/&#39;/g,'\'').split(" ").splice(0,6).join(" ") + '...';
+							textSuggestions.push(typeAheadWord);
+							if(i === (data.typeAheadPanel.typeAheadSuggestions.length - 1)){
+								if(FAS.typeAhead.domElements.$resultsDropDown.hasClass('flyout-active')){
+									if(data.flyOutPanel.productResultsHeaderText.toLowerCase() !== FAS.typeAhead.domElements.$flyOut.find('h3').attr('data-flyout-header-text').toLowerCase()){
+										FAS.typeAhead.jsonData = data;
+									}
+								} else {
+									FAS.typeAhead.jsonData = data;
+								}
+								return process(textSuggestions);
+							}
+						}
+					} else {
+						FAS.typeAhead.checkHint('');
+						if(FAS.typeAhead.domElements.$resultsDropDown.hasClass('flyout-active')){
+							FAS.typeAhead.domElements.$resultsDropDown.removeClass('flyout-active')
+						}
+						jQuery('.typeahead.dropdown-menu').hide();
+					}
+				}
+			).always(FAS.typeAhead.listItemFocus);
+		} else {
+			return;
+		}
+	},
+	minLength: FAS.typeAhead.minLength,
+	sorter: function (items) {
+		return items;
+	},
+	items: (siteObj.siteInfo.brand.toLowerCase() === 'whbm' || window.matchMedia("(max-width: 767px)").matches) ? 5:10,
+	delay: FAS.typeAhead.delay,
+	appendTo: FAS.typeAhead.domElements.$resultsDropDown,
+	afterSelect: function(query){
+		if(!isTouchEnabled() || FAS.typeAhead.domElements.$resultsDropDown.find('.active a').attr('data-clicked-once') === 'true' || window.matchMedia("(max-width: 767px)").matches){
+			FAS.typeAhead.domElements.$searchIcon.click();
+		} else {
+			FAS.typeAhead.domElements.$resultsDropDown.find('li a').attr('data-clicked-once', 'false');
+			FAS.typeAhead.domElements.$resultsDropDown.find('.active a').attr('data-clicked-once', 'true');
+			FAS.typeAhead.domElements.$inputField.val(query);
+			FAS.typeAhead.domElements.$hint.text('');
+			jQuery.getJSON(FAS.typeAhead.jsonUrl(query.trim())).always(function(data){
+				if(data.flyOutPanel.productResultsHeaderText.toLowerCase() !== FAS.typeAhead.domElements.$flyOut.find('h3').attr('data-flyout-header-text').toLowerCase()){
+					FAS.typeAhead.flyoutUpdate(data);
+				}
+			});
+		}
+	}
+});
+
+//5 SEARCH PAGE OPTIONS
+if(jQuery('body').hasClass('is-search-page') && !!$.cookie('userSearchTerm')){
+	jQuery('#typeahead-search-input, .typeahead-hint').removeClass('placeholder');
+	FAS.typeAhead.domElements.$hint.text('');
+	FAS.typeAhead.domElements.$inputField.val(decodeURIComponent(FAS.typeAhead.lastSearch.replace(/%3E/g,'').replace(/%3C/g,'')));
+	FAS.typeAhead.domElements.$inputField.attr('data-save-init-input', decodeURIComponent(FAS.typeAhead.lastSearch.replace(/%3E/g,'').replace(/%3C/g,'')));
+	FAS.typeAhead.showHistory = false;
+	if(!jQuery('.content').hasClass('noResults')){
+		jQuery('.content .collection:eq(0)').before('<div class="search-msg">Showing results for '+ decodeURIComponent(FAS.typeAhead.lastSearch.replace(/%3E/g,'').replace(/%3C/g,''))+'</div>');
+	}
+}
+							</textarea>
+						</div>
+					</div>
+				</div>

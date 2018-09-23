@@ -122,8 +122,6 @@ if ($_POST["g-recaptcha-response"]) {
 		</section><!-- End #contact-form -->
 
 		<section id="hp-hero">
-
-			<img src="/site15/assets/hero_filler.png" alt="" class="hide-tp hero-filler" />
 			<img class="mobile-hero-img hide-dt" src="/site15/assets/hero_mobile.jpg" alt="Joe Prehoda's family" />
 			<div class="responsive-wrapper hero-wrapper float-wrapper wrapper-large">
 				<h1 class="raleway">Hi, I&rsquo;m <span class="highlight-text">Joe</span> Prehoda</h1>
@@ -154,7 +152,7 @@ if ($_POST["g-recaptcha-response"]) {
 						<a href="/site15/work.html" tabindex="1">
 							<div class="bucket-title highlight wrapper-inset raleway white-text"><h3 class="raleway">What I can do</h3></div>
 							<div class="bucket-description wrapper-inset">
-								<p class="raleway">Check out some<br class="hide-tp" />examples of my work or view my repository where I keep all of my code snippets.</p>
+								<p class="raleway">Check out examples<br class="hide-tp" />of my work or view my repository where I keep all of my code snippets.</p>
 							</div>
 							<div class="bucket-image">
 								<img src="/site15/assets/my_work_icon.png" alt="Code Snippets" />
@@ -168,18 +166,16 @@ if ($_POST["g-recaptcha-response"]) {
 		<section id="my-story-section">
 			<div class="float-wrapper responsive-wrapper wrapper-large">
 				<div id="hover-circle" class="section-image float-left">
-					<img src="/site15/assets/history_bw.jpg" alt="" role="presentation" />
-					<div class="webkit-radius-fix">
-						<img src="/site15/assets/history_color.jpg" alt="" role="presentation" />
-					</div>
+					<img src="/site15/assets/history_bw.jpg" alt="" role="presentation" class="bw-story"/>
+					<img src="/site15/assets/history_color.jpg" alt="" role="presentation" class="color-story"/>
 					<div class="my-story-image-description highlight">
 						<p class="raleway white-text">Professional Design<br/>on a deadline</p>
 					</div>
 				</div><!-- End #hover-circle -->
 				<div id="about-text" class="section-text float-right">
 					<h4 class="raleway white-text">A bit about my experience</h4>
-					<p class="raleway white-text">I&rsquo;ve been involved in the graphic design field since the early 2000s and moved over to web development in 2007 at the Naples Daily News. There I was given the chance to wear many hats, among them being web designer and web developer. Working for NDN provided a solid foundation which allowed me to move into a Senior Web Designer role at Sony Electronics. At Sony, I didn't just add to my coding experience, but I also gained knowledge in the business aspects of web design and development. The experience I gained from both Sony and NDN have allowed me to apply those talents today at Chico's as a Front End Developer.</p>
-					<p class="raleway white-text">I’m always on the lookout for new opportunities that will provide me a chance to learn and expand my talents in web development. <a href="https://www.linkedin.com/in/joe-prehoda-8040a325" tabindex="1">Feel free to check out my LinkedIn profile</a>.</p>
+					<p class="raleway white-text">I&rsquo;ve been involved in front end development since the mid 2000s starting at the Naples Daily News. There I was given the chance to wear many hats, among them being front end developer with a pinch of design work as well. Working for NDN provided a solid foundation which allowed me to move into a Senior Web Designer role at Sony Electronics. At Sony, I didn't just add to my coding experience, but I also gained knowledge in the business aspects of web design and development. The experience I gained from both Sony and NDN have allowed me to apply those talents today at Chico's as a Front End Developer. Today, at Chico's I work with JavaScript, HTML and CSS on a daily basis. jQuery is my first love, but I'm always looking to branch out.</p>
+					<p class="raleway white-text">I’m always on the lookout for new opportunities that will provide me a chance to learn and expand my talents in web development. <a href="https://www.linkedin.com/in/joe-prehoda-front-end-developer/" tabindex="1">Feel free to check out my LinkedIn profile</a>.</p>
 				</div><!-- End .section-text -->
 			</div><!-- End .responsive-wrapper -->
 		</section><!-- End #my-story-section -->
@@ -188,8 +184,8 @@ if ($_POST["g-recaptcha-response"]) {
 			<div class="float-wrapper responsive-wrapper wrapper-large">
 				<div id="skill-text" class="section-text float-left">
 					<h4 class="raleway">Languages and Programs I know</h4>
-					<p class="raleway">Web Development, HTML, XHTML, HTML5, CSS, CSS3, JavaScript, jQuery, Angular, JSON, AJAX, SOAP, XML, REST, Bootstrap, Cross-browser compatibility, Responsive design, Media queries, PHP, Django, .Java, Git, SVN, SEO, ADA compliance, WordPress, Movable Type, Oracle’s ATG BCC, Filezilla, YouTube API, Facebook API, Twitter API, Pinterest API, Third party pixel integration, Email creation, Constant Contact, Wufoo, Survey Monkey, Omniture, Google Analytics, Google Tag Manager, Adobe Photoshop, Adobe Illustrator, Adobe Dreamweaver, Notepad++, Brackets, Jira, Trello, Zendesk, Agile, Scrum.</p>
-					<p class="raleway">I’m a pretty fast learner so if you have a proprietary system or something not in the list above, chances are I’ll pick it up pretty quickly. Interested in what you see here? <a href="#" tabindex="1">Drop me a line and let’s chat</a>.</p>
+					<p class="raleway">Front End Development, HTML, XHTML, HTML5, CSS, CSS3, Object Oriented JavaScript, jQuery, JSON, AJAX, SOAP, XML, REST, Bootstrap, Cross-browser compatibility, Responsive design, Media queries, PHP, Django, Splunk, Git, SVN, SEO, ADA compliance, Wave compliance scanning, Jaws, WordPress, Movable Type, Oracle’s ATG BCC, Filezilla, YouTube API, Facebook API, Twitter API, Pinterest API, Third party pixel integration, Email creation, Constant Contact, Wufoo, Survey Monkey, Omniture, Google Analytics, Google Tag Manager, Adobe Photoshop, Adobe Illustrator, Invision, Adobe Dreamweaver, Notepad++, Brackets, Visual Studio Code, Slack, Selenium, Jira, Trello, Zendesk, Agile, Scrum.</p>
+					<p class="raleway">I’m a pretty fast learner so if you have a proprietary system or something not in the list above, chances are I’ll pick it up pretty quickly. Interested in what you see here? <a class="toggle-modal" href="#" tabindex="1" aria-haspopup="true">Drop me a line and let’s chat</a>.</p>
 				</div><!-- End .section-text -->
 				<div class="section-image float-right">
 					<img src="/site15/assets/past_employment.gif" alt="Tribune Media Services | Naples Daily News | Sony Electronics | Chicos FAS" />
@@ -203,7 +199,7 @@ if ($_POST["g-recaptcha-response"]) {
 		<p class="float-right raleway">
 			<a href="#" class="toggle-modal" tabindex="1" aria-haspopup="true">Contact Me</a>
 			<span class="footer-divider white-text">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-			<a href="https://www.linkedin.com/in/joe-prehoda-8040a325" tabindex="1">View My LinkedIn profile</a>
+			<a href="https://www.linkedin.com/in/joe-prehoda-front-end-developer/" tabindex="1">View My LinkedIn profile</a>
 		</p>
 	</footer>
 

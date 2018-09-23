@@ -68,6 +68,7 @@ if(window.location.search.indexOf('formSubmit=true') >= 0 && $('#contact-form').
 $('.toggle-modal').on('click', function(e){
 	e.preventDefault();
 	$('.modal').toggleClass('show-modal');
+	$('body').toggleClass('modal-open');
 });
 
 if(window.innerHeight < 768){
